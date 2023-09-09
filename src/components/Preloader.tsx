@@ -1,10 +1,6 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
-// interface PreloaderProps {
-//   containedRef: RefObject<HTMLElement>;
-// }
-
 const Preloader = () => {
   const loadingtext = useRef<HTMLElement | null>(null);
   const pace = useRef<HTMLElement | null>(null);
@@ -47,7 +43,7 @@ const Preloader = () => {
 
   return (
     <div id="preloader" className="preload">
-      <div className="loading-text">THIENDUC.</div>
+      <div className="loading-text font-ClashGrotesk">THIENDUC.</div>
       <div className="pace">
         <div className="pace-progess"></div>
       </div>

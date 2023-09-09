@@ -39,7 +39,7 @@ const Footer = () => {
             className="flex items-center col-span-2 space-x-2 animate-bounce w-fit group 2xl:text-body-1"
           >
             <HiArrowNarrowUp />
-            Back
+            Back To Top
           </button>
         )}
       </div>
