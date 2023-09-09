@@ -47,7 +47,7 @@ const Preloader = () => {
 
   return (
     <div id="preloader" className="preload">
-      <div className="loading-text">LOADING</div>
+      <div className="loading-text">THIENDUC.</div>
       <div className="pace">
         <div className="pace-progess"></div>
       </div>
