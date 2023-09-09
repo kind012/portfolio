@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { HiArrowNarrowUp } from "react-icons/hi";
 const Footer = () => {
-  const [backToTop, setBackToTop] = useState<boolean>(false);
+  const [backToTop, setBackToTop] = useState<boolean>(true);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.screenY > 100) {
-        setBackToTop(true);
-      } else {
         setBackToTop(false);
+      } else {
+        setBackToTop(true);
       }
     });
   }, []);
