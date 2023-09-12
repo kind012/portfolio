@@ -115,6 +115,17 @@ const Contact = () => {
                 <span className="absolute bottom-0 left-0 h-[0.12rem] w-0 rounded-full bg-black duration-300 ease-in-out group-hover:w-full"></span>
               </a>
             </div>
+            <div className="flex flex-col space-y-3 text-body-2 2xl:text-3xl">
+              <a
+                href="phoneto:0123456789"
+                className="relative cursor-pointer group w-fit"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="text font-ClashGrotesk">+84 123 456 789</span>
+                <span className="absolute bottom-0 left-0 h-[0.12rem] w-0 rounded-full bg-black duration-300 ease-in-out group-hover:w-full"></span>
+              </a>
+            </div>
           </div>
           <div className="space-y-3">
             <h4 className="font-semibold text-body-1 2xl:text-4xl">

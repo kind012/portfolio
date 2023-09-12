@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+
 const Intro = () => {
   const texts = [
     "Hey guy !",
@@ -22,7 +23,7 @@ const Intro = () => {
   return (
     <section
       id="intro"
-      className="relative flex flex-col justify-center select-none h-screen  md:mb-[195px] "
+      className="relative flex flex-col justify-center select-none h-screen md:mb-[195px]"
     >
       <div className="lg:pl-[180px] lg:py-[152px] sm:px-[40px]">
         <motion.p
@@ -43,7 +44,7 @@ const Intro = () => {
           }}
         >
           <motion.h1
-            className="overflow-visible text-transparent md:flex-1 font-outline-1 font-outline-2  text-[93px]"
+            className="overflow-visible text-transparent md:flex-1 font-outline-1 font-outline-2 text-[93px]"
             initial="hidden"
             animate="visible"
             variants={variants}
@@ -55,7 +56,7 @@ const Intro = () => {
             initial="hidden"
             animate="visible"
             variants={variants}
-            className="lg:text-[84px] md:text-[40px]"
+            className="lg:text-[84px] md:text-[40px] "
           >
             {texts[2]}
           </motion.p>

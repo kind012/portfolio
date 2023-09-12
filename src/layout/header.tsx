@@ -32,7 +32,7 @@ const Header = () => {
       <a href="#">
         <p className="font-bold md:text-lg sm:text-sm">thienduc.</p>
       </a>
-      <nav className="flex items-center md:gap-7 text-[17px]">
+      <nav className="flex items-center md:gap-7 text-[17px] font-ClashGrotesk">
         <a
           href="#about"
           data-section="about"
