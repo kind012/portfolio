@@ -70,46 +70,51 @@ body {
   .preload {
     width: 100vw;
     height: 100vh;
-    background-color: black;
-    position: fixed;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-  }
-  .loading-text {
-    letter-spacing: 30px;
-    color: #fff;
-    font-weight: 700;
+    color: #000000;
     position: relative;
-    top: -50px;
-    pointer-events: none;
-    user-select: none;
   }
-  .pace {
-    pointer-events: none;
-    user-select: none;
-    z-index: 2000;
-    position: fixed;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 400px;
-    border: 0;
-    height: 1px;
-    overflow: hidden;
-    background: #fff;
-  }
-  .pace .pace-progess {
-    max-width: 400px;
+  .follow {
     position: absolute;
-    z-index: 2000;
-    top: 0;
-    right: 100%;
+    background-color: #8c8c73;
+    height: 2px;
+    width: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .loading {
     height: 100%;
     width: 100%;
-    background: #fff;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+  }
+  .pace {
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    height: 2px;
+    width: 0;
+    transition: 0.4s ease-out;
+  }
+  .pace-progess {
+    position: absolute;
+    font-size: 130px;
+    color: #fff;
+    font-weight: 500;
+    transform: translateY(-15px);
+  }
+  .content {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    padding: auto;
+    z-index: 2;
   }
 }
 html.lenis {
