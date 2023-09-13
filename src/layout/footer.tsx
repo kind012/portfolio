@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { HiArrowNarrowUp } from "react-icons/hi";
+
 const Footer = () => {
   const [backToTop, setBackToTop] = useState<boolean>(true);
 
@@ -30,13 +31,13 @@ const Footer = () => {
         </div>
         <div>
           <span className="text-body-4 2xl:text-body-1 font-ClashGrotesk">
-            Code and designed by me 💖
+            Code and designed by me 🎨
           </span>
         </div>
         {backToTop && (
           <button
             onClick={scrollUp}
-            className="flex items-center col-span-2 space-x-2 animate-bounce w-fit group 2xl:text-body-1"
+            className="flex items-center col-span-2 space-x-2 hover:animate-bounce w-fit group 2xl:text-body-1"
           >
             <HiArrowNarrowUp />
             Back To Top

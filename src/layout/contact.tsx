@@ -33,10 +33,10 @@ const Contact = () => {
       <div className="md:grid md:grid-cols-6 flex flex-col md:px-12 gap-20 mt-[50px]">
         <div className="col-span-4 ">
           <h3 className="max-w-lg font-semibold leading-tight 2xl:max-w-3xl text-heading-3 2xl:text-7xl">
-            Have an something say?
+            That's enough of me,
           </h3>
           <p className="mt-3 max-w-md 2xl:max-w-2xl text-body-5 2xl:text-4xl mb-[50px] font-ClashGrotesk ">
-            Let's send message for me.
+            Let's talk about you.
           </p>
           <form onSubmit={sendEmail} ref={form}>
             <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2">
@@ -160,7 +160,7 @@ const Contact = () => {
                 </div>
               </a>
               <a
-                href="https://github.com/kind012"
+                href="https://www.facebook.com/tranthienduc1001"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center space-x-2 group "

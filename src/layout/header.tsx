@@ -60,7 +60,12 @@ const Header = () => {
           <span>contact</span>
           <span className="absolute bottom-0 left-0 h-[0.125rem] w-0 rounded-full bg-black duration-300 ease-in-out group-hover:w-full"></span>
         </a>
-        <a className="duration-200 border cursor-pointer button group hover:border-primary-600 hover:bg-transparent">
+        <a
+          className="duration-200 border cursor-pointer button group hover:border-primary-600 hover:bg-transparent"
+          href="https://www.facebook.com/tranthienduc1001"
+          target="_blank"
+          rel="noreferrer"
+        >
           <span className="group-hover:text-black">Let's Talk.</span>
         </a>
       </nav>
