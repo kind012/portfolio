@@ -32,7 +32,7 @@ const Intro = () => {
           animate="visible"
           variants={variants}
         >
-          <span className="inline-block animated animated2">{texts[0]}</span>
+          <span className="inline-block animated">{texts[0]}</span>
         </motion.p>
         <div
           className="font-bold sm:text-3xl lg:leading-[54px] sm:leading-[50px] md:max-w-5xl  sm:w-fit lg:max-w-6xl overflow-hidden py-6"

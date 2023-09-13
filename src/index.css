@@ -120,11 +120,9 @@ body {
     top: 50%;
     width: 150%;
     transform: translate(0, -50%);
-    animation: marquee 20s linear infinite;
+    animation: marquee 15s linear infinite;
   }
-  .animated2 {
-    animation-delay: 10s;
-  }
+
   @keyframes marquee {
     from {
       transform: translateX(0%);
