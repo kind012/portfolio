@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 const Intro = () => {
   const texts = [
-    "Hey guy !",
-    "I'M THIEN DUC",
-    "Front end developer.",
+    "TRAN THIEN DUC - UI/UX DESIGNER - FRONTEND DEVELOPER",
+    "Front end developer",
+    "Portfolio/23",
     "Web developer",
     "Web design",
     "Portfolio 2023",
@@ -27,15 +27,12 @@ const Intro = () => {
     >
       <div className="lg:pl-[180px] lg:py-[152px] sm:px-[40px]">
         <motion.p
-          className="font-medium text-xl text-[#909090] mb-[25px] w-[125px]  overflow-hidden font-ClashGrotesk"
+          className="font-normal text-base text-[#000000] mb-[45px] w-[250px]  overflow-hidden font-ClashGrotesk whitespace-nowrap border border-[#909090] rounded-full px-2 py-3 text-center "
           initial="hidden"
           animate="visible"
           variants={variants}
-          style={{
-            display: "flex",
-          }}
         >
-          {texts[0]}
+          <span className="inline-block animated animated2">{texts[0]}</span>
         </motion.p>
         <div
           className="font-bold sm:text-3xl lg:leading-[54px] sm:leading-[50px] md:max-w-5xl  sm:w-fit lg:max-w-6xl overflow-hidden py-6"
@@ -44,7 +41,7 @@ const Intro = () => {
           }}
         >
           <motion.h1
-            className="overflow-visible text-transparent md:flex-1 font-outline-1 font-outline-2 text-[93px]"
+            className="overflow-visible md:flex-1 text-[93px]"
             initial="hidden"
             animate="visible"
             variants={variants}

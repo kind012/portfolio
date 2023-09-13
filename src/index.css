@@ -116,6 +116,26 @@ body {
     padding: auto;
     z-index: 2;
   }
+  .animated {
+    top: 50%;
+    width: 150%;
+    transform: translate(0, -50%);
+    animation: marquee 20s linear infinite;
+  }
+  .animated2 {
+    animation-delay: 10s;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+    from {
+      transform: translateX(0%);
+    }
+  }
 }
 html.lenis {
   height: auto;
