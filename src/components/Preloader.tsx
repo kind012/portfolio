@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap, Expo, CSSPlugin } from "gsap";
+
 gsap.registerPlugin(CSSPlugin);
 
 const Preloader = () => {
@@ -7,10 +8,11 @@ const Preloader = () => {
 
   const counterRef = useRef<number>(0);
   counterRef.current = counter;
+
   useEffect(() => {
     const count = setInterval(() => {
       if (counterRef.current < 100) {
-        setCounter(counterRef.current + 1);
+        setCounter(counterRef?.current + 1);
         const t1 = gsap.timeline();
         t1.to(".follow", {
           width: "100%",
@@ -47,7 +49,10 @@ const Preloader = () => {
     <div className="preload">
       <div className="loading">
         <div className="follow"></div>
-        <div className="pace hide" style={{ width: counter + "%" }}></div>
+        <div
+          className="pace hide"
+          style={{ width: counterRef.current + "%" }}
+        ></div>
         <div className="pace-progess hide">{counter}%</div>
       </div>
       <div className="content"></div>
