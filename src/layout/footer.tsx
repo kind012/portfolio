@@ -37,10 +37,12 @@ const Footer = () => {
         {backToTop && (
           <button
             onClick={scrollUp}
-            className="flex items-center col-span-2 space-x-2 hover:animate-bounce w-fit group 2xl:text-body-1"
+            className="flex items-center col-span-2 space-x-2 w-fit group 2xl:text-body-1"
           >
-            <HiArrowNarrowUp />
             Back To Top
+            <span className="hover:animate-bounce">
+              <HiArrowNarrowUp size={25} />
+            </span>
           </button>
         )}
       </div>
