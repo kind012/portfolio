@@ -30,11 +30,11 @@ const Preloader = () => {
             height: "100%",
             duration: 0.7,
             delay: 0.5,
-            ease: Expo.easeOut,
+            ease: Expo.easeInOut,
           })
           .to(".content", {
             width: "100%",
-            ease: Expo.easeOut,
+            ease: Expo.easeInOut,
             duration: 0.7,
           });
       } else {
