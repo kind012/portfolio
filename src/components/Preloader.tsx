@@ -15,7 +15,7 @@ const Preloader = () => {
       } else {
         clearInterval(count);
       }
-    }, 25);
+    }, 27);
   }, []);
 
   const reveal = () => {
@@ -32,11 +32,11 @@ const Preloader = () => {
     })
       .to(".hide", {
         opacity: 0,
-        duration: 0.3,
+        duration: 0.4,
       })
       .to(".hide", {
         display: "none",
-        duration: 0.3,
+        duration: 0.4,
       })
       .to(".follow", {
         height: "100%",
