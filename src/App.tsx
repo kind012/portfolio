@@ -16,7 +16,7 @@ function App() {
   const finishedLoading = () => {
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 5500);
   };
 
   useEffect(() => {

@@ -11,45 +11,37 @@ const Preloader = () => {
     const count = setInterval(() => {
       if (counterRef.current < 100) {
         setCounter(counterRef.current + 1);
-        reveal();
+        const t1 = gsap.timeline();
+        t1.to(".follow", {
+          width: "100%",
+          ease: Expo.easeInOut,
+          duration: 1.2,
+          delay: 0.7,
+        })
+          .to(".hide", {
+            opacity: 0,
+            duration: 0.4,
+          })
+          .to(".hide", {
+            display: "none",
+            duration: 0.4,
+          })
+          .to(".follow", {
+            height: "100%",
+            duration: 0.7,
+            delay: 0.5,
+            ease: Expo.easeOut,
+          })
+          .to(".content", {
+            width: "100%",
+            ease: Expo.easeOut,
+            duration: 0.7,
+          });
       } else {
         clearInterval(count);
       }
-    }, 27);
+    }, 25);
   }, []);
-
-  const reveal = () => {
-    const t1 = gsap.timeline({
-      onComplete: () => {
-        console.log("completed");
-      },
-    });
-    t1.to(".follow", {
-      width: "100%",
-      ease: Expo.easeInOut,
-      duration: 1.2,
-      delay: 0.7,
-    })
-      .to(".hide", {
-        opacity: 0,
-        duration: 0.4,
-      })
-      .to(".hide", {
-        display: "none",
-        duration: 0.4,
-      })
-      .to(".follow", {
-        height: "100%",
-        duration: 0.7,
-        delay: 0.5,
-        ease: Expo.easeOut,
-      })
-      .to(".content", {
-        width: "100%",
-        ease: Expo.easeOut,
-        duration: 0.7,
-      });
-  };
 
   return (
     <div className="preload">
