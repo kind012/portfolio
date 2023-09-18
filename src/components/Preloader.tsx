@@ -22,11 +22,11 @@ const Preloader = () => {
         })
           .to(".hide", {
             opacity: 0,
-            duration: 0.3,
+            duration: 0.5,
           })
           .to(".hide", {
             display: "none",
-            duration: 0.3,
+            duration: 0.5,
           })
           .to(".follow", {
             height: "100%",

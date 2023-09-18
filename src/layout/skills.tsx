@@ -64,7 +64,7 @@ const Skills = () => {
                 become a professional front end developer.
               </p>
             </div>
-            <div className="w-full h-1 border-b-[#000000]  md:hidden"></div>
+            <div className="w-[60%] h-1 border-b-[#000000]  md:hidden border-b-2 pt-9"></div>
           </div>
         </motion.div>
         <motion.div
@@ -92,7 +92,7 @@ const Skills = () => {
                 become a professional front end developer.
               </p>
             </div>
-            <div className="w-0 h-1 bg-accent-100 md:hidden"></div>
+            <div className="w-[60%] h-1 border-b-[#000000]  md:hidden border-b-2 pt-9"></div>
           </div>
         </motion.div>
         <motion.div
@@ -122,7 +122,7 @@ const Skills = () => {
                 become a professional front end developer.
               </p>
             </div>
-            <div className="w-full h-1 border-b-[#000000]  md:hidden"></div>
+            <div className="w-[60%] h-1 border-b-[#000000]  md:hidden border-b-2 pt-9"></div>
           </div>
         </motion.div>
       </div>
