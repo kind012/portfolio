@@ -116,16 +116,6 @@ body {
     padding: auto;
     z-index: 2;
   }
-  .animated {
-    height: 100%;
-    animation: marquee 15s linear infinite running;
-  }
-
-  @keyframes marquee {
-    100% {
-      transform: translateX(-490px);
-    }
-  }
 }
 html.lenis {
   height: auto;
