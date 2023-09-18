@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -45,4 +44,5 @@ module.exports = {
       },
     },
   },
+  darkMode: "class",
 };
