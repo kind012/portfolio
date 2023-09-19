@@ -9,7 +9,8 @@ const Intro = () => {
   const texts = [
     "TRAN THIEN DUC - UI/UX DESIGNER - FRONTEND DEVELOPER -",
     "TRAN THIEN DUC - UI/UX DESIGNER - FRONTEND DEVELOPER -",
-    "Front end developer",
+    "Front End",
+    "Developer",
     "Portfolio/23.",
     "Web developer",
     "Web design",
@@ -45,43 +46,74 @@ const Intro = () => {
       id="intro"
       className="relative flex flex-col justify-center select-none h-screen md:mb-[195px]"
     >
-      <div className="lg:pl-[180px] lg:py-[152px] sm:px-[40px] pl-[25px]">
-        <motion.div
-          className="font-normal text-base text-[#000000] mb-[45px] w-[245px] overflow-hidden font-ClashGrotesk border border-[#909090] rounded-full px-2 py-3 text-center flex"
-          initial="hidden"
-          animate="visible"
-          variants={variants}
-        >
-          <div className="relative flex whitespace-nowrap">
-            <p ref={firstText}>{texts[0]}</p>
-            <p ref={secondText} className=" absoluteleft-full">
-              {texts[1]}
-            </p>
+      <div className="lg:px-[140px] lg:py-[152px] sm:px-[40px] pl-[25px] lg:w-full">
+        <div className="flex flex-col lg:flex-row lg:gap-[19rem] items-start lg:items-end overflow-hidden">
+          <div
+            className="font-semibold sm:text-3xl md:text lg:leading-[74px] leading-[50px] sm:w-fit lg:max-w-[678px] py-6 font-ClashGrotesk"
+            style={{
+              display: "block",
+            }}
+          >
+            <motion.h1
+              className="overflow-visible md:flex-1 lg:text-[71px] text-[63px]"
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+            >
+              {texts[2]}
+            </motion.h1>
+            <motion.h1
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+              className="lg:text-[71px] text-[40px]"
+            >
+              {texts[3]}
+            </motion.h1>
+            <motion.h1
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+              className="lg:text-[71px] text-[40px] decoration-black underline"
+            >
+              {texts[4]}
+            </motion.h1>
           </div>
-        </motion.div>
-        <div
-          className="font-bold sm:text-3xl md:text lg:leading-[54px] sm:leading-[50px] md:max-w-5xl  sm:w-fit lg:max-w-6xl overflow-hidden py-6"
-          style={{
-            display: "inline-block",
-          }}
-        >
-          <motion.h1
-            className="overflow-visible md:flex-1 lg:text-[93px]  text-[63px]"
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-          >
-            {texts[2]}
-          </motion.h1>
-          <br />
-          <motion.p
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-            className="lg:text-[84px] text-[40px] "
-          >
-            {texts[3]}
-          </motion.p>
+          <div className="flex flex-col gap-[32px] lg:max-w-[452px] ">
+            <motion.p
+              className="text-base lg:text-lg font-ClashGrotesk "
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+            >
+              I create{" "}
+              <span className="inline-block font-bold">user experiences</span>,
+              design beautiful websites for
+              <span className="inline-block font-bold"> businesses</span>, and
+              connect people through{" "}
+              <span className="inline-block font-bold">
+                design and development.
+              </span>
+            </motion.p>
+            <motion.div
+              className="font-normal text-base text-[#000000] mb-[45px] w-[245px] overflow-hidden font-ClashGrotesk border border-[#909090] rounded-full px-2 py-3 text-center flex"
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+            >
+              <motion.div
+                className="relative flex whitespace-nowrap font-ClashGrotesk"
+                initial="hidden"
+                animate="visible"
+                variants={variants}
+              >
+                <p ref={firstText}>{texts[0]}</p>
+                <p ref={secondText} className=" absoluteleft-full">
+                  {texts[1]}
+                </p>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
       <div
@@ -92,13 +124,13 @@ const Intro = () => {
         }}
       >
         <motion.p initial="hidden" animate="visible" variants={variants}>
-          {texts[4]}
-        </motion.p>
-        <motion.p initial="hidden" animate="visible" variants={variants}>
           {texts[5]}
         </motion.p>
         <motion.p initial="hidden" animate="visible" variants={variants}>
           {texts[6]}
+        </motion.p>
+        <motion.p initial="hidden" animate="visible" variants={variants}>
+          {texts[7]}
         </motion.p>
       </div>
     </section>
