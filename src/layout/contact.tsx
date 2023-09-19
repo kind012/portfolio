@@ -45,7 +45,7 @@ const Contact = () => {
                   type="text"
                   name="to_name"
                   id="name"
-                  placeholder=" "
+                  placeholder=""
                   required
                   className="peer block w-full appearance-none border-0 border-b border-[#000000]  bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                 />
@@ -60,13 +60,13 @@ const Contact = () => {
                 <input
                   type="text"
                   name="from_name"
-                  id="name"
-                  placeholder=" "
+                  id="email"
+                  placeholder=""
                   required
                   className="peer block w-full appearance-none border-0 border-b border-[#000000]  bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                 />
                 <label
-                  htmlFor="name"
+                  htmlFor="email"
                   className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 2xl:text-body-2 text-secondary-400 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75"
                 >
                   Your email
@@ -75,7 +75,8 @@ const Contact = () => {
               <div className="relative z-0 sm:col-span-2">
                 <textarea
                   name="message"
-                  placeholder=" "
+                  id="message"
+                  placeholder=""
                   rows={5}
                   className="peer block w-full appearance-none border-0 border-b border-[#000000]  bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                   required

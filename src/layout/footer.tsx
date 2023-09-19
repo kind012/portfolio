@@ -22,8 +22,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="flex items-end justify-between px-5 py-4 mt-14 sm:flex text-body-4 md:text-body-3">
-      <div className="flex flex-col md:flex-row md:w-full flex-1 lg:w-[57.5vw] justify-between ">
+    <footer className="flex justify-between px-5 py-4 mt-14 sm:flex text-body-4 md:text-body-3">
+      <div className="flex flex-col lg:flex-row md:w-full flex-1 lg:w-[57.5vw] justify-between">
         <div className="flex space-x-1">
           <span>©</span>
           <span>2023</span>
