@@ -21,10 +21,12 @@ const About = () => {
                 coding and software related things to become front-end
                 developer. My favorite part of programming is the
                 problem-solving aspect. I love the feeling of finally figuring
-                out a solution to a problem. My core stack is React, Next.js,
-                Typescript. I also have a small passion for design. I am always
-                looking to learn new technologies. I am currently looking for a
-                full-time position as a front-end developer.👨‍💻
+                out a solution to a problem. My core stack is{" "}
+                <span className="underline">React, Next.js, Typescript.</span> I
+                also have a small passion for design. I am always looking to
+                learn new technologies. I am currently looking for a full-time
+                position as a{" "}
+                <span className="underline">front-end developer.👨‍💻</span>
                 <br />
                 <br />
                 When I'm not coding, I like listening to music and I enjoy it,

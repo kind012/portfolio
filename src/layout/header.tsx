@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed top-0 z-50 flex items-center justify-between w-full px-8 py-3 translate-y-0 bg-secondary-100 "
+      className="fixed top-0 z-50 flex items-center justify-between w-full px-8 py-3 translate-y-0 bg-secondary-100"
       initial="hidden"
       animate="visible"
       variants={varients}
@@ -43,6 +43,15 @@ const Header = () => {
           <span className="absolute bottom-0 left-0 h-[0.125rem] w-0 rounded-full bg-black duration-300 ease-in-out group-hover:w-full"></span>
         </a>
         <a
+          href="#skills"
+          data-section="skills"
+          className="relative hidden group md:inline-block"
+          onClick={handleClick}
+        >
+          <span>skills</span>
+          <span className="absolute bottom-0 left-0 h-[0.125rem] w-0 rounded-full bg-black duration-300 ease-in-out group-hover:w-full"></span>
+        </a>
+        <a
           href="#projects"
           data-section="projects"
           className="relative hidden group md:inline-block"
@@ -52,19 +61,9 @@ const Header = () => {
           <span className="absolute bottom-0 left-0 h-[0.125rem] w-0 rounded-full bg-black duration-300 ease-in-out group-hover:w-full"></span>
         </a>
         <a
+          className="duration-200 border button group hover:border-primary-600 hover:bg-transparent cursor-none"
           href="#contact"
           data-section="contact"
-          className="relative hidden group md:inline-block"
-          onClick={handleClick}
-        >
-          <span>contact</span>
-          <span className="absolute bottom-0 left-0 h-[0.125rem] w-0 rounded-full bg-black duration-300 ease-in-out group-hover:w-full"></span>
-        </a>
-        <a
-          className="duration-200 border cursor-pointer button group hover:border-primary-600 hover:bg-transparent"
-          href="https://www.facebook.com/tranthienduc1001"
-          target="_blank"
-          rel="noreferrer"
         >
           <span className="group-hover:text-black">Let's Talk.</span>
         </a>

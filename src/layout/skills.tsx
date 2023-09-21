@@ -34,7 +34,7 @@ const Skills = () => {
     },
   };
   return (
-    <section className="my-[10%] px-5 md:px-10 xl:px-20 2xl:px-28">
+    <section className="my-[10%] px-5 md:px-10 xl:px-20 2xl:px-28" id="skills">
       <SectionHeading>Skills</SectionHeading>
       <div className="space-y-14">
         <motion.div

@@ -32,8 +32,8 @@ function App() {
           <Header />
           <Intro />
           <About data-scroll="about" />
-          <Skills />
-          <Projects data-scroll="project" />
+          <Skills data-scroll="skills" />
+          <Projects />
           <Contact data-scroll="contact" />
           <Footer />
         </>

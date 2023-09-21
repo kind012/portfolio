@@ -40,7 +40,7 @@ const Footer = () => {
             className="flex items-center col-span-2 space-x-2 w-fit group 2xl:text-body-1"
           >
             Back To Top
-            <span className="hover:animate-bounce">
+            <span className="transition duration-300 ease-in-out hover:-translate-y-2">
               <HiArrowNarrowUp size={25} />
             </span>
           </button>
