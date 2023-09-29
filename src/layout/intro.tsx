@@ -1,7 +1,5 @@
-import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-
 const Intro = () => {
   const firstText = useRef<HTMLParagraphElement>(null);
   const secondText = useRef<HTMLParagraphElement>(null);
@@ -13,28 +11,12 @@ const Intro = () => {
     "TRAN THIEN DUC - UI/UX DESIGNER - FRONTEND DEVELOPER -",
     "FRONTEND",
     "DEVELOPER",
-    "PORTFOLIO/23",
+    "BASE IN VIETNAM",
     "INSTAGRAM",
-    "AVAILABLE FOR PERSON",
+    "AVAILABLE FOR FREELANCE",
     "WORK FROM SEP 28'",
   ];
 
-  const variants = {
-    hidden: {
-      y: "270%",
-      transition: { ease: [0.325, 0.04, 0.56, 0.96], duration: 0.95 },
-    },
-    visible: {
-      y: 0,
-      transition: {
-        ease: [0.475, 0.05, 0.57, 0.97],
-        duration: 0.8,
-        stagger: {
-          ammout: 0.4,
-        },
-      },
-    },
-  };
   useEffect(() => {
     requestAnimationFrame(animation);
   }, []);
@@ -49,68 +31,63 @@ const Intro = () => {
     requestAnimationFrame(animation);
   };
 
+  const initHero = () => {
+    gsap.set(".show-text", { y: "101%" });
+
+    gsap.timeline({ defaults: { ease: "expo.out" } }).to(
+      ".show-text",
+      {
+        duration: 1.75,
+        y: 0,
+        stagger: 0.055,
+      },
+      0
+    );
+  };
+  useEffect(() => {
+    initHero();
+  }, []);
+
   return (
     <section
       id="intro"
       className="relative flex flex-col justify-center select-none lg:mb-[107px]"
     >
       <div className="lg:px-[47px] lg:py-[152px] sm:px-[40px] pl-[25px] lg:h-screen ">
-        <div className="flex flex-col lg:flex-row lg:gap-[19rem] items-start lg:items-end overflow-hidden mb-[10.5rem]">
-          <div className="lg:leading-[129px] font-semibold sm:text-3xl md:text sm:w-fit lg:max-w-[678px] py-6 ">
-            <motion.h1
-              className="md:flex-1 lg:text-[160px] font-semibold text-[63px]"
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-            >
-              {texts[2]}
-            </motion.h1>
-            <motion.h1
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              className="lg:text-[160px] font-semibold text-[40px] lg:pl-[157px]"
-            >
-              {texts[3]}
-            </motion.h1>
-            <motion.span
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              className="lg:text-[24px] lg:w-[231px] lg:pl-[53rem] leading-[52px] font-medium text-[40px] block "
-            >
-              {texts[4]}
-            </motion.span>
+        <div className="flex flex-col lg:flex-row lg:gap-[19rem] items-start lg:items-end mb-[10.5rem]">
+          <div className="lg:leading-[129px] font-semibold sm:text-3xl md:text sm:w-fit py-6">
+            <div className="hidden-text show-text">
+              <h1 className="md:flex-1 lg:text-[160px] font-semibold text-[63px] show-text">
+                {texts[2]}
+              </h1>
+            </div>
+            <div className="hidden-text show-text">
+              <h1 className="lg:text-[160px] font-semibold text-[40px] lg:pl-[157px] show-text">
+                {texts[3]}
+              </h1>
+            </div>
+            <div className="hidden-text show-text">
+              <span className="lg:text-[24px] lg:w-full lg:pl-[53rem] leading-[52px] font-medium text-[40px] block show-text">
+                {texts[4]}
+              </span>
+            </div>
           </div>
         </div>
-        <div className="flex items-center justify-between gap-8 lg:flex-row">
-          <motion.div
-            className="font-normal text-base text-[#000000]  w-[245px] overflow-hidden font-ClashGrotesk flex"
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-          >
-            <motion.div
-              className="relative flex whitespace-nowrap font-ClashGrotesk"
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-            >
+        <div className="flex items-center justify-between gap-8 overflow-hidden lg:flex-row">
+          <div className="font-normal text-base text-[#000000]  w-[245px] show-text height-inherit overflow-hidden font-ClashGrotesk flex">
+            <div className="relative flex whitespace-nowrap font-ClashGrotesk show-text">
               <p ref={firstText}>{texts[0]}</p>
               <p ref={secondText} className="absolute left-full">
                 {texts[1]}
               </p>
-            </motion.div>
-          </motion.div>
-          <div>
-            <motion.a
+            </div>
+          </div>
+          <div className="show-text height-inherit">
+            <a
               href="https://www.instagram.com/tranthienducc/"
               target="_blank"
               rel="noreferrer"
-              className="text-[15px] font-medium flex items-center gap-1"
-              initial="hidden"
-              animate="visible"
-              variants={variants}
+              className="text-[15px] font-medium flex items-center gap-1 show-text "
             >
               {texts[5]}
               <span className="transition duration-300 ease-in-out hover:rotate-45">
@@ -128,25 +105,11 @@ const Intro = () => {
                   />
                 </svg>
               </span>
-            </motion.a>
+            </a>
           </div>
-          <div
-            className="px-6 font-medium font-ClashGrotesk"
-            style={{
-              overflow: "hidden",
-            }}
-          >
-            <motion.p initial="hidden" animate="visible" variants={variants}>
-              {texts[6]}
-            </motion.p>
-            <motion.p
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              className=""
-            >
-              {texts[7]}
-            </motion.p>
+          <div className="px-6 font-medium font-ClashGrotesk show-text height-inherit ">
+            <p className="show-text">{texts[6]}</p>
+            <p className="show-text">{texts[7]}</p>
           </div>
         </div>
       </div>

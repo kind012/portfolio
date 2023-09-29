@@ -13,7 +13,8 @@ const About = () => {
                 Who am I?
               </h3>
               <p className="translate-y-10 text-body-1 2xl:text-4xl font-ClashGrotesk">
-                I am an front end developer based and live in Can Tho, Viet Nam.
+                I'm Thien Duc, an front end developer based and live in Can Tho,
+                Viet Nam.
                 <br />
                 <br />
                 After graduating from High school, I decided to pursue my
