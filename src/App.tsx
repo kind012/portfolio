@@ -31,10 +31,10 @@ function App() {
           <Cursor />
           <Header />
           <Intro />
-          <About data-scroll="about" />
-          <Skills data-scroll="skills" />
+          <About />
+          <Skills />
           <Projects />
-          <Contact data-scroll="contact" />
+          <Contact />
           <Footer />
         </>
       )}

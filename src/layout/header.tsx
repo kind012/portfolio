@@ -1,14 +1,8 @@
-import { useLenis } from "@studio-freight/react-lenis";
 import { motion } from "framer-motion";
-const Header = () => {
-  const lenis = useLenis();
+import { links } from "../utils/data";
+import { AnimatedLink } from "../components/AnimatedLink";
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const sectionId = (e.target as HTMLAnchorElement).getAttribute(
-      "data-section"
-    );
-    lenis.scrollTo(sectionId);
-  };
+const Header = () => {
   const varients = {
     hidden: {
       y: -99,
@@ -30,36 +24,18 @@ const Header = () => {
       variants={varients}
     >
       <a href="#">
-        <p className="font-bold md:text-lg sm:text-sm">thienduc.</p>
+        <p className="font-bold md:text-lg sm:text-sm font-ClashGrotesk ">
+          thienduc.
+        </p>
       </a>
       <nav className="flex items-center md:gap-7 text-[17px] font-ClashGrotesk">
-        <a
-          href="#about"
-          data-section="about"
-          onClick={handleClick}
-          className="relative hidden group md:inline-block"
-        >
-          <span>about</span>
-          <span className="absolute bottom-0 left-0 h-[0.125rem] w-0 rounded-full bg-black duration-300 ease-in-out group-hover:w-full"></span>
-        </a>
-        <a
-          href="#skills"
-          data-section="skills"
-          className="relative hidden group md:inline-block"
-          onClick={handleClick}
-        >
-          <span>skills</span>
-          <span className="absolute bottom-0 left-0 h-[0.125rem] w-0 rounded-full bg-black duration-300 ease-in-out group-hover:w-full"></span>
-        </a>
-        <a
-          href="#projects"
-          data-section="projects"
-          className="relative hidden group md:inline-block"
-          onClick={handleClick}
-        >
-          <span>projects</span>
-          <span className="absolute bottom-0 left-0 h-[0.125rem] w-0 rounded-full bg-black duration-300 ease-in-out group-hover:w-full"></span>
-        </a>
+        {links.map((link, i) => {
+          return (
+            <div className="relative hidden group md:inline-block" key={i}>
+              <AnimatedLink title={link.title} href={link.href} />
+            </div>
+          );
+        })}
         <a
           className="duration-200 border button group hover:border-primary-600 hover:bg-transparent cursor-none"
           href="#contact"
