@@ -19,6 +19,7 @@ const Skills = () => {
       ctrls.start("hidden");
     }
   }, [ctrls, inView]);
+
   const characterAnimation = {
     hidden: {
       opacity: 0,
@@ -88,8 +89,8 @@ const Skills = () => {
                 Tools
               </h3>
               <p className="max-w-md translate-y-10 xl:max-w-2xl text-body-1 2xl:text-3xl font-ClashGrotesk">
-                These are the basic things a programmer needs to be able to
-                become a professional front end developer.
+                These are tools for design professionals, and places to store
+                your project code.
               </p>
             </div>
             <div className="w-[60%] h-1 border-b-[#000000]  md:hidden border-b-2 pt-9"></div>
@@ -118,8 +119,8 @@ const Skills = () => {
                 Libraries & Framwork
               </h3>
               <p className="max-w-md translate-y-10 xl:max-w-2xl text-body-1 2xl:text-3xl font-ClashGrotesk">
-                These are the basic things a programmer needs to be able to
-                become a professional front end developer.
+                Powerful frameworks make your website more professional, neat
+                and secure.
               </p>
             </div>
           </div>
