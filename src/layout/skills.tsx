@@ -1,7 +1,8 @@
-import SectionHeading from "../components/SectionHeading";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { characterAnimation } from "../utils/animations";
+import SectionHeading from "../components/SectionHeading";
 
 const Skills = () => {
   const ctrls = useAnimation();
@@ -20,26 +21,12 @@ const Skills = () => {
     }
   }, [ctrls, inView]);
 
-  const characterAnimation = {
-    hidden: {
-      opacity: 0,
-      y: `0.24em`,
-    },
-    visible: {
-      opacity: 1,
-      y: `0em`,
-      transition: {
-        duration: 1,
-        ease: [0.2, 0.65, 0.3, 0.9],
-      },
-    },
-  };
   return (
     <section className="my-[10%] px-5 md:px-10 xl:px-20 2xl:px-28" id="skills">
       <SectionHeading>Skills</SectionHeading>
       <div className="space-y-14">
         <motion.div
-          className="grid grid-cols-1 gap-5 mt-10 md:grid-cols-2 md:gap-24"
+          className="grid grid-cols-1 gap-5 mt-10 md:grid-cols-2 md:gap-24 overflow-hidden"
           ref={ref}
           initial="hidden"
           animate={ctrls}

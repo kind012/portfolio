@@ -1,21 +1,22 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+
+const texts = [
+  "TRAN THIEN DUC - UI/UX DESIGNER - FRONTEND DEVELOPER -",
+  "TRAN THIEN DUC - UI/UX DESIGNER - FRONTEND DEVELOPER -",
+  "FRONTEND",
+  "DEVELOPER",
+  "BASE IN VIETNAM",
+  "INSTAGRAM",
+  "AVAILABLE FOR FREELANCE",
+  "WORK FROM SEP 28'",
+];
+
 const Intro = () => {
   const firstText = useRef<HTMLParagraphElement>(null);
   const secondText = useRef<HTMLParagraphElement>(null);
   let xPercent = 0;
   const direction = -1;
-
-  const texts = [
-    "TRAN THIEN DUC - UI/UX DESIGNER - FRONTEND DEVELOPER -",
-    "TRAN THIEN DUC - UI/UX DESIGNER - FRONTEND DEVELOPER -",
-    "FRONTEND",
-    "DEVELOPER",
-    "BASE IN VIETNAM",
-    "INSTAGRAM",
-    "AVAILABLE FOR FREELANCE",
-    "WORK FROM SEP 28'",
-  ];
 
   useEffect(() => {
     requestAnimationFrame(animation);
