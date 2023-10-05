@@ -30,8 +30,8 @@ const Contact = () => {
   return (
     <section className="my-[10%] px-5 md:px-10 xl:px-20 2xl:px-28" id="contact">
       <SectionHeading>Contact</SectionHeading>
-      <div className="md:grid md:grid-cols-6 flex flex-col md:px-12 gap-20 mt-[50px]">
-        <div className="col-span-4 ">
+      <div className="md:grid md:grid-cols-6 flex flex-col lg:px-12 gap-20 mt-[50px]">
+        <div className="col-span-4">
           <h3 className="max-w-lg font-semibold leading-tight 2xl:max-w-3xl text-heading-3 2xl:text-7xl">
             That's enough of me,
           </h3>
@@ -90,11 +90,8 @@ const Contact = () => {
               </div>
             </div>
 
-            <button
-              type="submit"
-              className="mt-10 duration-200 border button group hover:border-primary-600 hover:bg-transparent"
-            >
-              <span className="group-hover:text-black">Send Message</span>
+            <button type="submit" className="mt-10 button">
+              <span className="text">Send Message</span>
             </button>
           </form>
         </div>

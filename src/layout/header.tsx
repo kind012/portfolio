@@ -18,13 +18,13 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed top-0 z-50 flex items-center justify-between w-full px-8 py-3 translate-y-0 bg-secondary-100"
+      className="fixed top-0 z-50 flex items-center justify-between w-full px-8 py-3 translate-y-0 bg-[#f7f7f2]"
       initial="hidden"
       animate="visible"
       variants={varients}
     >
       <a href="#">
-        <p className="font-bold md:text-lg sm:text-sm font-ClashGrotesk ">
+        <p className="font-semibold text-[#2E2E2E] md:text-lg sm:text-sm font-ClashGrotesk ">
           thienduc.
         </p>
       </a>
@@ -37,11 +37,11 @@ const Header = () => {
           );
         })}
         <a
-          className="duration-200 border button group hover:border-primary-600 hover:bg-transparent cursor-none"
+          className="button cursor-none"
           href="#contact"
           data-section="contact"
         >
-          <span className="group-hover:text-black">Let's Talk.</span>
+          <span className="text">Let's Talk.</span>
         </a>
       </nav>
     </motion.header>

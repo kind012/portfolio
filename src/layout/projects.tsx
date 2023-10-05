@@ -6,7 +6,7 @@ import project3 from "../assets/newproject3img.png";
 const Projects = () => {
   return (
     <section
-      className="my-[10%] px-5 md:px-10 xl:px-20 2xl:px-28"
+      className="my-[10%] px-5 md:px-10 xl:px-20 2xl:px-28 bg-black rounded-3xl"
       id="projects"
     >
       <SectionHeading>Projects</SectionHeading>
@@ -30,15 +30,15 @@ const Projects = () => {
             </a>
             <div className="mt-4">
               <div className="flex mb-3 space-x-1">
-                <p className="flex items-center justify-center px-4 py-1 text-black bg-transparent border rounded-full border-primary-600 text-body-4 2xl:text-3xl font-ClashGrotesk">
+                <p className="flex items-center justify-center px-4 py-1 text-[#8c8c73] bg-transparent border rounded-full border-primary-600 text-body-4 2xl:text-3xl font-ClashGrotesk ">
                   ReactJS * TailwindCSS * TypeScript
                 </p>
               </div>
               <div className="2xl:space-y-3">
-                <h3 className="font-medium text-black uppercase text-title 2xl:text-5xl">
+                <h3 className="font-medium text-white uppercase text-title 2xl:text-5xl ">
                   personal portfolio
                 </h3>
-                <p className="font-light text-black text-body-2 2xl:text-4xl font-ClashGrotesk">
+                <p className="font-light text-[#d9d9d9] text-body-2 2xl:text-4xl font-ClashGrotesk">
                   Frontend Development
                 </p>
               </div>
@@ -65,15 +65,15 @@ const Projects = () => {
               </a>
               <div className="mt-4">
                 <div className="flex mb-3 space-x-1">
-                  <p className="flex items-center justify-center px-4 py-1 text-black bg-transparent border rounded-full border-primary-600 text-body-4 2xl:text-3xl font-ClashGrotesk">
+                  <p className="flex items-center justify-center px-4 py-1 text-[#8c8c73]  bg-transparent border rounded-full border-primary-600 text-body-4 2xl:text-3xl font-ClashGrotesk">
                     ReactJS * TailwindCSS * Firebase
                   </p>
                 </div>
                 <div className="2xl:space-y-3">
-                  <h3 className="font-medium text-black uppercase text-title 2xl:text-5xl">
+                  <h3 className="font-medium text-white uppercase text-title 2xl:text-5xl">
                     blog
                   </h3>
-                  <p className="font-light text-black text-body-2 2xl:text-4xl font-ClashGrotesk">
+                  <p className="font-light text-[#d9d9d9] text-body-2 2xl:text-4xl font-ClashGrotesk">
                     Frontend Development
                   </p>
                 </div>
@@ -100,15 +100,15 @@ const Projects = () => {
             </a>
             <div className="mt-4">
               <div className="flex mb-3 space-x-1">
-                <p className="flex items-center justify-center px-4 py-1 text-black bg-transparent border rounded-full border-primary-600 text-body-4 2xl:text-3xl font-ClashGrotesk">
+                <p className="flex items-center justify-center px-4 py-1 text-[#8c8c73]  bg-transparent border rounded-full border-primary-600 text-body-4 2xl:text-3xl font-ClashGrotesk">
                   NextJS * TailwindCSS * TypeScript * MongoDB
                 </p>
               </div>
               <div className="2xl:space-y-3">
-                <h3 className="font-medium text-black uppercase text-title 2xl:text-5xl">
+                <h3 className="font-medium text-white uppercase text-title 2xl:text-5xl">
                   Todo App
                 </h3>
-                <p className="font-light text-black text-body-2 2xl:text-4xl font-ClashGrotesk">
+                <p className="font-light text-[#d9d9d9] text-body-2 2xl:text-4xl font-ClashGrotesk">
                   Frontend Development
                 </p>
               </div>
