@@ -1,62 +1,93 @@
-import { useEffect, useRef, useState } from "react";
-import { gsap, Expo, CSSPlugin } from "gsap";
+import { motion } from "framer-motion";
+import { slideUp, opacity } from "../utils/animations";
+import { useEffect, useState } from "react";
 
-gsap.registerPlugin(CSSPlugin);
+type Dimension = {
+  width: number;
+  height: number;
+};
+
+const words = [
+  "HALO",
+  "XINCHAO",
+  "IM",
+  "FRONTEND",
+  "DEVELOPER",
+  "UI",
+  "UX",
+  "DESIGN",
+];
 
 const Preloader = () => {
-  const [counter, setCounter] = useState<number>(0);
-
-  const counterRef = useRef<number>(0);
-  counterRef.current = counter;
+  const [index, setIndex] = useState<number>(0);
+  const [dimension, setDimension] = useState<Dimension>({
+    width: 0,
+    height: 0,
+  });
 
   useEffect(() => {
-    const count = setInterval(() => {
-      if (counterRef.current < 100) {
-        setCounter(counterRef?.current + 1);
-        const t1 = gsap.timeline();
-        t1.to(".follow", {
-          width: "100%",
-          ease: Expo.easeInOut,
-          duration: 1.2,
-          delay: 0.7,
-        })
-          .to(".hide", {
-            opacity: 0,
-            duration: 0.5,
-          })
-          .to(".hide", {
-            display: "none",
-            duration: 0.5,
-          })
-          .to(".follow", {
-            height: "100%",
-            duration: 0.7,
-            delay: 0.5,
-            ease: Expo.easeOut,
-          })
-          .to(".content", {
-            width: "100%",
-            ease: Expo.easeOut,
-            duration: 0.7,
-          });
-      } else {
-        clearInterval(count);
-      }
-    }, 25);
+    setDimension({ width: window.innerWidth, height: window.innerHeight });
   }, []);
 
+  useEffect(() => {
+    if (index == words.length - 1) return;
+    setTimeout(
+      () => {
+        setIndex(index + 1);
+      },
+      index == 0 ? 950 : 150
+    );
+  }, [index]);
+
+  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
+    dimension.height
+  } Q${dimension.width / 2} ${dimension.height + 300} 0 ${
+    dimension.height
+  }  L0 0`;
+  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
+    dimension.height
+  } Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;
+
+  const curve = {
+    initial: {
+      d: initialPath,
+      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] },
+    },
+    exit: {
+      d: targetPath,
+      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
+    },
+  };
+
   return (
-    <div className="preload">
-      <div className="loading">
-        <div className="follow"></div>
-        <div
-          className="pace hide"
-          style={{ width: counterRef.current + "%" }}
-        ></div>
-        <div className="pace-progess hide">{counter}%</div>
-      </div>
-      <div className="content"></div>
-    </div>
+    <motion.div
+      variants={slideUp}
+      initial="initial"
+      exit="exit"
+      className="h-screen w-[100vw] bg-[#141516] fixed top-0 left-0 z-[9999] text-white flex items-center justify-center"
+    >
+      {dimension.width > 0 && (
+        <>
+          <motion.p
+            variants={opacity}
+            initial="initial"
+            animate="enter"
+            className="text-[42px] z-[999]"
+          >
+            <span></span>
+            {words[index]}
+          </motion.p>
+          <svg className="svg-style">
+            <motion.path
+              variants={curve}
+              initial="initial"
+              exit="exit"
+              className="fill-[#141516]"
+            ></motion.path>
+          </svg>
+        </>
+      )}
+    </motion.div>
   );
 };
 

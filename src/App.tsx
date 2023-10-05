@@ -9,6 +9,7 @@ import Cursor from "./components/customCursor/Cursor";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { useEffect, useState } from "react";
 import Preloader from "./components/Preloader";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const [isLoading, setLoading] = useState<boolean>(true);
@@ -16,7 +17,7 @@ function App() {
   const finishedLoading = () => {
     setTimeout(() => {
       setLoading(false);
-    }, 5500);
+    }, 3500);
   };
 
   useEffect(() => {
@@ -25,7 +26,9 @@ function App() {
 
   return (
     <ReactLenis root>
-      {isLoading && <Preloader />}
+      <AnimatePresence mode="wait">
+        {isLoading && <Preloader />}
+      </AnimatePresence>
       {!isLoading && (
         <>
           <Cursor />
