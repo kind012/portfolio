@@ -3,16 +3,20 @@ import SectionHeading from "../components/SectionHeading";
 
 const About = () => {
   return (
-    <section id="about" className="px-5 md:px-10 xl:px-20 2xl:px-28">
+    // #background-color: #dadad3
+    <section
+      id="about"
+      className="px-5 bg-black rounded-3xl md:px-10 xl:px-20 2xl:px-28"
+    >
       <div className="select-none section-heading">
         <SectionHeading>about me</SectionHeading>
         <div className="flex flex-col items-start gap-8 mt-10 md:flex-row lg:gap-10">
           <div className="top-20 sm:sticky md:top-28 lg:top-32">
             <div className="w-full space-y-4 2xl:space-y-10">
-              <h3 className="font-semibold leading-tight translate-y-10 text-heading-3 2xl:text-7xl ">
+              <h3 className="font-semibold leading-tight text-white translate-y-10 text-heading-3 2xl:text-7xl ">
                 Who am I?
               </h3>
-              <p className="translate-y-10 text-body-1 2xl:text-4xl font-ClashGrotesk">
+              <p className="translate-y-10 text-body-1 2xl:text-4xl font-ClashGrotesk text-[#d1d1c7]">
                 I'm Thien Duc, an front end developer based and live in Can Tho,
                 Viet Nam.
                 <br />

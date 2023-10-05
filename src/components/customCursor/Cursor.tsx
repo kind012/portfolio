@@ -47,7 +47,7 @@ const Cursor = () => {
           xmlns="http://www.w3.org/2000/svg"
           width="7"
           height="7"
-          fill="#ffffff"
+          fill="#000000"
           className="bi bi-arrow-up-right"
           viewBox="0 0 16 16"
         >
