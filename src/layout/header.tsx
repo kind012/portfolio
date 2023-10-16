@@ -1,30 +1,18 @@
 import { motion } from "framer-motion";
-import { links } from "../utils/data";
+import { links } from "../libs/data";
 import { AnimatedLink } from "../components/AnimatedLink";
+import { varients } from "../libs/animations";
 
 const Header = () => {
-  const varients = {
-    hidden: {
-      y: -99,
-      transition: { ease: [0.325, 0.04, 0.56, 0.96], duration: 0.95 },
-      opacity: 0,
-    },
-    visible: {
-      y: 0,
-      transition: { ease: [0.475, 0.05, 0.57, 0.97], duration: 0.85 },
-      opacity: 1,
-    },
-  };
-
   return (
     <motion.header
-      className="fixed top-0 z-50 flex items-center justify-between w-full px-8 py-3 translate-y-0 bg-[#f7f7f2]"
+      className="fixed top-0 flex items-center justify-between w-full px-8 py-6 translate-y-0 mix-blend-difference z-[999] text-[#eff0df]"
       initial="hidden"
       animate="visible"
       variants={varients}
     >
       <a href="#">
-        <p className="font-semibold text-[#2E2E2E] md:text-lg sm:text-sm font-ClashGrotesk ">
+        <p className="font-semibold md:text-lg sm:text-sm font-ClashGrotesk">
           thienduc.
         </p>
       </a>
@@ -36,13 +24,6 @@ const Header = () => {
             </div>
           );
         })}
-        <a
-          className="button cursor-none"
-          href="#contact"
-          data-section="contact"
-        >
-          <span className="text">Let's Talk.</span>
-        </a>
       </nav>
     </motion.header>
   );

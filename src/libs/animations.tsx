@@ -59,15 +59,28 @@ export const opacity = {
 
 export const characterAnimation = {
   hidden: {
-    y: `-10%`,
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.1,
+      stagger: 0.055,
+    },
+  },
+};
+
+export const varients = {
+  hidden: {
+    y: -99,
+    transition: { ease: [0.325, 0.04, 0.56, 0.96], duration: 0.95 },
     opacity: 0,
   },
   visible: {
     y: 0,
+    transition: { ease: [0.475, 0.05, 0.57, 0.97], duration: 0.85 },
     opacity: 1,
-    transition: {
-      duration: 1.75,
-      stagger: 0.055,
-    },
   },
 };

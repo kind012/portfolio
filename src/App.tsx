@@ -3,7 +3,7 @@ import Header from "./layout/header";
 import Intro from "./layout/intro";
 import Projects from "./layout/projects";
 import Contact from "./layout/contact";
-import Skills from "./layout/skills";
+import Service from "./layout/service";
 import Footer from "./layout/footer";
 import Cursor from "./components/customCursor/Cursor";
 import { ReactLenis } from "@studio-freight/react-lenis";
@@ -35,7 +35,7 @@ function App() {
           <Header />
           <Intro />
           <About />
-          <Skills />
+          <Service />
           <Projects />
           <Contact />
           <Footer />

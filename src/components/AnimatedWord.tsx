@@ -1,12 +1,12 @@
 import { Variants } from "framer-motion";
 import { motion } from "framer-motion";
-import { titleAnimated } from "../utils/animations";
+import { titleAnimated } from "../libs/animations";
 
 interface AnimatedWordProps {
   title: string;
   animation: Variants;
   isHovered: boolean;
-  href: string;
+  href?: string;
 }
 const AnimatedWord = ({
   title,
@@ -22,12 +22,12 @@ const AnimatedWord = ({
       initial="rest"
       animate={isHovered ? "hover" : "rest"}
     >
-      {title.split("").map((character, i) =>
+      {title?.split("").map((character, i) =>
         character === " " ? (
           <span key={i}>&nbsp;</span>
         ) : (
           <motion.span
-            className="relative inline-block whitespace-nowrap"
+            className="relative inline-block whitespace-nowrap text-[#eff0df]"
             key={i}
             variants={animation}
           >

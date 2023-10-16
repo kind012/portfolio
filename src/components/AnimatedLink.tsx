@@ -1,11 +1,11 @@
 import { useState } from "react";
 import AnimatedWord from "./AnimatedWord";
 import { motion } from "framer-motion";
-import { letterAnimated, letterAnimatedTwo } from "../utils/animations";
+import { letterAnimated, letterAnimatedTwo } from "../libs/animations";
 
 interface AnimatedLinkProps {
   title: string;
-  href: string;
+  href?: string;
 }
 
 export const AnimatedLink = ({ title, href }: AnimatedLinkProps) => {

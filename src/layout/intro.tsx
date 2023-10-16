@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { AnimatedLink } from "../components/AnimatedLink";
 
 const texts = [
   "TRAN THIEN DUC - UI/UX DESIGNER - FRONTEND DEVELOPER -",
@@ -7,9 +8,6 @@ const texts = [
   "FRONTEND",
   "DEVELOPER",
   "BASE IN VIETNAM",
-  "INSTAGRAM",
-  "AVAILABLE FOR FREELANCE",
-  "WORK FROM SEP 28'",
 ];
 
 const Intro = () => {
@@ -56,27 +54,27 @@ const Intro = () => {
     >
       <div className="lg:px-[47px] lg:py-[152px] sm:px-[40px] pl-[25px] lg:h-screen ">
         <div className="flex flex-col lg:flex-row lg:gap-[19rem] items-start lg:items-end mb-[10.5rem]">
-          <div className="lg:leading-[129px] font-semibold sm:text-3xl md:text sm:w-fit py-6">
+          <div className="lg:leading-[129px] font-bold sm:text-3xl md:text sm:w-fit py-6">
             <div className="hidden-text show-text">
-              <h1 className="md:flex-1 lg:text-[160px] font-semibold text-[63px] show-text">
+              <h1 className="md:flex-1 lg:text-[160px] font-semibold text-[63px] show-text font-ClashGrotesk text-[#eff0df]">
                 {texts[2]}
               </h1>
             </div>
             <div className="hidden-text show-text">
-              <h1 className="lg:text-[160px] font-semibold text-[40px] lg:pl-[157px] show-text">
+              <h1 className="lg:text-[160px] font-semibold text-[40px] lg:pl-[157px] show-text font-ClashGrotesk text-[#eff0df]">
                 {texts[3]}
               </h1>
             </div>
             <div className="hidden-text show-text">
-              <span className="lg:text-[24px] lg:w-full lg:pl-[53rem] leading-[52px] font-medium text-[40px] block show-text">
+              <p className="lg:text-[24px] lg:w-full lg:pl-[53rem] leading-[52px] font-medium text-[40px] show-text font-ClashGrotesk text-[#eff0df]">
                 {texts[4]}
-              </span>
+              </p>
             </div>
           </div>
         </div>
         <div className="flex items-center justify-between gap-8 overflow-hidden lg:flex-row">
           <div className="font-normal text-base text-[#000000]  w-[245px] show-text height-inherit overflow-hidden font-ClashGrotesk flex">
-            <div className="relative flex whitespace-nowrap font-ClashGrotesk show-text">
+            <div className="relative flex whitespace-nowrap font-ClashGrotesk show-text text-stone-300">
               <p ref={firstText}>{texts[0]}</p>
               <p ref={secondText} className="absolute left-full">
                 {texts[1]}
@@ -84,13 +82,11 @@ const Intro = () => {
             </div>
           </div>
           <div className="show-text height-inherit">
-            <a
-              href="https://www.instagram.com/tranthienducc/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-[15px] font-medium flex items-center gap-1 show-text "
-            >
-              {texts[5]}
+            <div className="text-[15px] font-medium flex items-center gap-1 show-text">
+              <AnimatedLink
+                title="INSTAGRAM"
+                href="https://www.instagram.com/tranthienducc/"
+              />
               <span className="transition duration-300 ease-in-out hover:rotate-45">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -106,11 +102,16 @@ const Intro = () => {
                   />
                 </svg>
               </span>
-            </a>
+            </div>
           </div>
           <div className="px-6 font-medium font-ClashGrotesk show-text height-inherit ">
-            <p className="show-text">{texts[6]}</p>
-            <p className="show-text">{texts[7]}</p>
+            <div className="flex flex-row items-center gap-2 show-text">
+              <div className="w-[.75rem] h-[.75rem] bg-[#27c927] rounded-[50%] animate-pulse"></div>
+              <AnimatedLink title="AVAILABLE OCTOBER 2023" />
+            </div>
+            <div className="show-text">
+              <AnimatedLink title="WORK FROM SEP 28'" />
+            </div>
           </div>
         </div>
       </div>

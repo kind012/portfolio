@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { slideUp, opacity } from "../utils/animations";
+import { slideUp, opacity } from "../libs/animations";
 import { useEffect, useState } from "react";
 
 type Dimension = {
@@ -64,7 +64,7 @@ const Preloader = () => {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="h-screen w-[100vw] bg-[#141516] fixed top-0 left-0 z-[9999] text-white flex items-center justify-center"
+      className="h-screen w-[100vw] bg-[#effodf] fixed top-0 left-0 z-[9999] text-black flex items-center justify-center"
     >
       {dimension.width > 0 && (
         <>
@@ -72,7 +72,7 @@ const Preloader = () => {
             variants={opacity}
             initial="initial"
             animate="enter"
-            className="text-[42px] z-[999]"
+            className="text-[42px] z-[999] font-semibold"
           >
             <span></span>
             {words[index]}
@@ -82,7 +82,7 @@ const Preloader = () => {
               variants={curve}
               initial="initial"
               exit="exit"
-              className="fill-[#141516]"
+              className="fill-[#e2e2e2]"
             ></motion.path>
           </svg>
         </>

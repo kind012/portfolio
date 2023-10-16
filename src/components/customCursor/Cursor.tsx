@@ -5,9 +5,12 @@ const Cursor = () => {
   useEffect(() => {
     const cursor = document.getElementById("custom-cursor");
     const images = document.querySelectorAll("img");
+    const h1s = document.querySelectorAll("h1");
+
     const cursorText = document.querySelector(
       ".cursor-text"
     ) as HTMLOrSVGImageElement;
+    const h1Text = document.querySelector(".text-h1") as HTMLParagraphElement;
 
     const onMouseMove: EventListener = (e) => {
       const event = e as MouseEvent;
@@ -15,6 +18,23 @@ const Cursor = () => {
       const { clientX, clientY } = event;
 
       gsap.to(cursor, { x: clientX, y: clientY });
+    };
+
+    const onMouseMoveText: EventListener = (e) => {
+      const event = e as MouseEvent;
+      const text = event.target as HTMLElement;
+
+      if (text.classList.contains("view")) {
+        gsap.to(cursor, { scale: 5 });
+        h1Text.style.display = "block";
+      } else {
+        gsap.to(cursor, { scale: 4 });
+      }
+    };
+
+    const onMouseLeaveText = () => {
+      gsap.to(cursor, { scale: 1 });
+      h1Text.style.display = "none";
     };
 
     const onMouseMoveImage: EventListener = (e) => {
@@ -28,14 +48,21 @@ const Cursor = () => {
         gsap.to(cursor, { scale: 4 });
       }
     };
+
     const onMouseLeaveImage = () => {
       gsap.to(cursor, { scale: 1 });
       cursorText.style.display = "none";
     };
+
     document.addEventListener("mousemove", onMouseMove);
     images.forEach((image) => {
       image.addEventListener("mousemove", onMouseMoveImage);
       image.addEventListener("mouseleave", onMouseLeaveImage);
+    });
+
+    h1s.forEach((texth1) => {
+      texth1.addEventListener("mousemove", onMouseMoveText);
+      texth1.addEventListener("mouseleave", onMouseLeaveText);
     });
   }, []);
 
@@ -57,6 +84,7 @@ const Cursor = () => {
           />
         </svg>
       </span>
+      <span className="text-h1"></span>
     </div>
   );
 };
