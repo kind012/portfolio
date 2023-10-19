@@ -1,5 +1,4 @@
-import { BsFacebook } from "react-icons/bs";
-import { FiGithub } from "react-icons/fi";
+import { Github, Facebook } from "lucide-react";
 import FormInput from "../components/FormInput";
 import SectionHeading from "../components/SectionHeading";
 
@@ -60,7 +59,7 @@ const Contact = () => {
                 rel="noreferrer"
                 className="flex items-center space-x-2 group "
               >
-                <FiGithub />
+                <Github color="#ffffff" />
                 <div className="relative">
                   <span className="font-ClashGrotesk text-stone-400">
                     Github
@@ -74,7 +73,7 @@ const Contact = () => {
                 rel="noreferrer"
                 className="flex items-center space-x-2 group "
               >
-                <BsFacebook />
+                <Facebook color="#ededed" strokeWidth={0.75} />
                 <div className="relative">
                   <span className="font-ClashGrotesk text-stone-400">
                     Facebook

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { AnimatedLink } from "../components/AnimatedLink";
+import { MoveUpRight } from "lucide-react";
 
 const texts = [
   "TRAN THIEN DUC - UI/UX DESIGNER - FRONTEND DEVELOPER -",
@@ -52,28 +53,28 @@ const Intro = () => {
       id="intro"
       className="relative flex flex-col justify-center select-none lg:mb-[107px]"
     >
-      <div className="lg:px-[47px] lg:py-[152px] sm:px-[40px] pl-[25px] lg:h-screen ">
-        <div className="flex flex-col lg:flex-row lg:gap-[19rem] items-start lg:items-end mb-[10.5rem]">
-          <div className="lg:leading-[129px] font-bold sm:text-3xl md:text sm:w-fit py-6">
+      <div className="lg:px-[47px] lg:py-[152px] sm:px-[40px] pl-[25px] lg:h-screen py-[50px]">
+        <div className="flex flex-col lg:flex-row lg:gap-[19rem] items-start lg:items-end mb-[3rem] lg:mb-[10.5rem]">
+          <div className="lg:leading-[129px] font-bold sm:text-3xl md:text sm:w-fit py-20 lg:py-6">
             <div className="hidden-text show-text">
-              <h1 className="md:flex-1 lg:text-[160px] font-semibold text-[63px] show-text font-ClashGrotesk text-[#eff0df]">
+              <h1 className="md:flex-1 lg:text-[160px] font-semibold text-[53px] show-text font-ClashGrotesk text-[#eff0df]">
                 {texts[2]}
               </h1>
             </div>
             <div className="hidden-text show-text">
-              <h1 className="lg:text-[160px] font-semibold text-[40px] lg:pl-[157px] show-text font-ClashGrotesk text-[#eff0df]">
+              <h1 className="lg:text-[160px] font-semibold text-[53px] lg:pl-[157px] show-text font-ClashGrotesk text-[#eff0df]">
                 {texts[3]}
               </h1>
             </div>
             <div className="hidden-text show-text">
-              <p className="lg:text-[24px] lg:w-full lg:pl-[53rem] leading-[52px] font-medium text-[40px] show-text font-ClashGrotesk text-[#eff0df]">
+              <p className="lg:text-[24px] lg:w-full lg:pl-[53rem] leading-[52px] font-medium text-[20px] show-text font-ClashGrotesk text-[#eff0df]">
                 {texts[4]}
               </p>
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between gap-8 overflow-hidden lg:flex-row">
-          <div className="font-normal text-base text-[#000000]  w-[245px] show-text height-inherit overflow-hidden font-ClashGrotesk flex">
+        <div className="flex flex-row items-center justify-between gap-4 overflow-hidden lg:gap-8">
+          <div className="font-normal text-base text-[#000000] w-[70px]  lg:w-[245px] show-text height-inherit overflow-hidden flex">
             <div className="relative flex whitespace-nowrap font-ClashGrotesk show-text text-stone-300">
               <p ref={firstText}>{texts[0]}</p>
               <p ref={secondText} className="absolute left-full">
@@ -82,29 +83,17 @@ const Intro = () => {
             </div>
           </div>
           <div className="show-text height-inherit">
-            <div className="text-[15px] font-medium flex items-center gap-1 show-text">
+            <div className="text-xs lg:text-[15px] font-medium flex items-center gap-1 show-text">
               <AnimatedLink
                 title="INSTAGRAM"
                 href="https://www.instagram.com/tranthienducc/"
               />
               <span className="transition duration-300 ease-in-out hover:rotate-45">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  className="bi bi-arrow-up-right"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
-                  />
-                </svg>
+                <MoveUpRight color="#ffffff" size={17} />
               </span>
             </div>
           </div>
-          <div className="px-6 font-medium font-ClashGrotesk show-text height-inherit ">
+          <div className="px-3 font-medium lg:px-6 font-ClashGrotesk show-text height-inherit  lg:text-[16px] text-xs ">
             <div className="flex flex-row items-center gap-2 show-text">
               <div className="w-[.75rem] h-[.75rem] bg-[#27c927] rounded-[50%] animate-pulse"></div>
               <AnimatedLink title="AVAILABLE OCTOBER 2023" />

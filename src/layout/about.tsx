@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="px-5 bg-[#e2e2e2] rounded-3xl md:px-10 xl:px-20 2xl:px-28"
+      className="px-5 bg-[#c9c9c9] rounded-3xl md:px-10 xl:px-20 2xl:px-28"
     >
       <div className="select-none section-heading">
         <SectionHeadingBeige>about me</SectionHeadingBeige>
@@ -15,12 +15,12 @@ const About = () => {
               <h3 className="font-semibold leading-tight text-black translate-y-10 text-heading-3 2xl:text-7xl ">
                 Who am I?
               </h3>
-              <p className="relative translate-y-10 text-body-1 2xl:text-4xl font-ClashGrotesk text-stone-700">
+              <p className="relative translate-y-7 lg:translate-y-10 text-body-1 2xl:text-4xl font-ClashGrotesk text-stone-700 lg:mb-0">
                 👋 Hi —{" "}
-                <span className="underline text-black relative show-gif">
+                <span className="relative text-black underline show-gif">
                   {" "}
                   I’m Thien Duc,
-                  <span className="w-[12rem] h-[12rem] hidden z-10 top-1/2 left-1/2 absolute pointer-events-none gif-image">
+                  <span className="w-[12rem] h-[12rem]  hidden z-10 top-1/2 left-1/2 absolute pointer-events-none gif-image">
                     <img
                       src="/src//assets//images//cat.gif"
                       alt="gifcat"
@@ -37,13 +37,13 @@ const About = () => {
                 developer. My favorite part of programming is the
                 problem-solving aspect. I create experience user interface
                 connect people together. My core stack is{" "}
-                <span className="underline text-black">
+                <span className="text-black underline">
                   React, Next.js, Typescript.
                 </span>{" "}
                 I also have a small passion for design. I am always looking to
                 learn new technologies. I am currently looking for a full-time
                 position as a{" "}
-                <span className="underline text-black">
+                <span className="text-black underline">
                   front-end developer.👨‍💻
                 </span>
                 <br />
@@ -53,7 +53,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="overflow-hidden rounded-md top-28 md:sticky">
+          <div className="mb-5 overflow-hidden rounded-md top-28 md:sticky lg:mb-6">
             <img
               src={workimage}
               alt="work"

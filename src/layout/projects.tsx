@@ -6,7 +6,7 @@ import SectionHeadingBeige from "../components/SectionHeadingBeige";
 const Projects = () => {
   return (
     <section
-      className="my-[10%] px-5 md:px-10 xl:px-20 2xl:px-28 bg-[#e2e2e2] rounded-3xl"
+      className="my-[10%] px-5 md:px-10 xl:px-20 2xl:px-28 bg-[#c9c9c9] rounded-3xl"
       id="projects"
     >
       <SectionHeadingBeige>Projects</SectionHeadingBeige>
@@ -16,7 +16,7 @@ const Projects = () => {
             <a
               href="abc"
               rel="noreferrer"
-              className="inline-block overflow-hidden duration-200 ease-linear group hover:rounded-3xl"
+              className="inline-block overflow-hidden duration-200 ease-linear group rounded-3xl"
               target="_blank"
             >
               <img
@@ -51,7 +51,7 @@ const Projects = () => {
               <a
                 href="https://blog-duc.netlify.app"
                 rel="noreferrer"
-                className="inline-block overflow-hidden duration-200 ease-linear group hover:rounded-3xl"
+                className="inline-block overflow-hidden duration-200 ease-linear group rounded-3xl"
                 target="_blank"
               >
                 <img
@@ -81,12 +81,12 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1 pt-0 md:col-span-5 ">
+        <div className="col-span-1 pt-0 md:col-span-5 lg:mb-6">
           <div>
             <a
               href="https://todoapp-duc-1yukcb7du-kind012.vercel.app/"
               rel="noreferrer"
-              className="inline-block overflow-hidden duration-200 ease-linear group hover:rounded-3xl"
+              className="inline-block overflow-hidden duration-200 ease-linear group rounded-3xl"
               target="_blank"
             >
               <img
