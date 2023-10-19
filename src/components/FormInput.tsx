@@ -80,7 +80,7 @@ const FormInput = () => {
       </div>
 
       <button type="submit" className="mt-10 button">
-        <span className="text">Send Message</span>
+        <span className="text">Let's Talk.</span>
       </button>
     </form>
   );

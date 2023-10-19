@@ -30,11 +30,11 @@ const SectionHeadingBeige = ({ children }: SectionHeadingProps) => {
       viewport={{ once: true, amount: 0.4 }}
       variants={cardVariants}
     >
-      <img src={ellipse} alt="eips" />
-      <h2 className="text-5xl font-medium uppercase w-fit sm:text-heading-2 text-black">
+      <img src={ellipse} alt="eips" className="hidden  lg:block" />
+      <h2 className="text-5xl font-medium text-black uppercase w-fit sm:text-heading-2">
         {children}
       </h2>
-      <img src={ellipse} alt="eips" />
+      <img src={ellipse} alt="eips" className="hidden  lg:block" />
     </motion.div>
   );
 };
