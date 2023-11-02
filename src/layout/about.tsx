@@ -1,18 +1,18 @@
-import workimage from "../assets/images/work-image.jpg";
 import SectionHeadingBeige from "../components/SectionHeadingBeige";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="px-5 bg-[#c9c9c9] rounded-3xl md:px-10 xl:px-20 2xl:px-28"
+      className="px-5 bg-[#f5f5ef] rounded-3xl md:px-10 xl:px-20 2xl:px-28 lg:mx-7 "
     >
       <div className="select-none section-heading">
         <SectionHeadingBeige>about me</SectionHeadingBeige>
         <div className="flex flex-col items-start gap-8 mt-10 md:flex-row lg:gap-10">
           <div className="top-20 sm:sticky md:top-28 lg:top-32">
             <div className="w-full space-y-4 2xl:space-y-10">
-              <h3 className="font-semibold leading-tight text-black translate-y-10 text-heading-3 2xl:text-7xl ">
+              <h3 className="font-semibold leading-tight text-black translate-y-10 text-heading-3 2xl:text-7xl bg-[#ebe7e7] rounded-lg px-3 py-2 w-full max-w-fit flex items-center gap-3">
+                <span className="w-[.75rem] h-[.75rem] bg-black rounded-[50%] block"></span>
                 Who am I?
               </h3>
               <p className="relative translate-y-7 lg:translate-y-10 text-body-1 2xl:text-4xl font-ClashGrotesk text-stone-700 lg:mb-0">
@@ -20,11 +20,11 @@ const About = () => {
                 <span className="relative text-black underline show-gif">
                   {" "}
                   I’m Thien Duc,
-                  <span className="w-[12rem] h-[12rem]  hidden z-10 top-1/2 left-1/2 absolute pointer-events-none gif-image">
+                  <span className="w-[8rem] h-28  hidden z-10 top-1/2 left-1/2 absolute pointer-events-none gif-image">
                     <img
-                      src="/src//assets//images//cat.gif"
+                      src="/cat.gif"
                       alt="gifcat"
-                      className="object-cover w-full h-full"
+                      className="object-cover w-full h-full rounded-xl"
                     />
                   </span>
                 </span>{" "}
@@ -37,7 +37,7 @@ const About = () => {
                 developer. My favorite part of programming is the
                 problem-solving aspect. I create experience user interface
                 connect people together. My core stack is{" "}
-                <span className="text-black underline">
+                <span className="text-black underline ">
                   React, Next.js, Typescript.
                 </span>{" "}
                 I also have a small passion for design. I am always looking to
@@ -55,7 +55,7 @@ const About = () => {
           </div>
           <div className="mb-5 overflow-hidden rounded-md top-28 md:sticky lg:mb-6">
             <img
-              src={workimage}
+              src="/me.jpg"
               alt="work"
               loading="lazy"
               className="object-cover object-center w-full h-auto rounded-md aspect-square md:aspect-auto"

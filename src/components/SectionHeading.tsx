@@ -1,4 +1,3 @@
-import ellipse from "../assets/elilipse.svg";
 import { Variants, motion } from "framer-motion";
 
 interface SectionHeadingProps {
@@ -30,11 +29,11 @@ const SectionHeading = ({ children }: SectionHeadingProps) => {
       viewport={{ once: true, amount: 0.4 }}
       variants={cardVariants}
     >
-      <img src={ellipse} alt="eips" className="hidden lg:block" />
+      <img src="/elilipse.svg" alt="eips" className="hidden lg:block" />
       <h2 className="text-5xl font-medium uppercase w-fit sm:text-heading-2 text-secondary-400">
         {children}
       </h2>
-      <img src={ellipse} alt="eips" className="hidden lg:block" />
+      <img src="/elilipse.svg" alt="eips" className="hidden lg:block" />
     </motion.div>
   );
 };
