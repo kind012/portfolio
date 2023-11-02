@@ -6,7 +6,7 @@ import { varients } from "../libs/animations";
 const Header = () => {
   return (
     <motion.header
-      className="fixed top-0 flex items-center justify-between w-full px-8 py-6 translate-y-0 mix-blend-difference z-[999] text-[#eff0df]"
+      className="fixed top-0 flex items-center justify-between w-full lg:w-full lg:px-12 px-6 py-6 translate-y-0 mix-blend-difference z-[999] text-[#eff0df]"
       initial="hidden"
       animate="visible"
       variants={varients}
@@ -25,6 +25,12 @@ const Header = () => {
           );
         })}
       </nav>
+      <a
+        href="#contact"
+        className="lg:hidden px-8 py-3 text-sm bg-white text-black rounded-full "
+      >
+        Let's talk.
+      </a>
     </motion.header>
   );
 };

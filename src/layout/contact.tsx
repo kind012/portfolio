@@ -1,6 +1,7 @@
 import { Github, Facebook } from "lucide-react";
 import FormInput from "../components/FormInput";
 import SectionHeading from "../components/SectionHeading";
+import { AnimatedLink } from "../components/AnimatedLink";
 
 const Contact = () => {
   return (
@@ -18,69 +19,33 @@ const Contact = () => {
         </div>
         <div className="grid grid-cols-1 col-span-2 gap-x-4 gap-y-8 text-accent-300 sm:grid-cols-2 sm:gap-y-0 md:grid-cols-1">
           <div className="space-y-3">
-            <h4 className="font-semibold text-body-1 2xl:text-4xl text-stone-300">
+            <h4 className="font-semibold text-body-1 2xl:text-4xl text-stone-400">
               My Contact
             </h4>
             <div className="flex flex-col space-y-3 text-body-2 2xl:text-3xl">
-              <a
-                href="mailto:hello@thienduc.xyz"
-                className="relative cursor-pointer group w-fit"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="text font-ClashGrotesk text-stone-400">
-                  hello@thienduc.xyz
-                </span>
-                <span className="absolute bottom-0 left-0 h-[0.12rem] w-0 rounded-full bg-stone-300 duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
+              <div className="relative cursor-pointer group w-fit text font-ClashGrotesk text-stone-400">
+                <AnimatedLink title="hello@thienduc.xyz" />
+              </div>
             </div>
             <div className="flex flex-col space-y-3 text-body-2 2xl:text-3xl">
-              <a
-                href="phoneto:0123456789"
-                className="relative cursor-pointer group w-fit"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="text font-ClashGrotesk text-stone-400">
-                  +84 123 456 789
-                </span>
-                <span className="absolute bottom-0 left-0 h-[0.12rem] w-0 rounded-full bg-stone-300 duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
+              <div className="relative cursor-pointer group w-fit text font-ClashGrotesk">
+                <AnimatedLink title="+84 123 456 789" />
+              </div>
             </div>
           </div>
           <div className="space-y-3">
-            <h4 className="font-semibold text-body-1 2xl:text-4xl text-stone-300">
+            <h4 className="font-semibold text-body-1 2xl:text-4xl text-stone-400">
               My Digital Spaces
             </h4>
             <div className="space-y-3 text-body-2 2xl:text-3xl">
-              <a
-                href="https://github.com/kind012"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center space-x-2 group "
-              >
+              <div className="flex items-center space-x-2 font-ClashGrotesk">
                 <Github color="#ffffff" />
-                <div className="relative">
-                  <span className="font-ClashGrotesk text-stone-400">
-                    Github
-                  </span>
-                  <span className="absolute bottom-0 left-0 h-[0.12rem] w-0 rounded-full bg-stone-300 duration-300 ease-in-out group-hover:w-full"></span>
-                </div>
-              </a>
-              <a
-                href="https://www.facebook.com/tranthienduc1001"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center space-x-2 group "
-              >
+                <AnimatedLink title="Github" />
+              </div>
+              <div className="flex items-center space-x-2 font-ClashGrotesk">
                 <Facebook color="#ededed" strokeWidth={0.75} />
-                <div className="relative">
-                  <span className="font-ClashGrotesk text-stone-400">
-                    Facebook
-                  </span>
-                  <span className="absolute bottom-0 left-0 h-[0.12rem] w-0 rounded-full bg-stone-300 duration-300 ease-in-out group-hover:w-full"></span>
-                </div>
-              </a>
+                <AnimatedLink title="Facebook" />
+              </div>
             </div>
           </div>
         </div>

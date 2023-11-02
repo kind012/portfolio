@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <footer className="flex items-end justify-between px-5 py-4 text-center lg:items-center mt-14 sm:flex md:text-body-3">
       <div className="flex flex-row md:w-full lg:w-[57.5vw] lg:justify-between">
-        <div className="flex space-x-1 text-stone-400">
+        <div className="flex space-x-1 text-stone-300">
           <span>©</span>
           <span>2023</span>
           <span className="font-extrabold 2xl:text-body-1">thienduc</span>
@@ -39,7 +39,7 @@ const Footer = () => {
       {backToTop && (
         <button
           onClick={scrollUp}
-          className="flex items-center col-span-2 space-x-2 w-fit group 2xl:text-body-1 text-stone-400"
+          className="flex items-center col-span-2 space-x-2 w-fit group 2xl:text-body-1 text-stone-300"
         >
           Back To Top
           <span className="transition duration-300 ease-in-out hover:-translate-y-2">

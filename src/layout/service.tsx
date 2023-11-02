@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { characterAnimation } from "../libs/animations";
 import SectionHeading from "../components/SectionHeading";
+import HoverText from "../components/HoverText";
 
 const Service = () => {
   const ctrls = useAnimation();
@@ -24,7 +25,7 @@ const Service = () => {
   return (
     <section className="my-[10%] px-5 md:px-10 xl:px-20 2xl:px-28" id="service">
       <SectionHeading>services</SectionHeading>
-      <div className="lg:space-y-14">
+      <div className="lg:space-y-14 ">
         <motion.div
           className="grid grid-cols-1 gap-5 mt-10 overflow-hidden md:grid-cols-2 md:gap-24"
           initial="hidden"
@@ -33,14 +34,16 @@ const Service = () => {
           ref={ref}
         >
           <div className="select-none leading-[2.3rem] text-stone-400 md:leading-[2.5rem] lg:leading-[3.4rem] ">
-            <p className="font-extrabold text-special 2xl:text-7xl">HTML</p>
-            <p className="font-extrabold text-special 2xl:text-7xl">CSS</p>
-            <p className="font-extrabold text-special 2xl:text-7xl">
-              JavaScript
-            </p>
-            <p className="font-extrabold text-special 2xl:text-7xl">
-              TypeScript
-            </p>
+            <HoverText>
+              <p className="font-extrabold text-special 2xl:text-7xl">HTML</p>
+              <p className="font-extrabold text-special 2xl:text-7xl">CSS</p>
+              <p className="font-extrabold text-special 2xl:text-7xl">
+                JavaScript
+              </p>
+              <p className="font-extrabold text-special 2xl:text-7xl">
+                TypeScript
+              </p>
+            </HoverText>
           </div>
           <div className="space-y-6">
             <div className="-space-y-6 2xl:space-y-10">
@@ -53,7 +56,7 @@ const Service = () => {
                 your business stand out on the digital stage.
               </p>
             </div>
-            <div className="w-[60%] h-1 border-b-white  md:hidden border-b-2 pt-9"></div>
+            <div className="w-[60%] h-1 border-b-white block  lg:hidden border-b-2 pt-9"></div>
           </div>
         </motion.div>
         <motion.div
@@ -64,12 +67,14 @@ const Service = () => {
           variants={characterAnimation}
         >
           <div className="select-none leading-[2.3rem] text-stone-400 md:leading-[2.5rem] lg:leading-[3.4rem]">
-            <p className="font-extrabold text-special 2xl:text-7xl">Github</p>
-            <p className="font-extrabold text-special 2xl:text-7xl">Git</p>
-            <p className="font-extrabold text-special 2xl:text-7xl">
-              Photoshop
-            </p>
-            <p className="font-extrabold text-special 2xl:text-7xl">Figma</p>
+            <HoverText>
+              <p className="font-extrabold text-special 2xl:text-7xl">Github</p>
+              <p className="font-extrabold text-special 2xl:text-7xl">Git</p>
+              <p className="font-extrabold text-special 2xl:text-7xl">
+                Photoshop
+              </p>
+              <p className="font-extrabold text-special 2xl:text-7xl">Figma</p>
+            </HoverText>
           </div>
           <div className="space-y-6">
             <div className="-space-y-6 2xl:space-y-10">
@@ -82,7 +87,7 @@ const Service = () => {
                 for future updates.
               </p>
             </div>
-            <div className="w-[60%] h-1 border-b-white  md:hidden border-b-2 pt-9"></div>
+            <div className="w-[60%] h-1 border-b-white lg:hidden block border-b-2 pt-9"></div>
           </div>
         </motion.div>
         <motion.div
@@ -93,14 +98,19 @@ const Service = () => {
           variants={characterAnimation}
         >
           <div className="select-none leading-[2.3rem] text-stone-400 md:leading-[2.5rem] lg:leading-[3.4rem] ">
-            <p className="font-extrabold text-special 2xl:text-7xl">ReactJS</p>
-            <p className="font-extrabold text-special 2xl:text-7xl">NextJS</p>
-            <p className="font-extrabold text-special 2xl:text-7xl">
-              TailwindCSS
-            </p>
-            <p className="font-extrabold text-special 2xl:text-7xl">
-              Material UI
-            </p>
+            <HoverText>
+              <p className="font-extrabold text-special 2xl:text-7xl">
+                ReactJS
+              </p>
+              <p className="font-extrabold text-special 2xl:text-7xl">NextJS</p>
+              <p className="font-extrabold text-special 2xl:text-7xl">
+                TailwindCSS
+              </p>
+              <p className="font-extrabold text-special 2xl:text-7xl">
+                Material UI
+              </p>
+              <p className="font-extrabold text-special 2xl:text-7xl">GSAP</p>
+            </HoverText>
           </div>
           <div className="lg:space-y-6 mb-7">
             <div className="-space-y-6 2xl:space-y-10">
