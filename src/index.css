@@ -60,7 +60,7 @@ body {
   }
   .button::before {
     content: "";
-    background-color: #d6d3d1;
+    background-color: #f5f5ef;
     width: 20px;
     height: 20px;
     display: block;
@@ -127,6 +127,7 @@ body {
     overflow: hidden;
   }
 }
+
 html.lenis {
   height: auto;
 }

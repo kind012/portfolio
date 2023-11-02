@@ -82,7 +82,7 @@ const Preloader = () => {
               variants={curve}
               initial="initial"
               exit="exit"
-              className="fill-[#e2e2e2]"
+              className="fill-[#f5f5ef]"
             ></motion.path>
           </svg>
         </>
