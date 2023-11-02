@@ -1,16 +1,17 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
+import { MoveUpRight } from "lucide-react";
 
 const Cursor = () => {
   useEffect(() => {
     const cursor = document.getElementById("custom-cursor");
     const images = document.querySelectorAll("img");
-    const h1s = document.querySelectorAll("h1");
+    const p = document.querySelectorAll("p");
 
     const cursorText = document.querySelector(
       ".cursor-text"
     ) as HTMLOrSVGImageElement;
-    const h1Text = document.querySelector(".text-h1") as HTMLParagraphElement;
+    const pText = document.querySelector(".text-p") as HTMLParagraphElement;
 
     const onMouseMove: EventListener = (e) => {
       const event = e as MouseEvent;
@@ -26,7 +27,7 @@ const Cursor = () => {
 
       if (text.classList.contains("view")) {
         gsap.to(cursor, { scale: 5 });
-        h1Text.style.display = "block";
+        pText.style.display = "block";
       } else {
         gsap.to(cursor, { scale: 4 });
       }
@@ -34,7 +35,7 @@ const Cursor = () => {
 
     const onMouseLeaveText = () => {
       gsap.to(cursor, { scale: 1 });
-      h1Text.style.display = "none";
+      pText.style.display = "none";
     };
 
     const onMouseMoveImage: EventListener = (e) => {
@@ -60,31 +61,18 @@ const Cursor = () => {
       image.addEventListener("mouseleave", onMouseLeaveImage);
     });
 
-    h1s.forEach((texth1) => {
-      texth1.addEventListener("mousemove", onMouseMoveText);
-      texth1.addEventListener("mouseleave", onMouseLeaveText);
+    p.forEach((textp) => {
+      textp.addEventListener("mousemove", onMouseMoveText);
+      textp.addEventListener("mouseleave", onMouseLeaveText);
     });
   }, []);
 
   return (
     <div id="custom-cursor" className="md:custom-cursor">
       <span className="cursor-text">
-        {" "}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="7"
-          height="7"
-          fill="#000000"
-          className="bi bi-arrow-up-right"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fillRule="evenodd"
-            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
-          />
-        </svg>
+        <MoveUpRight className="object-cover w-2 h-2" />
       </span>
-      <span className="text-h1"></span>
+      <span className="text-p"></span>
     </div>
   );
 };
