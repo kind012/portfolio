@@ -16,6 +16,22 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        pattern: "url('/bg-black-pattern.png')",
+      },
+      backgroundSize: {
+        sizeMb: "400px 270px, cover",
+      },
+      animation: {
+        spinn: "spinn 6s linear infinite",
+      },
+      keyframes: {
+        spinn: {
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
+      },
       fontFamily: {
         GeneralSans: "General Sans",
         ClashGrotesk: "Clash Grotesk",
