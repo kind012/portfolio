@@ -1,8 +1,10 @@
 import { useRef, FormEvent } from "react";
+import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
 
 const FormInput = () => {
   const form = useRef<HTMLFormElement>(null);
+
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     emailjs.init("YOUR_PUBLIC_KEY");
@@ -10,7 +12,7 @@ const FormInput = () => {
     emailjs.init("YOUR_PUBLIC_KEY");
 
     emailjs
-      .sendForm(
+      ?.sendForm(
         "YOUR_SERVICE_ID",
         "YOUR_TEMPLATE_ID",
         form.current!,
@@ -18,7 +20,8 @@ const FormInput = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log(result?.text);
+          toast.success("Send message successfully");
           form.current?.reset();
         },
         (error) => {
@@ -26,6 +29,7 @@ const FormInput = () => {
         }
       );
   };
+
   return (
     <form onSubmit={sendEmail} ref={form}>
       <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2">

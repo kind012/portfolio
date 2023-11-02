@@ -10,7 +10,7 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 import { useEffect, useState } from "react";
 import Preloader from "./components/Preloader";
 import { AnimatePresence } from "framer-motion";
-
+import { Toaster } from "sonner";
 function App() {
   const [isLoading, setLoading] = useState<boolean>(true);
 
@@ -31,6 +31,7 @@ function App() {
       </AnimatePresence>
       {!isLoading && (
         <>
+          <Toaster position="bottom-right" />
           <Cursor />
           <Header />
           <Intro />
