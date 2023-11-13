@@ -78,7 +78,7 @@ const Service = () => {
           </div>
           <div className="space-y-6">
             <div className="-space-y-6 2xl:space-y-10">
-              <h3 className="font-semibold leading-tight text-heading-3 2xl:text-7xl text-stone-400 border-thinn px-[14px] py-[4px] w-fit">
+              <h3 className="font-semibold leading-tight text-heading-3 2xl:text-7xl text-stone-400 border-thinn px-[14px] py-[4px] w-fit whitespace-nowrap">
                 THE FULL PACKAGE
               </h3>
               <p className="max-w-md translate-y-10 xl:max-w-2xl text-body-1 2xl:text-3xl font-Chillax text-stone-200">
