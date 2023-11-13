@@ -29,11 +29,9 @@ const SectionHeading = ({ children }: SectionHeadingProps) => {
       viewport={{ once: true, amount: 0.4 }}
       variants={cardVariants}
     >
-      <img src="/elilipse.svg" alt="eips" className="hidden lg:block" />
       <h2 className="text-5xl font-medium uppercase w-fit sm:text-heading-2 text-secondary-400">
         {children}
       </h2>
-      <img src="/elilipse.svg" alt="eips" className="hidden lg:block" />
     </motion.div>
   );
 };

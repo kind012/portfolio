@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
-import { MoveUpRight } from "lucide-react";
+import { Hand } from "lucide-react";
 
 const Cursor = () => {
   useEffect(() => {
@@ -70,7 +70,7 @@ const Cursor = () => {
   return (
     <div id="custom-cursor" className="md:custom-cursor">
       <span className="cursor-text">
-        <MoveUpRight className="object-cover w-2 h-2" />
+        <Hand className="object-cover w-2 h-2" />
       </span>
       <span className="text-p"></span>
     </div>

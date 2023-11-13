@@ -1,6 +1,7 @@
 import { useRef, FormEvent } from "react";
 import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
+import { ArrowUpRight } from "lucide-react";
 
 const FormInput = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -84,7 +85,11 @@ const FormInput = () => {
       </div>
 
       <button type="submit" className="mt-10 button">
-        <span className="text">Let's Talk.</span>
+        <span className="button__icon-wrapper">
+          <ArrowUpRight className="w-4 text-white button__icon-svg" />
+          <ArrowUpRight className="w-4 text-white button__icon-svg button__icon-svg--copy" />
+        </span>
+        LET'S TALK.
       </button>
     </form>
   );
