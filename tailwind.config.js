@@ -17,7 +17,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        pattern: "url('/bg-black-pattern.png')",
+        pattern: "url('/bg.png')",
       },
       backgroundSize: {
         sizeMb: "400px 270px, cover",
@@ -34,7 +34,7 @@ module.exports = {
       },
       fontFamily: {
         GeneralSans: "General Sans",
-        ClashGrotesk: "Clash Grotesk",
+        Chillax: "Clash Grotesk",
       },
       fontSize: {
         "body-1": "clamp(1.1rem, 2vw, 1.3rem)",
@@ -51,6 +51,9 @@ module.exports = {
       borderColor: {
         primary: {
           600: "#a8a29e",
+        },
+        secondary: {
+          100: "#000",
         },
       },
       backgroundColor: {
