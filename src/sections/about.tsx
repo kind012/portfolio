@@ -1,69 +1,93 @@
+import RevealLeft from "../components/reveal/RevealLeft";
+import RevealUp from "../components/reveal/RevealUp";
 import SectionHeadingBeige from "../components/SectionHeadingBeige";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="px-5 bg-[#f5f5ef] rounded-3xl md:px-10 xl:px-20 2xl:px-28 lg:mx-7 "
+      className="lg:mx-[75px] bg-white rounded-3xl xl:px-20 2xl:px-28 lg:py-[61px]"
     >
-      <div className="select-none section-heading">
+      <motion.div className="select-none">
         <SectionHeadingBeige>about me</SectionHeadingBeige>
-        <div className="flex flex-col items-start gap-8 mt-10 md:flex-row lg:gap-10">
-          <div className="top-20 sm:sticky md:top-28 lg:top-32">
-            <div className="w-full space-y-4 2xl:space-y-10">
-              <h3 className="font-semibold leading-tight text-white translate-y-10 text-heading-3 2xl:text-7xl px-[14px] py-[4px] w-fit bg-[#15181e] border rounded-2xl border-secondary-100  flex items-center gap-3">
-                Who am I?
+        <RevealUp>
+          <h5 className="text-base font-normal text-gray-600 font-NeueMontreal">
+            THIENDUC / FRONT END DEVELOPER
+          </h5>
+        </RevealUp>
+        <div className="pb-[84px] max-w-[850px] w-full pt-5">
+          <RevealUp>
+            <p className="text-[32px] font-NeueMontreal font-normal leading-[1.2] sm:sticky">
+              Hello, I'm a{" "}
+              <span className="font-semibold">front end developer</span> passion
+              about design and user experience. I specialize in end-to-end
+              development, i innovate design concepts to enhance your projects
+              effectively.
+            </p>
+          </RevealUp>
+        </div>
+
+        <div className="flex flex-row gap-3 mb-[82px]">
+          <div className="rounded-xl border pt-[35px] pl-[33px] pr-[49px] mb-[41px] flex flex-col  gap-[13px] max-w-[431px] w-full">
+            <RevealUp>
+              <div className="w-3 h-3 bg-orange-500 rounded-full absolute animate-pulse" />
+              <h3 className="text-black text-2xl font-medium pt-[18px] font-NeueMontreal">
+                UI Design
               </h3>
-              <p className="relative translate-y-7 lg:translate-y-10 text-body-1 2xl:text-4xl font-Chillax text-stone-700 lg:mb-0">
-                😶‍🌫️ Hi —{" "}
-                <span className="relative text-[#030303] font-semibold show-gif">
-                  {" "}
-                  I’m Thien Duc,
-                  <span className="w-[8rem] h-28  hidden z-10 top-1/2 left-1/2 absolute pointer-events-none gif-image">
-                    <img
-                      src="/cat.gif"
-                      alt="gifcat"
-                      className="object-cover w-full h-full rounded-xl"
-                    />
-                  </span>
-                </span>{" "}
-                a front end developer based and live in Can Tho, Viet Nam.
-                <br />
-                <br />
-                After graduating from High school, I decided to pursue my
-                passion for programming. I enrolled in a college and learned
-                coding and software related things to become front-end
-                developer. My favorite part of programming is the
-                problem-solving aspect. I create experience user interface
-                connect people together. My core stack is not{" "}
-                <span className="text-[#030303] font-semibold">
-                  React, Next.js, Typescript.
-                </span>{" "}
-                I also have a small passion for design. I am always looking to
-                learn new technologies. I am currently looking for a full-time
-                position as a{" "}
-                <span className="text-[#030303] font-semibold">
-                  front-end developer.👨‍💻
-                </span>
-                <br />
-                <br />
-                When I'm not coding, I like listening to music and I enjoy it,
-                watching movies, I also enjoy learning new things.🎹
-              </p>
-            </div>
+              <div className="max-w-[349px] w-full h-28">
+                <p className="text-gray-600 text-[20px] font-normal leading-[1.2] font-NeueMontreal">
+                  I create innovative designs for a wide range of digital
+                  platforms, including apps, websites, and other digital
+                  products in Figma.
+                </p>
+              </div>
+            </RevealUp>
           </div>
-          <div className="mb-5 overflow-hidden rounded-md top-28 md:sticky lg:mb-6">
-            <img
-              src="/me.jpg"
-              alt="work"
-              loading="lazy"
-              className="object-cover object-center w-full h-auto rounded-md aspect-square md:aspect-auto"
-              width="600"
-              height="800"
-            />
+          <div className="rounded-xl border pt-[35px] pl-[33px] pr-[49px] mb-[41px] flex flex-col gap-[13px] max-w-[431px] w-full">
+            <RevealUp>
+              <div className="w-3 h-3 bg-orange-500 rounded-full absolute animate-pulse" />
+              <h3 className="text-black text-2xl font-medium pt-[18px] font-NeueMontreal">
+                Branding
+              </h3>
+              <div className="max-w-[349px] w-full h-28">
+                <p className="text-gray-600 text-[20px] font-normal leading-[1.2] font-NeueMontreal">
+                  With my background as a graphic designer, I can create logos,
+                  printed matters and enhance branding elements.
+                </p>
+              </div>
+            </RevealUp>
+          </div>
+          <div className="rounded-xl border pt-[35px] pl-[33px] pr-[49px] mb-[41px] flex flex-col gap-[13px] max-w-[431px] w-full">
+            <RevealUp>
+              <div className="w-3 h-3 bg-orange-500 rounded-full absolute animate-pulse" />
+              <h3 className="text-black text-2xl font-medium pt-[18px] font-NeueMontreal">
+                Framework & Libraries
+              </h3>
+              <div className="max-w-[349px] w-full h-28">
+                <p className="text-gray-600 text-[20px] font-normal leading-[1.2] font-NeueMontreal">
+                  I craft websites using Framework & Libraries and transfer full
+                  ownership to your organization upon completion.
+                </p>
+              </div>
+            </RevealUp>
           </div>
         </div>
-      </div>
+
+        <RevealLeft>
+          <div className="w-full h-[620px] relative">
+            <span className="block absolute rounded-xl text-black bg-white text-xs px-3 py-[7px] top-8 left-8 font-NeueMontreal font-normal z-50">
+              Work Place
+            </span>
+            <img
+              src="/assets/images/me.jpg"
+              alt="me"
+              loading="lazy"
+              className="w-full h-full object-cover rounded-xl duration-700 lg:ease-in-out group-hover:scale-105 view"
+            />
+          </div>
+        </RevealLeft>
+      </motion.div>
     </section>
   );
 };

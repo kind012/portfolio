@@ -1,131 +1,180 @@
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { characterAnimation } from "../libs/animations";
+import { useRef } from "react";
 import SectionHeading from "../components/SectionHeading";
-import HoverText from "../components/HoverText";
+import { useScroll } from "framer-motion";
+import Word from "../components/textOpactiyScroll/Word";
+import RevealUp from "../components/reveal/RevealUp";
+
+const paragraph =
+  "I prioritize understanding user goals, tasks, expectations, and product-related issues to enhance digital project development.";
 
 const Service = () => {
-  const ctrls = useAnimation();
-
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
+  const element = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: element,
+    offset: ["start 0.9", "start 0.25"],
   });
 
-  useEffect(() => {
-    if (inView) {
-      ctrls.start("visible");
-    }
-    if (!inView) {
-      ctrls.start("hidden");
-    }
-  }, [ctrls, inView]);
-
+  const words = paragraph.split(" ");
   return (
-    <section className="my-[10%] px-5 md:px-10 xl:px-20 2xl:px-28" id="service">
+    <section className="lg:my-[10%] lg:mx-[75px]" id="service">
       <SectionHeading>services</SectionHeading>
-      <div className="lg:space-y-14 ">
-        <motion.div
-          className="grid grid-cols-1 gap-5 mt-10 overflow-hidden md:grid-cols-2 md:gap-24"
-          initial="hidden"
-          animate={ctrls}
-          variants={characterAnimation}
-          ref={ref}
+      <div className="max-w-[1110px] w-full mb-11">
+        <p
+          className="text-[57px] leading-[1.2] font-normal text-white flex flex-wrap"
+          ref={element}
+          style={{
+            opacity: scrollYProgress,
+          }}
         >
-          <div className="select-none leading-[2.3rem] text-stone-400 md:leading-[2.5rem] lg:leading-[3.4rem] ">
-            <HoverText>
-              <p className="font-extrabold text-special 2xl:text-7xl">HTML</p>
-              <p className="font-extrabold text-special 2xl:text-7xl">CSS</p>
-              <p className="font-extrabold text-special 2xl:text-7xl">
-                JavaScript
-              </p>
-              <p className="font-extrabold text-special 2xl:text-7xl">
-                TypeScript
-              </p>
-            </HoverText>
+          {words.map((word, i) => {
+            const start = i / words.length;
+            const end = start + 1 / words.length;
+            return (
+              <Word key={i} range={[start, end]} progress={scrollYProgress}>
+                {word}
+              </Word>
+            );
+          })}
+        </p>
+      </div>
+      <div className="max-w-[560px] w-full mb-[52px] ml-[47rem]">
+        <RevealUp>
+          <p className="font-light text-base text-white/75 leading-[1.2] uppercase">
+            User research and feedback play a crucial role in the development of
+            digital projects. In any UI/UX project, research, experiments, A/B
+            tests, and other forms of interaction are important. It is crucial
+            to put myself in the user’s shoes and ask questions.
+          </p>
+        </RevealUp>
+      </div>
+
+      <div className="grid grid-cols-3 col-span-3 gap-6">
+        {/* One */}
+        <div className="max-w-[463px] w-full mb-[41px] flex flex-col gap-[13px]">
+          <div className="flex flex-col">
+            <div className="border border-t-gray-500 max-w-[463px] w-full mb-1" />
+            <span className="text-base font-NeueMontreal font-medium text-[#f2f5f3] mb-2">
+              Our culture
+            </span>
+            <RevealUp>
+              <div className="leading-[1.1] text-[80px] font-bold text-white">
+                <h3>
+                  HTML
+                  <br />
+                  CSS
+                  <br />
+                  JAVASCRIPT
+                  <br />
+                  TYPESCRIPT
+                </h3>
+              </div>
+            </RevealUp>
           </div>
-          <div className="space-y-6">
-            <div className="-space-y-6 2xl:space-y-10">
-              <h3 className="font-semibold leading-tight text-heading-3 2xl:text-7xl text-stone-400 border-thinn px-[14px] py-[4px] w-fit">
+        </div>
+        {/* TWO */}
+        <div className="max-w-[463px] w-full mb-[41px] flex flex-col gap-[13px]">
+          <div className="flex flex-col">
+            <div className="border border-t-gray-500 max-w-[463px] w-full mb-1" />
+            <span className="text-base font-NeueMontreal font-medium text-[#f2f5f3] mb-2">
+              Our service
+            </span>
+            <RevealUp>
+              <div className="leading-[1.1] text-[80px] font-bold text-white">
+                <h3>
+                  GITHUB
+                  <br />
+                  GIT
+                  <br />
+                  PHOSTOSHOP
+                  <br />
+                  FIGMA
+                </h3>
+              </div>
+            </RevealUp>
+          </div>
+        </div>
+        {/* THREE */}
+        <div className="max-w-[463px] w-full mb-[41px] flex flex-col gap-[13px]">
+          <div className="flex flex-col">
+            <div className="border border-t-gray-500 max-w-[463px] w-full mb-1" />
+            <span className="text-base font-NeueMontreal font-medium text-[#f2f5f3] mb-2">
+              Our culture
+            </span>
+            <RevealUp>
+              <div className="leading-[1.1] text-[80px] font-bold text-white">
+                <h3>
+                  REACTJS
+                  <br />
+                  NEXTJS
+                  <br />
+                  REACTQUERY
+                  <br />
+                  GSAP
+                </h3>
+              </div>
+            </RevealUp>
+          </div>
+        </div>
+        {/* FOUR */}
+        <div className="max-w-[463px] w-full mb-[41px] flex flex-col gap-[13px]">
+          <div className="flex flex-col">
+            <div className="border border-t-gray-500 max-w-[463px] w-full mb-1" />
+            <span className="text-base font-NeueMontreal font-medium text-[#f2f5f3] mb-2">
+              Our approach
+            </span>
+            <RevealUp>
+              <h3 className="mb-4 leading-[1.1] text-[80px] font-bold text-white">
                 DESIGN
               </h3>
-              <p className="max-w-md translate-y-10 xl:max-w-2xl text-body-1 2xl:text-3xl font-Chillax text-stone-200">
+              <p className="text-xl font-normal text-white/75 font-NeueMontreal">
                 With a high sensibility for modern and elegant design, i can
                 deliver meaningfull and user-friendly web designs thaw will make
                 your business stand out on the digital stage.
               </p>
-            </div>
-            <div className="w-[60%] h-1 border-b-white block  lg:hidden border-b-2 pt-9"></div>
+            </RevealUp>
           </div>
-        </motion.div>
-        <motion.div
-          className="grid grid-cols-1 gap-5 mt-10 md:grid-cols-2 md:gap-24"
-          ref={ref}
-          initial="hidden"
-          animate={ctrls}
-          variants={characterAnimation}
-        >
-          <div className="select-none leading-[2.3rem] text-stone-400 md:leading-[2.5rem] lg:leading-[3.4rem]">
-            <HoverText>
-              <p className="font-extrabold text-special 2xl:text-7xl">Github</p>
-              <p className="font-extrabold text-special 2xl:text-7xl">Git</p>
-              <p className="font-extrabold text-special 2xl:text-7xl">
-                Photoshop
-              </p>
-              <p className="font-extrabold text-special 2xl:text-7xl">Figma</p>
-            </HoverText>
-          </div>
-          <div className="space-y-6">
-            <div className="-space-y-6 2xl:space-y-10">
-              <h3 className="font-semibold leading-tight text-heading-3 2xl:text-7xl text-stone-400 border-thinn px-[14px] py-[4px] w-fit whitespace-nowrap">
+        </div>
+        {/* FIVE */}
+        <div className="max-w-[463px] w-full mb-[41px] flex flex-col gap-[13px]">
+          <div className="flex flex-col">
+            <div className="border border-t-gray-500 max-w-[463px] w-full mb-1" />
+            <span className="text-base font-NeueMontreal font-medium text-[#f2f5f3] mb-2">
+              Our edge
+            </span>
+            <RevealUp>
+              <h3 className="mb-4 leading-[1.1] text-[80px] font-bold text-white">
                 THE FULL PACKAGE
               </h3>
-              <p className="max-w-md translate-y-10 xl:max-w-2xl text-body-1 2xl:text-3xl font-Chillax text-stone-200">
+              <p className="text-xl font-normal text-white/75 font-NeueMontreal">
                 From design to development, i build a complete website from
                 scratch and handle every step of the process. I remain available
                 for future updates.
               </p>
-            </div>
-            <div className="w-[60%] h-1 border-b-white lg:hidden block border-b-2 pt-9"></div>
+            </RevealUp>
           </div>
-        </motion.div>
-        <motion.div
-          className="grid grid-cols-1 gap-5 mt-10 md:grid-cols-2 md:gap-24"
-          ref={ref}
-          initial="hidden"
-          animate={ctrls}
-          variants={characterAnimation}
-        >
-          <div className="select-none leading-[2.3rem] text-stone-400 md:leading-[2.5rem] lg:leading-[3.4rem]">
-            <HoverText>
-              <p className="font-extrabold text-special 2xl:text-7xl">
-                ReactJS
-              </p>
-              <p className="font-extrabold text-special 2xl:text-7xl">NextJS</p>
-              <p className="font-extrabold text-special 2xl:text-7xl">
-                TailwindCSS
-              </p>
-              <p className="font-extrabold text-special 2xl:text-7xl">
-                Shadcn UI
-              </p>
-              <p className="font-extrabold text-special 2xl:text-7xl">GSAP</p>
-            </HoverText>
-          </div>
-          <div className="lg:space-y-6 mb-7">
-            <div className="-space-y-6 2xl:space-y-10">
-              <h3 className="font-semibold leading-tight text-heading-3 2xl:text-7xl text-stone-400 border-thinn px-[14px] py-[4px] w-fit">
-                DEVELOPMENT
-              </h3>
-              <p className="max-w-md translate-y-10 xl:max-w-2xl text-body-1 2xl:text-3xl font-Chillax text-stone-200">
-                Mainly focused on React & NextJS Based technologies, i can build
-                any type of web interface and have been developing several
-                projects both personal and my clients. i use Typescrip for
-                programming.
-              </p>
+        </div>
+        {/* SIX */}
+        <div className="max-w-[463px] w-full mb-[41px] flex flex-col gap-[13px]">
+          <div className="flex flex-col">
+            <div className="border border-t-gray-500 max-w-[463px] w-full mb-1" />
+            <span className="text-base font-NeueMontreal font-medium text-[#f2f5f3] mb-2">
+              Our performance
+            </span>
+            <div className="leading-[1.1] text-[80px] font-bold text-white">
+              <RevealUp>
+                <h3 className="leading-[1.1] text-[80px] font-bold text-white mb-4">
+                  DEVELOPMENT
+                </h3>
+                <p className="text-xl font-normal text-white/75 font-NeueMontreal">
+                  Mainly focused on React & NextJS Based technologies, i can
+                  build any type of web interface and have been developing
+                  several projects both personal and my clients. i use Typescrip
+                  for programming.
+                </p>
+              </RevealUp>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
