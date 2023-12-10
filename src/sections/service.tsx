@@ -22,9 +22,6 @@ const Service = () => {
         <p
           className="text-[57px] leading-[1.2] font-normal text-white flex flex-wrap"
           ref={element}
-          style={{
-            opacity: scrollYProgress,
-          }}
         >
           {words.map((word, i) => {
             const start = i / words.length;
