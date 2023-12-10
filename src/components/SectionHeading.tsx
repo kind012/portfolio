@@ -1,37 +1,22 @@
-import { Variants, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { cardVariants } from "../helpers/utils/animations/animations";
 
 interface SectionHeadingProps {
   children: React.ReactNode;
 }
 
-const cardVariants: Variants = {
-  offscreen: {
-    y: 100,
-    opacity: 0,
-  },
-  onscreen: {
-    y: 30,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.15,
-      duration: 0.3,
-    },
-  },
-};
-
 const SectionHeading = ({ children }: SectionHeadingProps) => {
   return (
     <motion.div
-      className="flex items-center justify-center gap-4"
+      className="flex items-center gap-4 mb-[60px]"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.4 }}
       variants={cardVariants}
     >
-      <h2 className="text-5xl font-medium uppercase w-fit sm:text-heading-2 text-secondary-400">
+      <p className="font-normal text-black uppercase w-fit bg-white rounded-3xl py-[6px] px-[14px] font-NeueMontreal">
         {children}
-      </h2>
+      </p>
     </motion.div>
   );
 };

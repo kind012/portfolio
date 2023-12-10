@@ -1,40 +1,22 @@
-import { Variants, motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
+import { cardVariants } from "../helpers/utils/animations/animations";
 
 interface SectionHeadingProps {
   children: React.ReactNode;
 }
 
-const cardVariants: Variants = {
-  offscreen: {
-    y: 100,
-    opacity: 0,
-  },
-  onscreen: {
-    y: 30,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.15,
-      duration: 0.3,
-    },
-  },
-};
-
 const SectionHeadingBeige = ({ children }: SectionHeadingProps) => {
   return (
     <motion.div
-      className="flex items-center justify-center gap-4"
+      className="flex items-center gap-4 mb-[60px]"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.4 }}
       variants={cardVariants}
     >
-      <Sparkles className="hidden lg:w-12 lg:h-12" />
-      <h2 className="text-5xl font-medium text-black uppercase w-fit sm:text-heading-2">
+      <p className="font-normal text-white uppercase w-fit bg-black rounded-3xl py-[6px] px-[14px] font-NeueMontreal hover:bg-white/25 hover:text-black duration-300">
         {children}
-      </h2>
-      <Sparkles className="hidden  lg:w-12 lg:h-12" />
+      </p>
     </motion.div>
   );
 };

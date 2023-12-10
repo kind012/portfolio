@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { slideUp, opacity } from "../libs/animations";
+import { slideUp, opacity } from "../helpers/utils/animations/animations";
 import { useEffect, useState } from "react";
 
 type Dimension = {
