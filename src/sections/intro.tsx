@@ -23,43 +23,51 @@ const Intro = () => {
   return (
     <section
       id="intro"
-      className="relative flex flex-col justify-center select-none lg:mb-[109px]"
+      className="relative flex lg:flex-row flex-col justify-center select-none mb-8 lg:mb-[109px]"
     >
-      <div className=" lg:h-screen lg:px-[75px] lg:pt-[55px] uppercase">
-        <div className="flex flex-col lg:flex-row lg:gap-[19rem] items-start lg:items-end mb-[3rem] lg:mb-2">
+      <div className=" lg:h-screen px-7 lg:px-[75px] pt-20 lg:pt-[55px] uppercase">
+        <div className="flex flex-col lg:flex-row lg:gap-[19rem] items-center lg:items-end mb-[3rem] lg:mb-2">
           <div className="uppercase text-white leading-[1.1]">
             <div className="flex lg:flex-row flex-col items-center gap-[15px]">
               <div className="hidden-text show-text">
-                <h1 className="font-bold text-[187px]">{texts[0]}</h1>
+                <h1 className="font-bold text-[40px] lg:text-[187px]">
+                  {texts[0]}
+                </h1>
                 <img
                   src="/assets/images/neon-abstract.png"
                   alt="neon"
                   loading="lazy"
-                  className="w-60 h-[120px] object-cover rounded-full hover:skew-y-2 duration-300"
+                  className="lg:w-60 lg:h-[120px] w-[140px] h-[60px] object-cover rounded-full hover:skew-y-2 duration-300"
                 />
               </div>
             </div>
-            <div className="flex items-center lg:pl-[184px] gap-[15px]">
+            <div className="flex lg:flex-row flex-col items-center lg:pl-[184px] gap-[15px]">
               <div className="hidden-text show-text">
                 <img
                   src="/assets/images/man.png"
                   alt="neon"
                   loading="lazy"
-                  className="w-60 h-[120px] object-cover rounded-full hover:skew-x-2 duration-300"
+                  className="lg:w-60 lg:h-[120px] w-[140px] h-[60px] object-cover rounded-full hover:skew-x-2 duration-300"
                 />
-                <h1 className="font-bold text-[187px]">{texts[1]}</h1>
+                <h1 className="font-bold text-[58px] lg:text-[187px]">
+                  {texts[1]}
+                </h1>
               </div>
             </div>
-            <div className="flex items-center gap-[15px] lg:pl-[68px]">
+            <div className="flex lg:flex-row flex-col items-center gap-2 lg:gap-[15px] lg:pl-[68px]">
               <div className="hidden-text show-text">
-                <h1 className="font-bold text-[187px]">{texts[2]}</h1>
+                <h1 className="font-bold text-[40px] lg:text-[187px]">
+                  {texts[2]}
+                </h1>
                 <img
                   src="/assets/images/designer.png"
                   alt="neon"
                   loading="lazy"
-                  className="w-60 h-[120px] object-cover rounded-full hover:skew-y-2 duration-300"
+                  className="lg:w-60 lg:h-[120px] w-[140px] h-[60px] object-cover rounded-full hover:skew-y-2 duration-300"
                 />
-                <h1 className="font-bold text-[187px]">{texts[3]}</h1>
+                <h1 className="font-bold text-[32px] lg:text-[187px]">
+                  {texts[3]}
+                </h1>
               </div>
             </div>
           </div>

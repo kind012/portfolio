@@ -5,12 +5,12 @@ import RevealLeft from "../components/reveal/RevealLeft";
 const Projects = () => {
   return (
     <section
-      className="xl:px-20 lg:py-[61px] lg:my-[10%] lg:mx-[75px] bg-white rounded-3xl"
+      className="lg:px-20 lg:py-[61px] lg:my-[10%] lg:mx-[75px] mx-3  px-4 bg-white rounded-3xl"
       id="projects"
     >
       <SectionHeadingBeige>Projects</SectionHeadingBeige>
       <div className="flex flex-col gap-[90px] w-full">
-        <div className="flex flex-row gap-[14px] items-end">
+        <div className="flex flex-col lg:flex-row gap-[14px] items-end">
           <div className="max-w-[800px]">
             <RevealLeft>
               <Link
@@ -39,7 +39,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-[14px] text-right items-end">
+        <div className="flex flex-col lg:flex-row gap-[14px] text-right items-end">
           <div className="flex flex-col leading-[1.2]  flex-1">
             <p className="text-sm font-light text-black/75 uppercase tracking-normal">
               ReactJS • TailwindCSS • Firebase
@@ -69,7 +69,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-[14px] items-end">
+        <div className="flex flex-col lg:flex-row gap-[14px] items-start lg:items-end">
           <div className="max-w-[800px]">
             <RevealLeft>
               <Link

@@ -14,7 +14,7 @@ const SectionHeadingBeige = ({ children }: SectionHeadingProps) => {
       viewport={{ once: true, amount: 0.4 }}
       variants={cardVariants}
     >
-      <p className="font-normal text-white uppercase w-fit bg-black rounded-3xl py-[6px] px-[14px] font-NeueMontreal hover:bg-white/25 hover:text-black duration-300">
+      <p className="font-normal text-white uppercase w-fit bg-black rounded-3xl lg:py-[6px] lg:px-[14px] px-5 py-3 font-NeueMontreal hover:bg-white/25 hover:text-black duration-300">
         {children}
       </p>
     </motion.div>

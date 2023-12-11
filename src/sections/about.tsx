@@ -1,15 +1,14 @@
 import RevealLeft from "../components/reveal/RevealLeft";
 import RevealUp from "../components/reveal/RevealUp";
 import SectionHeadingBeige from "../components/SectionHeadingBeige";
-import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="lg:mx-[75px] bg-white rounded-3xl xl:px-20 2xl:px-28 lg:py-[61px]"
+      className="lg:mx-[75px] mx-3 bg-white rounded-3xl px-4 lg:px-20 2xl:px-28 lg:py-[61px]"
     >
-      <motion.div className="select-none">
+      <div className="select-none">
         <SectionHeadingBeige>about me</SectionHeadingBeige>
         <RevealUp>
           <h5 className="text-base font-normal text-gray-600 font-NeueMontreal">
@@ -28,7 +27,7 @@ const About = () => {
           </RevealUp>
         </div>
 
-        <div className="flex flex-row gap-3 mb-[82px]">
+        <div className="flex flex-col lg:flex-row gap-3 mb-[82px]">
           <div className="rounded-xl border pt-[35px] pl-[33px] pr-[49px] mb-[41px] flex flex-col  gap-[13px] max-w-[431px] w-full">
             <RevealUp>
               <div className="w-3 h-3 bg-orange-500 rounded-full absolute animate-pulse" />
@@ -75,7 +74,7 @@ const About = () => {
         </div>
 
         <RevealLeft>
-          <div className="w-full h-[620px] relative">
+          <div className="w-full lg:mb-0 mb-5 h-[620px] relative">
             <span className="block absolute rounded-xl text-black bg-white text-xs px-3 py-[7px] top-8 left-8 font-NeueMontreal font-normal z-50">
               Work Place
             </span>
@@ -87,7 +86,7 @@ const About = () => {
             />
           </div>
         </RevealLeft>
-      </motion.div>
+      </div>
     </section>
   );
 };
