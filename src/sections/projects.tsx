@@ -18,7 +18,7 @@ const Projects = () => {
                 className="duration-200 ease-linear group rounded-3xl inline-block overflow-hidden"
               >
                 <img
-                  src="/assets/images/me.jpg"
+                  src="/assets/images/imgproject1.png"
                   alt="me"
                   loading="lazy"
                   className="w-full h-full object-cover rounded-xl duration-700 ease-in-out group-hover:scale-105 view"
@@ -59,7 +59,7 @@ const Projects = () => {
                 className="duration-200 ease-linear group rounded-3xl inline-block overflow-hidden"
               >
                 <img
-                  src="/assets/images/me.jpg"
+                  src="/assets/images/imgproject3.png"
                   alt="me"
                   loading="lazy"
                   className="w-full h-full object-cover rounded-xl duration-700 ease-in-out group-hover:scale-105 view"
@@ -78,7 +78,7 @@ const Projects = () => {
                 to="https://todoapp-duc-new.vercel.app/"
               >
                 <img
-                  src="/assets/images/me.jpg"
+                  src="/assets/images/imgproject2.png"
                   alt="me"
                   loading="lazy"
                   className="w-full h-full object-cover rounded-xl duration-700 ease-in-out group-hover:scale-105 view"

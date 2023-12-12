@@ -30,7 +30,7 @@ const Intro = () => {
           <div className="uppercase text-white leading-[1.1]">
             <div className="flex lg:flex-row flex-col items-center gap-[15px]">
               <div className="hidden-text show-text">
-                <h1 className="font-bold text-[40px] lg:text-[187px]">
+                <h1 className="font-bold text-[35px] lg:text-[187px]">
                   {texts[0]}
                 </h1>
                 <img
@@ -49,14 +49,14 @@ const Intro = () => {
                   loading="lazy"
                   className="lg:w-60 lg:h-[120px] w-[140px] h-[60px] object-cover rounded-full hover:skew-x-2 duration-300"
                 />
-                <h1 className="font-bold text-[58px] lg:text-[187px]">
+                <h1 className="font-bold text-[35px] lg:text-[187px]">
                   {texts[1]}
                 </h1>
               </div>
             </div>
             <div className="flex lg:flex-row flex-col items-center gap-2 lg:gap-[15px] lg:pl-[68px]">
               <div className="hidden-text show-text">
-                <h1 className="font-bold text-[40px] lg:text-[187px]">
+                <h1 className="font-bold text-[35px] lg:text-[187px]">
                   {texts[2]}
                 </h1>
                 <img
@@ -65,7 +65,7 @@ const Intro = () => {
                   loading="lazy"
                   className="lg:w-60 lg:h-[120px] w-[140px] h-[60px] object-cover rounded-full hover:skew-y-2 duration-300"
                 />
-                <h1 className="font-bold text-[32px] lg:text-[187px]">
+                <h1 className="font-bold text-[35px] lg:text-[187px]">
                   {texts[3]}
                 </h1>
               </div>
