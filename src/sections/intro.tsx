@@ -23,7 +23,7 @@ const Intro = () => {
   return (
     <section
       id="intro"
-      className="relative flex lg:flex-row flex-col justify-center select-none mb-8 lg:mb-[109px]"
+      className="relative flex lg:flex-row flex-col lg:justify-start justify-center select-none mb-8 lg:mb-[109px]"
     >
       <div className=" lg:h-screen px-7 lg:px-[75px] pt-20 lg:pt-[55px] uppercase">
         <div className="flex flex-col lg:flex-row lg:gap-[19rem] items-center lg:items-end mb-[3rem] lg:mb-2">
