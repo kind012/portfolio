@@ -1,13 +1,8 @@
-import { MotionValue, useTransform } from "framer-motion";
-import { ReactPortal } from "react";
-import { motion } from "framer-motion";
+import { useTransform } from "framer-motion";
 
-type WordType = {
-  children: ReactPortal | string;
-  i?: number;
-  range: number[];
-  progress: MotionValue<number>;
-};
+import { motion } from "framer-motion";
+import { WordType } from "../../constants/type";
+
 const Word = ({ children, i, range, progress }: WordType) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (

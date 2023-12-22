@@ -1,11 +1,9 @@
 import { useRef } from "react";
-import SectionHeading from "../components/SectionHeading";
 import { useScroll } from "framer-motion";
+import { paragraph } from "../constants/data";
+import SectionHeading from "../components/SectionHeading";
 import Word from "../components/textOpactiyScroll/Word";
 import RevealUp from "../components/reveal/RevealUp";
-
-const paragraph =
-  "I prioritize understanding user goals, tasks, expectations, and product-related issues to enhance digital project development.";
 
 const Service = () => {
   const element = useRef(null);
@@ -54,7 +52,7 @@ const Service = () => {
               Our culture
             </span>
             <RevealUp>
-              <div className="leading-[1.1]  text-6xl lg:text-[80px] font-bold text-white">
+              <div className="leading-[1.1] text-6xl lg:text-[80px] font-bold text-white">
                 <h3>
                   HTML
                   <br />

@@ -5,12 +5,8 @@ import {
   letterAnimatedTwo,
 } from "../../helpers/utils/animations/animations";
 import { AnimateWord } from "./AnimateWord";
+import { AnimateLinkProps } from "../../constants/type";
 
-interface AnimateLinkProps {
-  title: string;
-  href?: string;
-  target?: string;
-}
 const AnimateLink = ({ title, href, target }: AnimateLinkProps) => {
   const [isHovered, setHovered] = useState<boolean>(false);
   return (

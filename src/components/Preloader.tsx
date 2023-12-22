@@ -1,22 +1,8 @@
 import { motion } from "framer-motion";
 import { slideUp, opacity } from "../helpers/utils/animations/animations";
 import { useEffect, useState } from "react";
-
-type Dimension = {
-  width: number;
-  height: number;
-};
-
-const words = [
-  "HALO",
-  "XINCHAO",
-  "IM",
-  "FRONTEND",
-  "DEVELOPER",
-  "UI",
-  "UX",
-  "DESIGN",
-];
+import { words } from "../constants/data";
+import { Dimension } from "../constants/type";
 
 const Preloader = () => {
   const [index, setIndex] = useState<number>(0);

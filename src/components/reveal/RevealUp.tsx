@@ -1,10 +1,6 @@
 import { useInView, motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
-
-interface RevealUpProps {
-  children: React.ReactNode;
-  width?: "fit-content" | "100%";
-}
+import { RevealUpProps } from "../../constants/type";
 
 const RevealUp = ({ children, width }: RevealUpProps) => {
   const ref = useRef(null);

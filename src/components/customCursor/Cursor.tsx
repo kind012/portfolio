@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
-import { Plug2 } from "lucide-react";
 
 const Cursor = () => {
   useEffect(() => {
@@ -69,9 +68,7 @@ const Cursor = () => {
 
   return (
     <div id="custom-cursor" className="md:custom-cursor">
-      <span className="cursor-text">
-        <Plug2 className="w-2 h-2" />
-      </span>
+      <span className="cursor-text">See Now</span>
       <span className="text-p"></span>
     </div>
   );

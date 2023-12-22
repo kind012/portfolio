@@ -1,10 +1,6 @@
 import { useInView, motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
-
-interface RevealLeftProps {
-  children: React.ReactNode;
-  width?: "fit-content" | "100%";
-}
+import { RevealLeftProps } from "../../constants/type";
 
 const RevealLeft = ({ children, width }: RevealLeftProps) => {
   const ref = useRef(null);

@@ -1,14 +1,6 @@
-import { Variants } from "framer-motion";
 import { motion } from "framer-motion";
 import { titleAnimated } from "../../helpers/utils/animations/animations";
-
-interface AnimateProps {
-  title: string;
-  animation: Variants;
-  isHovered: boolean;
-  href: string | undefined;
-  target?: string;
-}
+import { AnimateProps } from "../../constants/type";
 
 export const AnimateWord = ({
   title,

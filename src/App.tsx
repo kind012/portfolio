@@ -9,7 +9,6 @@ import {
   Contact,
   Footer,
 } from "./sections";
-import { Toaster } from "sonner";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import Preloader from "./components/Preloader";
 import Cursor from "./components/customCursor/Cursor";
@@ -34,7 +33,6 @@ function App() {
       </AnimatePresence>
       {!isLoading && (
         <>
-          <Toaster position="bottom-right" />
           <Cursor />
           <Header />
           <Intro />

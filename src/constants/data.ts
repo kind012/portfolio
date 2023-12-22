@@ -31,3 +31,16 @@ export const links = [
     datasection: "contact",
   },
 ];
+export const paragraph =
+  "I prioritize understanding user goals, tasks, expectations, and product-related issues to enhance digital project development.";
+
+export const words = [
+  "HALO",
+  "XINCHAO",
+  "IM",
+  "FRONTEND",
+  "DEVELOPER",
+  "UI",
+  "UX",
+  "DESIGN",
+];

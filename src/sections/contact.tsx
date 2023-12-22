@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import RevealUp from "../components/reveal/RevealUp";
 
 const Contact = () => {
@@ -16,7 +17,12 @@ const Contact = () => {
               let's connect
             </h3>
           </RevealUp>
-          <button className="button duration-300">Write a message</button>
+          <Link
+            to="mailto:tranthienduc1001@gmail.com"
+            className="flex justify-center button duration-300 text-center items-center"
+          >
+            Write a message
+          </Link>
         </div>
       </div>
     </section>
