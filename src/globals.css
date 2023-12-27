@@ -97,6 +97,15 @@
   font-display: swap;
 }
 
+/* QUANTUM */
+@font-face {
+  font-family: "Quantum";
+  src: url("/public/assets/fonts/font/Quantum/Quantum.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 button {
   cursor: none;

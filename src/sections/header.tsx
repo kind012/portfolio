@@ -13,9 +13,7 @@ const Header = () => {
       variants={varients}
     >
       <Link to="#">
-        <p className="font-semibold text-lg lg:text-xl font-NeueMontreal">
-          thien<span className="text-[#cacaca]">duc.</span>
-        </p>
+        <h1 className="font-bold font-Quantum text-xl lg:text-2xl">DUX</h1>
       </Link>
 
       <a
