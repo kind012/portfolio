@@ -13,7 +13,9 @@ const Header = () => {
       variants={varients}
     >
       <Link to="#">
-        <h1 className="font-bold font-Quantum text-xl lg:text-2xl">DUX</h1>
+        <h1 className="font-bold uppercase font-Anurati text-xl lg:text-xl">
+          nart
+        </h1>
       </Link>
 
       <a

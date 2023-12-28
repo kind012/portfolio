@@ -34,8 +34,8 @@ const Intro = () => {
                   {texts[0]}
                 </h1>
                 <img
-                  src="/assets/images/neon-abstract.png"
-                  alt="neon"
+                  src="/assets/images/waves-cartoon.jpg"
+                  alt="waves"
                   loading="lazy"
                   className="lg:w-60 lg:h-[120px] w-[140px] h-[60px] object-cover rounded-full hover:skew-y-2 duration-300"
                 />
@@ -60,7 +60,7 @@ const Intro = () => {
                   {texts[2]}
                 </h1>
                 <img
-                  src="/assets/images/designer.png"
+                  src="/assets/images/design.jpg"
                   alt="neon"
                   loading="lazy"
                   className="lg:w-60 lg:h-[120px] w-[140px] h-[60px] object-cover rounded-full hover:skew-y-2 duration-300"
