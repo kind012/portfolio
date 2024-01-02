@@ -14,7 +14,7 @@ const SectionHeading = ({ children }: SectionHeadingProps) => {
       viewport={{ once: true, amount: 0.4 }}
       variants={cardVariants}
     >
-      <p className="font-normal text-black uppercase w-fit bg-white rounded-3xl py-[6px] px-[14px] font-NeueMontreal">
+      <p className="font-normal text-black uppercase w-fit font-NeueMontreal">
         {children}
       </p>
     </motion.div>

@@ -5,7 +5,7 @@ import RevealLeft from "../components/reveal/RevealLeft";
 const Projects = () => {
   return (
     <section
-      className="lg:px-20 lg:py-[61px] lg:my-[10%] lg:mx-[75px] mx-3  px-4 bg-white rounded-3xl"
+      className="lg:px-20 lg:py-[61px] lg:my-[10%] lg:mx-[75px] mx-3  px-4 bg-black rounded-3xl"
       id="projects"
     >
       <SectionHeadingBeige>Projects</SectionHeadingBeige>
@@ -27,13 +27,13 @@ const Projects = () => {
             </RevealLeft>
           </div>
           <div className="flex flex-col leading-[1.2]">
-            <p className="text-sm font-light text-black/75 uppercase tracking-normal">
+            <p className="text-sm font-light text-white/75 uppercase tracking-normal">
               ReactJS • TailwindCSS • TypeScript
             </p>
-            <h5 className="text-[62px] text-black font-normal uppercase tracking-normal">
+            <h5 className="text-[62px] text-white font-normal uppercase tracking-normal">
               personal portfolio
             </h5>
-            <p className="text-sm font-light text-black/75 uppercase">
+            <p className="text-sm font-light text-white/75 uppercase">
               Frontend Development
             </p>
           </div>
@@ -41,13 +41,13 @@ const Projects = () => {
 
         <div className="flex flex-col lg:flex-row gap-[14px] text-right items-end">
           <div className="flex flex-col leading-[1.2]  flex-1">
-            <p className="text-sm font-light text-black/75 uppercase tracking-normal">
+            <p className="text-sm font-light text-white/75 uppercase tracking-normal">
               ReactJS • TailwindCSS • Firebase
             </p>
-            <h5 className="text-[62px] text-black font-normal uppercase tracking-normal">
+            <h5 className="text-[62px] text-white font-normal uppercase tracking-normal">
               blog
             </h5>
-            <p className="text-sm font-light text-black/75 uppercase">
+            <p className="text-sm font-light text-white/75 uppercase">
               Frontend Development
             </p>
           </div>
@@ -87,13 +87,13 @@ const Projects = () => {
             </RevealLeft>
           </div>
           <div className="flex flex-col leading-[1.2]">
-            <p className="text-sm font-light text-black/75 uppercase tracking-normal">
+            <p className="text-sm font-light text-white/75 uppercase tracking-normal">
               NextJS • TailwindCSS • TypeScript • MongoDB
             </p>
-            <h5 className="text-[62px] text-black font-normal uppercase tracking-normal">
+            <h5 className="text-[62px] text-white font-normal uppercase tracking-normal">
               Todo App
             </h5>
-            <p className="text-sm font-light text-black/75 uppercase">
+            <p className="text-sm font-light text-white/75 uppercase">
               Frontend Development
             </p>
           </div>
