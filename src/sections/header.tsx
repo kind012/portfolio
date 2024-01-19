@@ -7,14 +7,14 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <motion.header
-      className="fixed top-0 flex items-center justify-between w-full lg:w-full lg:py-6 lg:px-[32px] px-6 py-6 translate-y-0 mix-blend-difference z-[999] text-white"
+      className="fixed top-0 flex items-center justify-between w-full lg:w-full lg:py-6 lg:px-[64px] px-6 py-6 translate-y-0 mix-blend-difference z-[999] text-white"
       initial="hidden"
       animate="visible"
       variants={varients}
     >
       <Link to="#">
-        <h1 className="font-bold uppercase font-XSpace text-xl lg:text-xl">
-          dian
+        <h1 className="font-bold uppercase font-Nebula text-xl lg:text-xl">
+          dus
         </h1>
       </Link>
 

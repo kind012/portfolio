@@ -1,88 +1,117 @@
-import { useEffect } from "react";
-import gsap from "gsap";
+// import { useEffect } from "react";
+// import gsap from "gsap";
+// import { texts } from "../constants/data";
+// import RevealLeft from "../components/reveal/RevealLeft";
+
+import {
+  Code,
+  DraftingCompass,
+  Fan,
+  Flower,
+  PackagePlus,
+  Plus,
+  Sparkle,
+} from "lucide-react";
 import { texts } from "../constants/data";
-import RevealLeft from "../components/reveal/RevealLeft";
+import RevealUp from "../components/reveal/RevealUp";
 
 const Intro = () => {
-  const initHero = () => {
-    gsap.set(".show-text", { y: "101%" });
+  // const initHero = () => {
+  //   gsap.set(".show-text", { y: "101%" });
 
-    gsap.timeline({ defaults: { ease: "expo.out" } }).to(
-      ".show-text",
-      {
-        duration: 1.75,
-        y: 0,
-        stagger: 0.055,
-      },
-      0
-    );
-  };
-  useEffect(() => {
-    initHero();
-  }, []);
+  //   gsap.timeline({ defaults: { ease: "expo.out" } }).to(
+  //     ".show-text",
+  //     {
+  //       duration: 1.75,
+  //       y: 0,
+  //       stagger: 0.055,
+  //     },
+  //     0
+  //   );
+  // };
+  // useEffect(() => {
+  //   initHero();
+  // }, []);
 
   return (
     <section
       id="intro"
-      className="relative flex lg:flex-row flex-col lg:justify-start justify-center select-none mb-8 lg:mb-[109px]"
+      className="mx-16 mt-16 bg-black rounded-[40px] text-white pt-9 lg:mb-[109px] h-[806px] max-w-[1408px] w-full relative"
     >
-      <div className=" lg:h-screen px-7 lg:px-[75px] pt-20 lg:pt-[55px] uppercase">
-        <div className="flex flex-col lg:flex-row lg:gap-[19rem] items-center lg:items-end mb-[3rem] lg:mb-2">
-          <div className="uppercase text-black leading-[1.1]">
-            <div className="flex lg:flex-row flex-col items-center gap-[15px]">
-              <div className="hidden-text show-text">
-                <h1 className="font-bold text-[35px] lg:text-[187px]">
-                  {texts[0]}
-                </h1>
-                <RevealLeft>
-                  <img
-                    src="/assets/images/abstract.png"
-                    alt="waves"
-                    loading="lazy"
-                    className="lg:w-60 lg:h-[120px] w-[140px] h-[60px] object-cover rounded-full hover:skew-y-2 duration-300"
-                  />
-                </RevealLeft>
-              </div>
-            </div>
-            <div className="flex lg:flex-row flex-col items-center lg:pl-[184px] gap-[15px]">
-              <div className="hidden-text show-text">
-                <img
-                  src="/assets/images/man.png"
-                  alt="neon"
-                  loading="lazy"
-                  className="lg:w-60 lg:h-[120px] w-[140px] h-[60px] object-cover rounded-full hover:skew-x-2 duration-300"
-                />
-                <h1 className="font-bold text-[35px] lg:text-[187px]">
-                  {texts[1]}
-                </h1>
-              </div>
-            </div>
-            <div className="flex lg:flex-row flex-col items-center gap-2 lg:gap-[15px] lg:pl-[68px]">
-              <div className="hidden-text show-text">
-                <h1 className="font-bold text-[35px] lg:text-[187px]">
-                  {texts[2]}
-                </h1>
-                <RevealLeft>
-                  <img
-                    src="/assets/images/design.png"
-                    alt="neon"
-                    loading="lazy"
-                    className="lg:w-60 lg:h-[120px] w-[140px] h-[60px] object-cover rounded-full hover:skew-y-2 duration-300"
-                  />
-                </RevealLeft>
-                <h1 className="font-bold text-[35px] lg:text-[187px]">
-                  {texts[3]}
-                </h1>
-              </div>
+      <div className="px-8 py-6 font-NeueMontreal">
+        <div className="text-[88px] font-medium leading-[96px]">
+          <RevealUp>
+            <h1 className="uppercase ml-[64px]">{texts[0]}</h1>
+          </RevealUp>
+          <div className="flex flex-row gap-5">
+            <RevealUp>
+              <h1 className="uppercase ml-[110px]">{texts[1]}</h1>
+            </RevealUp>
+            <div className="flex flex-col gap-2">
+              <RevealUp>
+                <div className="flex flex-row gap-3 rounded-full border px-2 py-2 max-w-[470px] w-full h-[98px] items-center">
+                  <Code color="#fafafa" className="w-[82px] h-[82px]" />
+                  <h1 className="uppercase">coding</h1>
+                </div>
+              </RevealUp>
+              <RevealUp>
+                <div className="flex flex-row gap-3 rounded-full border px-2 py-2 max-w-[612px] w-full h-[98px] items-center ml-7">
+                  <PackagePlus color="#fff" className="w-[82px] h-[82px]" />
+                  <h1 className="uppercase">creativity</h1>
+                </div>
+              </RevealUp>
+              <RevealUp>
+                <div className="flex flex-row gap-3 rounded-full border px-2 py-2 items-center ml-14 max-w-[440px] w-full">
+                  <DraftingCompass color="#fff" className="w-[82px] h-[82px]" />
+                  <h1 className="uppercase">design</h1>
+                </div>
+              </RevealUp>
             </div>
           </div>
         </div>
-        <ul className="text-black flex flex-row items-center justify-between text-center">
-          <li>{texts[4]}</li>
-          <li>{texts[5]}</li>
-          <li>{texts[6]}</li>
-          <li>{texts[7]}</li>
-        </ul>
+        <div className="pt-[73px] ml-[633px]">
+          <RevealUp>
+            <div className="flex flex-col gap-[17px]">
+              <div className="flex flex-wrap gap-[9px] items-center  text-center">
+                <h3 className="uppercase text-sm font-semibold font-XSpace">
+                  duckie
+                </h3>
+                <span>[duc-kie]</span>
+              </div>
+              <p className="text-lg max-w-[382px] w-full font-medium">
+                I create elevating digital experiences that inspire and connect
+                with people through development and design.
+              </p>
+            </div>
+          </RevealUp>
+        </div>
+        <div className="flex flex-col gap-[137px] absolute max-w-[560px] w-full h-[500px] top-36">
+          <div className="w-[420px] h-[420px]">
+            <img
+              src="/assets/images/shape-absctract.png"
+              alt="img"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="flex flex-row justify-between">
+            <span className="font-normal text-xs">_HELLO</span>
+            <div className="flex flex-wrap gap-2">
+              <Plus color="#fafafa" className="w-4 h-4" />
+              <Fan color="#fafafa" className="w-4 h-4" />
+              <Flower color="#fafafa" className="w-4 h-4" />
+              <Sparkle color="#fafafa" className="w-4 h-4" />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-row items-center justify-between mt-[71px]">
+          <div className="flex flex-row gap items-center gap-28">
+            <span className="text-xs font-normal">Viet Nam - 9:13 PM</span>
+            <span className="text-xs font-normal">{texts[3]}</span>
+            <span className="text-xs font-normal">{texts[4]}</span>
+            <span className="text-xs font-normal">{texts[5]}</span>
+          </div>
+          <span className="text-xs font-normal">© 2024 Duckie</span>
+        </div>
       </div>
     </section>
   );

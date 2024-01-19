@@ -1,12 +1,10 @@
 export const texts = [
-  "frontend",
+  "front end and",
   "developer",
-  "web",
-  "designer",
-  "( 2002 )",
-  "( available )",
-  "( vietnam )",
-  "( 2024 )",
+  "2002",
+  "Available",
+  "Designer",
+  "2024",
 ];
 
 export const links = [

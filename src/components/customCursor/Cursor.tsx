@@ -68,7 +68,7 @@ const Cursor = () => {
 
   return (
     <div id="custom-cursor" className="md:custom-cursor">
-      <span className="cursor-text">See Now</span>
+      <span className="cursor-text">🔥Play</span>
       <span className="text-p"></span>
     </div>
   );
