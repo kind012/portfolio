@@ -35,7 +35,6 @@ module.exports = {
       fontFamily: {
         Antonio: "Antonio",
         NeueMontreal: "Neue Montreal",
-        Nebula: "Nebula",
       },
       borderColor: {
         primary: {

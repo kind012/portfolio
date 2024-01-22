@@ -1,7 +1,7 @@
 export const texts = [
   "front end and",
   "developer",
-  "2002",
+  "Viet Nam - 9:13 PM",
   "Available",
   "Designer",
   "2024",

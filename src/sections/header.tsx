@@ -13,8 +13,8 @@ const Header = () => {
       variants={varients}
     >
       <Link to="#">
-        <h1 className="font-bold uppercase font-Nebula text-xl lg:text-xl">
-          dus
+        <h1 className="font-bold font-NeueMontreal text-xl lg:text-xl">
+          dush.
         </h1>
       </Link>
 

@@ -1,8 +1,3 @@
-// import { useEffect } from "react";
-// import gsap from "gsap";
-// import { texts } from "../constants/data";
-// import RevealLeft from "../components/reveal/RevealLeft";
-
 import {
   Code,
   DraftingCompass,
@@ -16,23 +11,6 @@ import { texts } from "../constants/data";
 import RevealUp from "../components/reveal/RevealUp";
 
 const Intro = () => {
-  // const initHero = () => {
-  //   gsap.set(".show-text", { y: "101%" });
-
-  //   gsap.timeline({ defaults: { ease: "expo.out" } }).to(
-  //     ".show-text",
-  //     {
-  //       duration: 1.75,
-  //       y: 0,
-  //       stagger: 0.055,
-  //     },
-  //     0
-  //   );
-  // };
-  // useEffect(() => {
-  //   initHero();
-  // }, []);
-
   return (
     <section
       id="intro"
@@ -74,9 +52,9 @@ const Intro = () => {
             <div className="flex flex-col gap-[17px]">
               <div className="flex flex-wrap gap-[9px] items-center  text-center">
                 <h3 className="uppercase text-sm font-semibold font-XSpace">
-                  duckie
+                  dush
                 </h3>
-                <span>[duc-kie]</span>
+                <span>[du-sh]</span>
               </div>
               <p className="text-lg max-w-[382px] w-full font-medium">
                 I create elevating digital experiences that inspire and connect
@@ -105,7 +83,7 @@ const Intro = () => {
         </div>
         <div className="flex flex-row items-center justify-between mt-[71px]">
           <div className="flex flex-row gap items-center gap-28">
-            <span className="text-xs font-normal">Viet Nam - 9:13 PM</span>
+            <span className="text-xs font-normal">{texts[2]}</span>
             <span className="text-xs font-normal">{texts[3]}</span>
             <span className="text-xs font-normal">{texts[4]}</span>
             <span className="text-xs font-normal">{texts[5]}</span>
