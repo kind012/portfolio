@@ -1,176 +1,29 @@
-import { useRef } from "react";
-import { useScroll } from "framer-motion";
-import { paragraph } from "../constants/data";
+import Card from "../components/Card";
 import SectionHeading from "../components/SectionHeading";
-import Word from "../components/textOpactiyScroll/Word";
 import RevealUp from "../components/reveal/RevealUp";
+import { cards } from "../constants/data";
 
 const Service = () => {
-  const element = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: element,
-    offset: ["start 0.9", "start 0.25"],
-  });
-
-  const words = paragraph.split(" ");
   return (
-    <section className="lg:my-[10%] mx-3 lg:mx-[75px]" id="service">
-      <SectionHeading>services</SectionHeading>
-      <div className="max-w-[1110px] w-full mb-11">
-        <p
-          className="text-5xl lg:text-[57px] leading-[1.2] font-normal text-black flex flex-wrap"
-          ref={element}
-        >
-          {words.map((word, i) => {
-            const start = i / words.length;
-            const end = start + 1 / words.length;
-            return (
-              <Word key={i} range={[start, end]} progress={scrollYProgress}>
-                {word}
-              </Word>
-            );
-          })}
-        </p>
-      </div>
-      <div className="lg:max-w-[560px] max-w-[300px] w-full mb-[52px] lg:ml-[47rem]">
+    <section className="lg:pb-[15px] px-[4%]" id="service">
+      <div className="flex lg:flex-row flex-col justify-between lg:items-center">
         <RevealUp>
-          <p className="font-normal text-base text-black/75 leading-[1.2] uppercase">
-            User research and feedback play a crucial role in the development of
-            digital projects. In any UI/UX project, research, experiments, A/B
-            tests, and other forms of interaction are important. It is crucial
-            to put myself in the user’s shoes and ask questions.
-          </p>
+          <SectionHeading>services.</SectionHeading>
         </RevealUp>
+        <div className="lg:max-w-[680px] max-w-[270px] w-full lg:mb-0 mb-3">
+          <RevealUp>
+            <p className="lg:text-[32px] text-xl leading-tight text-third-500 font-medium">
+              My responsibility is to deliver digital experiences that not only
+              serve a great purpose, but also give your business a powerful
+              advantage.
+            </p>
+          </RevealUp>
+        </div>
       </div>
 
-      <div className="grid lg:grid-cols-3 grid-cols-1 col-span-1 lg:col-span-3 gap-6">
-        {/* One */}
-        <div className="lg:max-w-[463px] max-w-[320px] w-full mb-[41px] flex flex-col gap-[13px]">
-          <div className="flex flex-col">
-            <div className="border border-t-gray-500 max-w-[463px] w-full mb-1" />
-            <span className="text-base font-NeueMontreal font-medium text-gray-600 mb-2">
-              Our culture
-            </span>
-            <RevealUp>
-              <div className="leading-[1.1] text-6xl lg:text-[80px] font-bold text-black">
-                <h3>
-                  HTML
-                  <br />
-                  CSS
-                  <br />
-                  JAVASCRIPT
-                  <br />
-                  TYPESCRIPT
-                </h3>
-              </div>
-            </RevealUp>
-          </div>
-        </div>
-        {/* TWO */}
-        <div className="lg:max-w-[463px] max-w-[320px] w-full mb-[41px] flex flex-col gap-[13px]">
-          <div className="flex flex-col">
-            <div className="border border-t-gray-500 max-w-[463px] w-full mb-1" />
-            <span className="text-base font-NeueMontreal font-medium text-gray-600 mb-2">
-              Our service
-            </span>
-            <RevealUp>
-              <div className="leading-[1.1] text-6xl lg:text-[80px] font-bold text-black">
-                <h3>
-                  GITHUB
-                  <br />
-                  GIT
-                  <br />
-                  PHOSTOSHOP
-                  <br />
-                  FIGMA
-                </h3>
-              </div>
-            </RevealUp>
-          </div>
-        </div>
-        {/* THREE */}
-        <div className="lg:max-w-[463px] max-w-[320px]  w-full mb-[41px] flex flex-col gap-[13px]">
-          <div className="flex flex-col">
-            <div className="border border-t-gray-500 max-w-[463px] w-full mb-1" />
-            <span className="text-base font-NeueMontreal font-medium text-gray-600 mb-2">
-              Our culture
-            </span>
-            <RevealUp>
-              <div className="leading-[1.1]  text-6xl lg:text-[80px] font-bold text-black">
-                <h3>
-                  REACTJS
-                  <br />
-                  NEXTJS
-                  <br />
-                  REACTQUERY
-                  <br />
-                  GSAP
-                </h3>
-              </div>
-            </RevealUp>
-          </div>
-        </div>
-        {/* FOUR */}
-        <div className="lg:max-w-[463px] max-w-[320px] w-full mb-[41px] flex flex-col gap-[13px]">
-          <div className="flex flex-col">
-            <div className="border border-t-gray-500 max-w-[463px] w-full mb-1" />
-            <span className="text-base font-NeueMontreal font-medium text-gray-600 mb-2">
-              Our approach
-            </span>
-            <RevealUp>
-              <h3 className="mb-4 leading-[1.1] text-6xl lg:text-[80px] font-bold text-black">
-                DESIGN
-              </h3>
-              <p className="text-xl font-normal text-black/75 font-NeueMontreal">
-                With a high sensibility for modern and elegant design, i can
-                deliver meaningfull and user-friendly web designs thaw will make
-                your business stand out on the digital stage.
-              </p>
-            </RevealUp>
-          </div>
-        </div>
-        {/* FIVE */}
-        <div className="lg:max-w-[463px] max-w-[320px] w-full mb-[41px] flex flex-col gap-[13px]">
-          <div className="flex flex-col">
-            <div className="border border-t-gray-500 max-w-[463px] w-full mb-1" />
-            <span className="text-base font-NeueMontreal font-medium text-gray-600 mb-2">
-              Our edge
-            </span>
-            <RevealUp>
-              <h3 className="mb-4 leading-[1.1] text-6xl lg:text-[80px] font-bold text-black">
-                THE FULL PACKAGE
-              </h3>
-              <p className="text-xl font-normal text-black/75 font-NeueMontreal">
-                From design to development, i build a complete website from
-                scratch and handle every step of the process. I remain available
-                for future updates.
-              </p>
-            </RevealUp>
-          </div>
-        </div>
-        {/* SIX */}
-        <div className="lg:max-w-[463px] max-w-[320px] w-full mb-[41px] flex flex-col gap-[13px]">
-          <div className="flex flex-col">
-            <div className="border border-t-gray-500 max-w-[463px] w-full mb-1" />
-            <span className="text-base font-NeueMontreal font-medium text-gray-600 mb-2">
-              Our performance
-            </span>
-            <div className="leading-[1.1] text-[80px] font-bold">
-              <RevealUp>
-                <h3 className="leading-[1.1] text-6xl lg:text-[80px] font-bold text-black mb-4">
-                  DEVELOPMENT
-                </h3>
-                <p className="text-xl font-normal text-black/75 font-NeueMontreal">
-                  Mainly focused on React & NextJS Based technologies, i can
-                  build any type of web interface and have been developing
-                  several projects both personal and my clients. i use Typescrip
-                  for programming.
-                </p>
-              </RevealUp>
-            </div>
-          </div>
-        </div>
-      </div>
+      {cards.map((card, index) => {
+        return <Card key={index} i={index} card={card} />;
+      })}
     </section>
   );
 };

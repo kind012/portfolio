@@ -1,37 +1,39 @@
-import AnimateLink from "../components/transformWord/AnimateLink";
+import { ArrowUp } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
+  const [backToTop, setBackToTop] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.screenY > 100) {
+        setBackToTop(false);
+      } else {
+        setBackToTop(true);
+      }
+    });
+  }, []);
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
-    <footer className="lg:mx-[75px] mx-3 py-4">
-      <div className="flex justify-between items-center">
-        <p className="uppercase text-xs lg:text-[15px] text-black font-normal font-NeueMontreal">
-          available for freelance
+    <footer className="lg:pb-[20px] px-[4%] pb-3">
+      <div className="flex justify-between lg:items-end items-end">
+        <p className="lg:text-lg text-base text-black font-semibold">
+          © 2024 Thien Duc
         </p>
-
-        <div className="flex items-center justify-between  gap-1 lg:gap-40">
-          <div className="uppercase text-xs lg:text-[15px] text-black font-normal font-NeueMontreal">
-            <AnimateLink
-              title="facebook"
-              href="https://www.facebook.com/tranthienduc1001/"
-              target="_blank"
-            />
-          </div>
-          <div className="uppercase text-xs lg:text-[15px] text-black font-normal font-NeueMontreal">
-            <AnimateLink
-              title="instagram"
-              href="https://www.instagram.com/tranthienducc/"
-              target="_blank"
-            />
-          </div>
-
-          <div className="uppercase text-xs lg:text-[15px] text-black font-normal font-NeueMontreal">
-            <AnimateLink
-              title="github"
-              href="https://github.com/kind012"
-              target="_blank"
-            />
-          </div>
-        </div>
+        {backToTop && (
+          <button
+            onClick={scrollUp}
+            className="lg:w-[72px] lg:h-[72px] w-[52px] h-[52px] flex justify-center items-center bg-primary-400 rounded-full"
+          >
+            <ArrowUp />
+          </button>
+        )}
       </div>
     </footer>
   );

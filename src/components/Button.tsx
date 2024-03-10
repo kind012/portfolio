@@ -1,8 +1,10 @@
+import { ArrowRight } from "lucide-react";
+
 const Button = () => {
   return (
-    <button type="submit" className="mt-10 button">
-      <span className="btn-text-one">let's talk.</span>
-      <span className="btn-text-two">let's talk.</span>
+    <button className="button">
+      <span className="uppercase text-link font-bold"> Let't go it</span>
+      <ArrowRight className="w-5 h-5 items-center svg" />
     </button>
   );
 };

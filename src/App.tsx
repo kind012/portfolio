@@ -2,7 +2,7 @@ import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import {
   Header,
-  Intro,
+  Hero,
   About,
   Service,
   Projects,
@@ -35,10 +35,12 @@ function App() {
         <>
           <Cursor />
           <Header />
-          <Intro />
-          <About />
-          <Service />
-          <Projects />
+          <Hero />
+          <div className="bg-black relative z-20 overflow-x-clip rounded-3xl">
+            <About />
+            <Service />
+            <Projects />
+          </div>
           <Contact />
           <Footer />
         </>

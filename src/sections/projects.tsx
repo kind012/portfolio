@@ -1,124 +1,119 @@
-import { ArrowUpRight } from "lucide-react";
-import SectionHeadingBeige from "../components/SectionHeadingBeige";
-import { Link } from "react-router-dom";
+import SectionHeading from "../components/SectionHeading";
+import RevealLeft from "../components/reveal/RevealLeft";
+import RevealUp from "../components/reveal/RevealUp";
+import Tags from "../helpers/utils/tags";
 
 const Projects = () => {
   return (
-    <section
-      className="lg:px-20 lg:py-[61px] lg:my-[10%] lg:mx-[75px] mx-3  px-4 bg-[#1a1a1a] rounded-3xl"
-      id="projects"
-    >
-      <SectionHeadingBeige>Projects</SectionHeadingBeige>
-      <div className="flex flex-col gap-[90px] w-full">
-        <div className="max-w-[1203px] w-full h-[40.3rem] relative">
-          <img
-            src="/assets/images/imgproject1.png"
-            alt="img1"
-            className="w-full h-full object-cover rounded-[22px]"
-          />
-          <div className="absolute max-w-[1203px] w-full h-[210.61px] bg-black bottom-0  py-[20.4px] px-[52.2px] rounded-b-[22px] z-[99999]">
-            <div className="flex flex-row justify-between items-center">
-              <div className="flex flex-col gap-2">
-                <h3 className="uppercase text-[90px] font-normal text-white font-Antonio leading-[108.37px]">
-                  personal portfolio
-                </h3>
-                <div className="flex flex-row gap-[11px]">
-                  <span className="block text-white bg-[#282828] rounded-[55.3px] text-center py-[4.76px] px-[22.08px] uppercase">
-                    personal
-                  </span>
-                  <span className="block text-white bg-[#282828] rounded-[55.3px] text-center py-[4.76px] px-[22.08px] uppercase">
-                    introduce
-                  </span>
-                </div>
-              </div>
-              <Link
-                to="https://portfolio-kind012.vercel.app/"
-                target="_blank"
-                className="w-[140px] h-[140px] relative"
-              >
+    <section className="pb-[76px] px-[4%]" id="projects">
+      <RevealUp>
+        <SectionHeading>Projects.</SectionHeading>
+      </RevealUp>
+      <div className="xl:gap-x-18 grid grid-cols-1 gap-x-14 gap-y-10 pb-20 md:grid-cols-12 md:gap-y-20 2xl:gap-x-20 ">
+        <div className="word-0">
+          <a
+            href="https://portfolio-kind012.vercel.app/"
+            target="_blank"
+            className="group"
+          >
+            <RevealLeft>
+              <div className="mb-4 rounded-xl lg:w-[778px] lg:h-[778px] w-[327px] h-[327px] overflow-hidden transition-all duration-300 xl:mb-5 2xl:mb-6">
                 <img
-                  src="/assets/images/visit-img.png"
-                  alt="icon"
-                  className="animate-spinn"
+                  src="/assets/images/projects/imgproject1.png"
+                  alt="project1"
+                  className="w-full h-full object-cover transition-all duration-[1200ms] group-hover:scale-105 ease-expo"
+                  loading="lazy"
                 />
-                <ArrowUpRight className="w-10 h-10 absolute inset-12" />
-              </Link>
-            </div>
-          </div>
+              </div>
+            </RevealLeft>
+            <RevealUp>
+              <div className="mt-3 flex lg:flex-row flex-col justify-between">
+                <h3 className="lg:text-[40px] text-[32px] font-bold text-beige-400 lg:mb-0 mb-3">
+                  Portfolio Personal
+                </h3>
+                <Tags />
+              </div>
+            </RevealUp>
+          </a>
         </div>
 
-        <div className="max-w-[1203px] w-full h-[40.3rem] relative">
-          <img
-            src="/assets/images/imgproject2.png"
-            alt="img1"
-            className="w-full h-full object-cover rounded-[22px]"
-          />
-          <div className="absolute max-w-[1203px] w-full h-[210.61px] bg-black bottom-0 z-[99999] py-[20.4px] px-[52.2px] rounded-b-[22px]">
-            <div className="flex flex-row justify-between items-center">
-              <div className="flex flex-col gap-2">
-                <h3 className="uppercase text-[90px] font-normal text-white font-Antonio leading-[108.37px]">
-                  blog
-                </h3>
-                <div className="flex flex-row gap-[11px]">
-                  <span className="block text-white bg-[#282828] rounded-[55.3px] text-center py-[4.76px] px-[22.08px] uppercase">
-                    personal
-                  </span>
-                  <span className="block text-white bg-[#282828] rounded-[55.3px] text-center py-[4.76px] px-[22.08px] uppercase">
-                    share knowledge
-                  </span>
-                </div>
-              </div>
-              <Link
-                to="https://blog-duc.netlify.app/"
-                target="_blank"
-                className="w-[140px] h-[140px] relative"
-              >
-                <img
-                  src="/assets/images/visit-img.png"
-                  alt="icon"
-                  className="animate-spinn"
-                />
-                <ArrowUpRight className="w-10 h-10 absolute inset-12" />
-              </Link>
+        {/* 2 */}
+        <div className="word-1">
+          <a
+            href="https://portfolio-kind012.vercel.app/"
+            target="_blank"
+            className="group"
+          >
+            <div className="mb-4 rounded-xl lg:w-[533px] lg:h-[533px] w-[327px] h-[327px]  overflow-hidden transition-all duration-300 xl:mb-5 2xl:mb-6">
+              <img
+                src="/assets/images/projects/imgproject2.png"
+                alt="project1"
+                className="w-full h-full object-cover transition-all duration-[1200ms] group-hover:scale-105 ease-expo"
+                loading="lazy"
+              />
             </div>
-          </div>
+            <RevealUp>
+              <div className="mt-3 flex flex-col lg:flex-row justify-between">
+                <h3 className="lg:text-[40px] text-[32px] font-bold text-beige-400 lg:mb-0 mb-3">
+                  Blog
+                </h3>
+                <Tags />
+              </div>
+            </RevealUp>
+          </a>
         </div>
 
-        <div className="max-w-[1203px] w-full h-[40.3rem] relative">
-          <img
-            src="/assets/images/imgproject3.png"
-            alt="img1"
-            className="w-full h-full object-cover rounded-[22px]"
-          />
-          <div className="absolute max-w-[1203px] w-full h-[210.61px] bg-black bottom-0 z-[99999] py-[20.4px] px-[52.2px] rounded-b-[22px]">
-            <div className="flex flex-row justify-between items-center">
-              <div className="flex flex-col gap-2">
-                <h3 className="uppercase text-[90px] font-normal text-white font-Antonio leading-[108.37px]">
-                  todo app
-                </h3>
-                <div className="flex flex-row gap-[11px]">
-                  <span className="block text-white bg-[#282828] rounded-[55.3px] text-center py-[4.76px] px-[22.08px] uppercase">
-                    personal
-                  </span>
-                  <span className="block text-white bg-[#282828] rounded-[55.3px] text-center py-[4.76px] px-[22.08px] uppercase">
-                    todo list
-                  </span>
-                </div>
-              </div>
-              <Link
-                to="https://todoapp-duc-new.vercel.app/"
-                target="_blank"
-                className="w-[140px] h-[140px] relative"
-              >
-                <img
-                  src="/assets/images/visit-img.png"
-                  alt="icon"
-                  className="animate-spinn"
-                />
-                <ArrowUpRight className="w-10 h-10 absolute inset-12" />
-              </Link>
+        {/* 3 */}
+        <div className="word-2">
+          <a
+            href="https://portfolio-kind012.vercel.app/"
+            target="_blank"
+            className="group"
+          >
+            <div className="mb-4 rounded-xl lg:w-[533px] lg:h-[533px] w-[327px] h-[327px]  overflow-hidden transition-all duration-300 xl:mb-5 2xl:mb-6">
+              <img
+                src="/assets/images/projects/imgproject1.png"
+                alt="project1"
+                className="w-full h-full object-cover transition-all duration-[1200ms] group-hover:scale-105 ease-expo"
+                loading="lazy"
+              />
             </div>
-          </div>
+            <RevealUp>
+              <div className="mt-3 flex flex-col lg:flex-row justify-between">
+                <h3 className="lg:text-[40px] text-[32px] lg:mb-0 mb-3 font-bold text-beige-400">
+                  Todo App
+                </h3>
+                <Tags />
+              </div>
+            </RevealUp>
+          </a>
+        </div>
+
+        <div className="word-3">
+          <a
+            href="https://portfolio-kind012.vercel.app/"
+            target="_blank"
+            className="group"
+          >
+            <RevealLeft>
+              <div className="mb-4 rounded-xl lg:w-[778px] lg:h-[778px] w-[327px] h-[327px]  overflow-hidden transition-all duration-300 xl:mb-5 2xl:mb-6">
+                <img
+                  src="/assets/images/projects/coming-soon.jpg"
+                  alt="comingsoon"
+                  className="w-full h-full object-cover transition-all duration-[1200ms] group-hover:scale-105 ease-expo"
+                  loading="lazy"
+                />
+              </div>
+            </RevealLeft>
+            <RevealUp>
+              <div className="mt-3 flex flex-col lg:flex-row justify-between">
+                <h3 className="lg:text-[40px] text-[32px] lg:mb-0 mb-3 font-bold text-beige-400">
+                  Coming soon...
+                </h3>
+                <Tags />
+              </div>
+            </RevealUp>
+          </a>
         </div>
       </div>
     </section>

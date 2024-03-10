@@ -25,32 +25,12 @@ const Preloader = () => {
     );
   }, [index]);
 
-  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
-    dimension.height
-  } Q${dimension.width / 2} ${dimension.height + 300} 0 ${
-    dimension.height
-  }  L0 0`;
-  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
-    dimension.height
-  } Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;
-
-  const curve = {
-    initial: {
-      d: initialPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] },
-    },
-    exit: {
-      d: targetPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
-    },
-  };
-
   return (
     <motion.div
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="h-screen w-[100vw] bg-[#effodf] fixed top-0 left-0 z-[9999] text-black flex items-center justify-center"
+      className="h-screen w-[100vw] bg-black fixed top-0 left-0 z-[9999] text-white flex items-center justify-center rounded-xl gap-3"
     >
       {dimension.width > 0 && (
         <>
@@ -63,14 +43,11 @@ const Preloader = () => {
             <span></span>
             {words[index]}
           </motion.p>
-          <svg className="svg-style">
-            <motion.path
-              variants={curve}
-              initial="initial"
-              exit="exit"
-              className="fill-[#f5f5ef]"
-            ></motion.path>
-          </svg>
+          <img
+            src="/assets/icon/logos/logo-loader.ico"
+            alt="logosicon"
+            className="w-7 h-7 bg-transparent text-white"
+          />
         </>
       )}
     </motion.div>

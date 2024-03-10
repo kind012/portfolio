@@ -2,95 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Font Atonio */
+/* Font Overused Grotesk */
 @font-face {
-  font-family: "Antonio";
-  src: url("/public/assets/fonts/font/Antonio/Antonio-Thin.ttf")
-    format("truetype");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Antonio";
-  src: url("/public/assets/fonts/font/Antonio/Antonio-Light.ttf")
-    format("truetype");
+  font-family: "Overused Grotesk";
+  src: url("/public/assets/fonts/font/OverusedGrotesk/OverusedGrotesk-Light.otf")
+    format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Antonio";
-  src: url("/public/assets/fonts/font/Antonio/Antonio-Regular.ttf")
-    format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Antonio";
-  src: url("/public/assets/fonts/font/Antonio/Antonio-Medium.ttf")
-    format("truetype");
+  font-family: "Overused Grotesk";
+  src: url("/public/assets/fonts/font/OverusedGrotesk/OverusedGrotesk-Medium.otf")
+    format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Antonio";
-  src: url("/public/assets/fonts/font/Antonio/Antonio-SemiBold.ttf")
-    format("truetype");
+  font-family: "Overused Grotesk";
+  src: url("/public/assets/fonts/font/OverusedGrotesk/OverusedGrotesk-SemiBold.otf")
+    format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: "Antonio";
-  src: url("/public/assets/fonts/font/Antonio/Antonio-Bold.ttf")
-    format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Font Neue Montreal */
-@font-face {
-  font-family: "Neue Montreal";
-  src: url("/public/assets/fonts/font/NeueMontreal/NeueMontreal-Light.otf")
-    format("opentype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Neue Montreal";
-  src: url("/public/assets/fonts/font/NeueMontreal/NeueMontreal-Italic.otf")
-    format("opentype");
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Neue Montreal";
-  src: url("/public/assets/fonts/font/NeueMontreal/NeueMontreal-Regular.otf")
-    format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Neue Montreal";
-  src: url("/public/assets/fonts/font/NeueMontreal/NeueMontreal-Medium.otf")
-    format("opentype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Neue Montreal";
-  src: url("/public/assets/fonts/font/NeueMontreal/NeueMontreal-Bold.otf")
+  font-family: "Overused Grotesk";
+  src: url("/public/assets/fonts/font/OverusedGrotesk/OverusedGrotesk-Bold.otf")
     format("opentype");
   font-weight: 700;
   font-style: normal;
@@ -107,8 +46,8 @@ a {
 }
 
 body {
-  font-family: "Antonio", sans-serif;
-  background: #f0f1fa;
+  font-family: "Overused Grotesk";
+  background: #e8e8e3;
 }
 
 @layer utilities {
@@ -122,28 +61,27 @@ body {
     width: 100%;
     height: calc(100% + 300px);
   }
-  .text-gradient {
-    color: transparent;
-    background-image: linear-gradient(297deg, #8ec5fc, #e0c3fc);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
 }
 @layer components {
   .button {
-    background-color: white;
-    color: black;
-    font-size: 14px;
-    text-transform: uppercase;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    font-weight: 400;
-  }
-  .button:hover {
-    background: #000;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    border-radius: 100px;
+    background-color: black;
     color: white;
+    padding: 12px 24px;
+  }
+  .button > svg {
+    width: 34px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .button:hover svg {
+    transform: translateX(5px);
+  }
+  .button:active {
+    transform: scale(0.95);
   }
   .custom-cursor {
     position: fixed;
@@ -186,6 +124,35 @@ body {
     align-items: center;
     gap: 20px;
   }
+  .z-text::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      150deg,
+      transparent,
+      rgba(0, 0, 0, 0.7) 50%,
+      #000 75%,
+      #000
+    );
+  }
+  .word-0 {
+    grid-column: span 7 / span 7;
+  }
+  .word-1 {
+    grid-column: span 5 / span 5;
+    padding-top: 5rem;
+  }
+  .word-2 {
+    grid-column: span 5 / span 5;
+    padding-top: 5rem;
+  }
+  .word-3 {
+    grid-column: span 7 / span 7;
+  }
 }
 
 html.lenis {
@@ -206,9 +173,4 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
-}
-
-.bg-secondary-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 250 249 / var(--tw-bg-opacity));
 }

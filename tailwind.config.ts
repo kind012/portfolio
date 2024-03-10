@@ -16,40 +16,40 @@ module.exports = {
       },
     },
     extend: {
-      boxShadow: {
-        big: "0 4px 12px rgba(0, 0, 0, 0.2)",
-      },
-      blur: {
-        big: "16px",
-      },
-      animation: {
-        spinn: "spinn 6s linear infinite",
-      },
-      keyframes: {
-        spinn: {
-          to: {
-            transform: "rotate(360deg)",
-          },
-        },
+      fontSize: {
+        "display-0": "clamp(3rem, -.057rem + 10.0714vw, 10.25rem)",
+        heading: "clamp(3.5rem, 2.3571rem + 4.5143vi, 10.5rem)",
+        number: "clamp(8rem, -.057rem + 20.0714vw, 20rem)",
+        link: "1.25rem",
       },
       fontFamily: {
-        Antonio: "Antonio",
-        NeueMontreal: "Neue Montreal",
+        OverusedGrotesk: "Overused Grotesk",
       },
-      borderColor: {
-        primary: {
-          600: "#a8a29e",
-        },
+
+      colors: {
         secondary: {
-          100: "#000",
+          300: "#393632",
         },
-      },
-      backgroundColor: {
         primary: {
-          400: "#a8a29e",
+          400: "#d1d1c7",
         },
-        secondaryrgb: {
-          255: "rgba(255,255,255,0.1)",
+        third: {
+          500: "#a29e9a",
+        },
+        four: {
+          600: "#6b645c",
+        },
+        beige: {
+          100: "#bfbfb1",
+          200: "#7e766c",
+          300: "#0a0a09",
+          400: "#ddddd5",
+          500: "#8c8c73",
+          600: "#e3e3dd",
+          700: "#e8e8e3",
+        },
+        error: {
+          100: "#9E1F1F",
         },
       },
     },
