@@ -28,7 +28,7 @@ const Projects = () => {
             </RevealLeft>
             <RevealUp>
               <div className="mt-3 flex lg:flex-row flex-col justify-between">
-                <h3 className="lg:text-[40px] text-[32px] font-bold text-beige-400 lg:mb-0 mb-3">
+                <h3 className="lg:text-[40px] text-[32px] font-bold text-black lg:mb-0 mb-3">
                   Portfolio Personal
                 </h3>
                 <Tags />
@@ -54,7 +54,7 @@ const Projects = () => {
             </div>
             <RevealUp>
               <div className="mt-3 flex flex-col lg:flex-row justify-between">
-                <h3 className="lg:text-[40px] text-[32px] font-bold text-beige-400 lg:mb-0 mb-3">
+                <h3 className="lg:text-[40px] text-[32px] font-bold text-black lg:mb-0 mb-3">
                   Blog
                 </h3>
                 <Tags />
@@ -80,7 +80,7 @@ const Projects = () => {
             </div>
             <RevealUp>
               <div className="mt-3 flex flex-col lg:flex-row justify-between">
-                <h3 className="lg:text-[40px] text-[32px] lg:mb-0 mb-3 font-bold text-beige-400">
+                <h3 className="lg:text-[40px] text-[32px] lg:mb-0 mb-3 font-bold text-black">
                   Todo App
                 </h3>
                 <Tags />
@@ -107,7 +107,7 @@ const Projects = () => {
             </RevealLeft>
             <RevealUp>
               <div className="mt-3 flex flex-col lg:flex-row justify-between">
-                <h3 className="lg:text-[40px] text-[32px] lg:mb-0 mb-3 font-bold text-beige-400">
+                <h3 className="lg:text-[40px] text-[32px] lg:mb-0 mb-3 font-bold text-black">
                   Coming soon...
                 </h3>
                 <Tags />

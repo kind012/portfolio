@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font Arges */
+@font-face {
+  font-family: "Arges";
+  src: url("/public/assets/fonts/font/Arges/Arges-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
 /* Font Overused Grotesk */
 @font-face {
   font-family: "Overused Grotesk";
@@ -47,7 +56,7 @@ a {
 
 body {
   font-family: "Overused Grotesk";
-  background: #e8e8e3;
+  background: black;
 }
 
 @layer utilities {
@@ -69,8 +78,8 @@ body {
     gap: 12px;
     align-items: center;
     border-radius: 100px;
-    background-color: black;
-    color: white;
+    background-color: #ece6d5;
+    color: black;
     padding: 12px 24px;
   }
   .button > svg {
@@ -93,7 +102,7 @@ body {
     pointer-events: none;
     z-index: 99999;
     padding: 10px;
-    background-color: #fff;
+    background-color: #ece6d5;
     mix-blend-mode: difference;
     display: flex;
     justify-content: center;
@@ -131,13 +140,6 @@ body {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      150deg,
-      transparent,
-      rgba(0, 0, 0, 0.7) 50%,
-      #000 75%,
-      #000
-    );
   }
   .word-0 {
     grid-column: span 7 / span 7;

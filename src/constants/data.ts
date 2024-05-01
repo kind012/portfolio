@@ -1,10 +1,5 @@
 export const links = [
   {
-    href: "#about",
-    title: "About",
-    datasection: "about",
-  },
-  {
     href: "#service",
     title: "Services",
     datasection: "service",

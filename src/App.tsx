@@ -36,7 +36,7 @@ function App() {
           <Cursor />
           <Header />
           <Hero />
-          <div className="bg-black relative z-20 overflow-x-clip rounded-3xl">
+          <div className="bg-white relative z-20 overflow-x-clip rounded-3xl">
             <About />
             <Service />
             <Projects />

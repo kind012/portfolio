@@ -8,7 +8,7 @@ const Service = () => {
     <section className="lg:pb-[15px] px-[4%]" id="service">
       <div className="flex lg:flex-row flex-col justify-between lg:items-center">
         <RevealUp>
-          <SectionHeading>services.</SectionHeading>
+          <SectionHeading>Services.</SectionHeading>
         </RevealUp>
         <div className="lg:max-w-[680px] max-w-[270px] w-full lg:mb-0 mb-3">
           <RevealUp>

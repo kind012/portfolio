@@ -24,6 +24,7 @@ module.exports = {
       },
       fontFamily: {
         OverusedGrotesk: "Overused Grotesk",
+        Arges: "Arges",
       },
 
       colors: {
@@ -31,13 +32,10 @@ module.exports = {
           300: "#393632",
         },
         primary: {
-          400: "#d1d1c7",
+          400: "#ece6d5",
         },
         third: {
-          500: "#a29e9a",
-        },
-        four: {
-          600: "#6b645c",
+          500: "#8C837B",
         },
         beige: {
           100: "#bfbfb1",

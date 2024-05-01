@@ -7,7 +7,7 @@ const Contact = () => {
         <RevealUp>
           <div className="lg:max-w-[829px] max-w-[300px] h-[284px] w-full lg:mb-[84px] mb-10">
             <h5
-              className="uppercase text-[#393632] font-bold
+              className="uppercase text-[#ece6d5] font-bold
             lg:text-[90.4px] text-5xl leading-none"
             >
               got a project? connect me to get infomation.

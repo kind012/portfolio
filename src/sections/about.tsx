@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section id="about" className="px-[4%] pt-[2%] pb-44">
       <RevealUp>
-        <SectionHeading>about me.</SectionHeading>
+        <SectionHeading>A little about me</SectionHeading>
       </RevealUp>
       <div className="relative">
         <RevealLeft>

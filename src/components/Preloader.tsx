@@ -30,7 +30,7 @@ const Preloader = () => {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="h-screen w-[100vw] bg-black fixed top-0 left-0 z-[9999] text-white flex items-center justify-center rounded-xl gap-3"
+      className="h-screen w-[100vw] bg-white fixed top-0 left-0 z-[9999] text-black flex items-center justify-center rounded-xl gap-3"
     >
       {dimension.width > 0 && (
         <>
@@ -46,7 +46,7 @@ const Preloader = () => {
           <img
             src="/assets/icon/logos/logo-loader.ico"
             alt="logosicon"
-            className="w-7 h-7 bg-transparent text-white"
+            className="w-7 h-7 bg-transparent text-black"
           />
         </>
       )}
