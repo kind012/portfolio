@@ -133,14 +133,7 @@ body {
     align-items: center;
     gap: 20px;
   }
-  .z-text::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-  }
+
   .word-0 {
     grid-column: span 7 / span 7;
   }
