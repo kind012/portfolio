@@ -1,7 +1,7 @@
-import Card from "../components/Card";
-import SectionHeading from "../components/SectionHeading";
-import RevealUp from "../components/reveal/RevealUp";
-import { cards } from "../constants/data";
+import Card from "../Card";
+import SectionHeading from "../SectionHeading";
+import RevealUp from "../reveal/RevealUp";
+import { cards } from "../../constants/data";
 
 const Service = () => {
   return (

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { links } from "../constants/data";
-import { AnimatedLink } from "../components/transformWordwithTag/AnimatedLink";
-import { varients } from "../helpers/utils/animations/animations";
+import { links } from "../../constants/data";
+import { AnimatedLink } from "../transformWordwithTag/AnimatedLink";
+import { varients } from "../../helpers/utils/animations/animations";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -12,13 +12,13 @@ const Header = () => {
       animate="visible"
       variants={varients}
     >
-      <nav className="flex flex-col lg:flex-row items-center lg:justify-between w-full text-lg font-light text-[#ece6d5]">
+      <nav className="flex flex-col lg:flex-row  lg:justify-between w-full text-lg font-light text-[#ece6d5] items-center">
         <Link to="#">
           <h1 className="font-medium text-xl lg:text-xl flex items-center gap-2">
             <img
               loading="lazy"
-              src="/assets/icon/logos/starContact.png"
-              className="w-4 h-4"
+              src="/assets/icon/logos/logo.svg"
+              className="w-7 h-7 text-white"
             />
             thienduc
           </h1>

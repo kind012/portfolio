@@ -1,4 +1,4 @@
-import RevealUp from "../components/reveal/RevealUp";
+import RevealUp from "../reveal/RevealUp";
 
 const Hero = () => {
   return (

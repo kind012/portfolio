@@ -8,10 +8,8 @@ import {
   Projects,
   Contact,
   Footer,
-} from "./sections";
-import { ReactLenis } from "@studio-freight/react-lenis";
+} from "./components/sections";
 import Preloader from "./components/Preloader";
-import Cursor from "./components/customCursor/Cursor";
 
 function App() {
   const [isLoading, setLoading] = useState<boolean>(true);
@@ -27,13 +25,12 @@ function App() {
   }, []);
 
   return (
-    <ReactLenis root>
+    <>
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
       {!isLoading && (
         <>
-          <Cursor />
           <Header />
           <Hero />
           <div className="bg-white relative z-20 overflow-x-clip rounded-3xl">
@@ -45,7 +42,7 @@ function App() {
           <Footer />
         </>
       )}
-    </ReactLenis>
+    </>
   );
 }
 

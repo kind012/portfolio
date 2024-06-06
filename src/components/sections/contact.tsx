@@ -1,5 +1,5 @@
-import Form from "../components/Form";
-import RevealUp from "../components/reveal/RevealUp";
+import Form from "../Form";
+import RevealUp from "../reveal/RevealUp";
 const Contact = () => {
   return (
     <section className="pb-[56px] px-[4%] pt-36" id="contact">
