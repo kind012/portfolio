@@ -44,7 +44,7 @@ const Preloader = () => {
             {words[index]}
           </motion.p>
           <img
-            src="/assets/icon/logos/logo-blue.svg"
+            src="/assets/icon/logos/logo-dark.svg"
             alt="logosicon"
             className="w-7 h-7 bg-transparent text-black"
           />
