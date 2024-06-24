@@ -30,6 +30,7 @@ const Card = ({ card, i }: CardProps) => {
                   src={card.images}
                   alt="star"
                   className="lg:w-8 lg:h-8 w-4 h-4"
+                  loading="lazy"
                 />
                 <h3 className="text-[#d1d1c7] lg:text-[56px] text-[32px] font-bold whitespace-nowrap">
                   {card.title}

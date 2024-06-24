@@ -32,7 +32,7 @@ export interface AnimateLinkProps {
 export interface AnimateProps {
   title: string;
   animation: Variants;
-  isHovered: boolean;
+  isHovered?: boolean;
   href: string | undefined;
   target?: string;
 }

@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="lg:pt-[230px] lg:h-[765px] h-[670px] lg:max-w-[1513px] max-w-full w-full bg-hero-pattern bg-cover  bg-center bg-no-repeat z-10"
+      className="lg:pt-[230px] pt-[100px] lg:pl-0 pl-[17px] lg:h-[765px] h-[690px] lg:max-w-[1513px] max-w-full w-full bg-hero-pattern bg-cover  bg-center bg-no-repeat z-10"
     >
       <div className="lg:text-center lg:items-center flex flex-col relative font-Arges leading-[3]">
         <RevealUp>

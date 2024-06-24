@@ -21,7 +21,7 @@ const Footer = () => {
     });
   };
   return (
-    <footer className="lg:pb-3">
+    <footer className="lg:pb-3 pb-5">
       <div className="flex justify-between lg:items-end items-end">
         <p className="lg:text-lg text-base text-[#a29e9a] font-semibold">
           © 2024 Thien Duc

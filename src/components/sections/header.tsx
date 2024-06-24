@@ -26,7 +26,10 @@ const Header = () => {
 
         {links.map((link, i) => {
           return (
-            <div className="relative group md:inline-block" key={i}>
+            <div
+              className="relative group md:inline-block lg:block hidden"
+              key={i}
+            >
               <AnimatedLink title={link.title} href={link.href} />
             </div>
           );

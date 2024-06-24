@@ -46,16 +46,16 @@ export const slideUp = {
   },
   exit: {
     top: "-100vh",
-    transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
+    transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1], delay: 0.1 },
   },
 };
 export const opacity = {
   initial: {
-    opacity: 0,
+    top: 0,
   },
   enter: {
-    opacity: 0.75,
-    transiton: { duration: 1, delay: 0.2 },
+    top: "-100vh",
+    transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
   },
 };
 

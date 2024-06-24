@@ -8,13 +8,21 @@ interface SectionHeadingProps {
 const SectionHeading = ({ children }: SectionHeadingProps) => {
   return (
     <motion.div
-      className="flex items-center gap-4 mb-[60px]"
+      className="flex items-center gap-4 mb-[60px] flex-row "
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.4 }}
       variants={cardVariants}
     >
-      <p className="font-bold text-[#d1d1c7] text-heading">{children}</p>
+      <img
+        src="/assets/icon/star.svg"
+        alt="star"
+        className=" w-6 h-6 lg:w-8 lg:h-8"
+        loading="lazy"
+      />
+      <p className="font-bold text-[#d1d1c7] text-heading leading-tight">
+        {children}
+      </p>
     </motion.div>
   );
 };

@@ -10,7 +10,8 @@ const Projects = () => {
     <section className="pb-[76px] px-[4%]" id="projects">
       <RevealUp>
         <SectionHeading>
-          projects showcase / <sup>(4)</sup>
+          projects showcase/
+          <sup className="text-[40px] lg:text-[80px]"> (4)</sup>
         </SectionHeading>
       </RevealUp>
       <div className="xl:gap-x-18 grid grid-cols-1 gap-x-14 gap-y-10 pb-20 md:grid-cols-12 md:gap-y-20 2xl:gap-x-20 ">
@@ -31,7 +32,7 @@ const Projects = () => {
               </div>
             </RevealLeft>
           </Link>
-          <div className="flex flex-row gap-x-40 items-baseline">
+          <div className="flex lg:flex-row gap-y-2 flex-col lg:gap-x-40 items-baseline">
             <TitleProject
               categories="Personal"
               url="/case-study/personal-portfolio"
@@ -82,7 +83,7 @@ const Projects = () => {
                 loading="lazy"
               />
             </div>
-            <div className="mt-3 flex flex-col lg:flex-row justify-between items-center">
+            <div className="mt-3 flex flex-col lg:flex-row justify-between items-baseline">
               <TitleProject
                 categories="List todo"
                 url="/case-study/todo-list"
@@ -93,7 +94,7 @@ const Projects = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col items-center lg:word-3">
+        <div className="flex flex-col items-stretch lg:items-center lg:word-3">
           <Link
             to="https://strive-platform.vercel.app/"
             target="_blank"
@@ -109,9 +110,9 @@ const Projects = () => {
                 />
               </div>
             </RevealLeft>
-            <div className="mt-3 flex flex-col lg:flex-row justify-between items-center">
+            <div className="mt-3 flex flex-col lg:flex-row items-baseline justify-between">
               <TitleProject
-                categories="List todo"
+                categories="SasS Platform"
                 url="/case-study/strive-platform"
                 title="Strive / Template Platform"
               />
