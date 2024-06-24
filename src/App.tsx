@@ -7,7 +7,6 @@ import {
   Service,
   Projects,
   Contact,
-  Footer,
 } from "./components/sections";
 import Preloader from "./components/Preloader";
 
@@ -33,13 +32,12 @@ function App() {
         <>
           <Header />
           <Hero />
-          <div className="bg-white relative z-20 overflow-x-clip rounded-3xl">
+          <div className="bg-[#080807] relative z-[99999] rounded-2xl -mt-5">
             <About />
             <Service />
             <Projects />
           </div>
           <Contact />
-          <Footer />
         </>
       )}
     </>

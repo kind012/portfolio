@@ -21,9 +21,9 @@ const Footer = () => {
     });
   };
   return (
-    <footer className="lg:pb-[20px] px-[4%] pb-3">
+    <footer className="lg:pb-3">
       <div className="flex justify-between lg:items-end items-end">
-        <p className="lg:text-lg text-base text-[#ece6d5] font-semibold">
+        <p className="lg:text-lg text-base text-[#a29e9a] font-semibold">
           © 2024 Thien Duc
         </p>
         {backToTop && (

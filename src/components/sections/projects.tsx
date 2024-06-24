@@ -2,18 +2,21 @@ import { Link } from "react-router-dom";
 import SectionHeading from "../SectionHeading";
 import RevealLeft from "../reveal/RevealLeft";
 import RevealUp from "../reveal/RevealUp";
-import { Album } from "lucide-react";
+import Hash from "../Hash";
+import TitleProject from "../TitleProject";
 
 const Projects = () => {
   return (
     <section className="pb-[76px] px-[4%]" id="projects">
       <RevealUp>
-        <SectionHeading>Projects.</SectionHeading>
+        <SectionHeading>
+          projects showcase / <sup>(4)</sup>
+        </SectionHeading>
       </RevealUp>
       <div className="xl:gap-x-18 grid grid-cols-1 gap-x-14 gap-y-10 pb-20 md:grid-cols-12 md:gap-y-20 2xl:gap-x-20 ">
         <div className="flex flex-col items-center lg:word-0">
-          <a
-            href="https://thienducdev.vercel.app/"
+          <Link
+            to="https://thienducdev.vercel.app/"
             target="_blank"
             className="group"
           >
@@ -27,25 +30,21 @@ const Projects = () => {
                 />
               </div>
             </RevealLeft>
-          </a>
-          <div className="flex flex-col lg:flex-row justify-between items-center max-w-max">
-            <h3 className="lg:text-[40px] text-[32px] font-bold text-black lg:mb-0 mb-3">
-              Portfolio Personal
-            </h3>
-            <Link
-              to="/case-study/personal-portfolio"
-              className="flex flex-row items-center gap-x-2 bg-black text-white p-2 rounded-lg"
-            >
-              <span className="text-sm font-medium">Read Case-Study</span>
-              <Album className="w-4 h-4" />
-            </Link>
+          </Link>
+          <div className="flex flex-row gap-x-40 items-baseline">
+            <TitleProject
+              categories="Personal"
+              url="/case-study/personal-portfolio"
+              title="Personal Portfolio"
+            />
+            <Hash />
           </div>
         </div>
 
         {/* 2 */}
         <div className="flex flex-col items-center lg:word-1">
-          <a
-            href="https://blog-duc.netlify.app/"
+          <Link
+            to="https://blog-duc.netlify.app/"
             target="_blank"
             className="group"
           >
@@ -57,25 +56,21 @@ const Projects = () => {
                 loading="lazy"
               />
             </div>
-            <div className="mt-3 flex flex-col lg:flex-row justify-between items-center">
-              <h3 className="lg:text-[40px] text-[32px] font-bold text-black lg:mb-0 mb-3">
-                Blog
-              </h3>
-              <Link
-                to="/case-study/blog"
-                className="flex flex-row items-center gap-x-2 bg-black text-white p-2 rounded-lg"
-              >
-                <span className="text-sm font-medium">Read Case-Study</span>
-                <Album className="w-4 h-4" />
-              </Link>
+            <div className="mt-3 flex flex-col lg:flex-row justify-between items-baseline">
+              <TitleProject
+                categories="Share knowledge"
+                url="/case-study/blog"
+                title="Blog"
+              />
+              <Hash />
             </div>
-          </a>
+          </Link>
         </div>
 
         {/* 3 */}
         <div className="flex flex-col items-center lg:word-2">
-          <a
-            href="https://todoapp-duc-new.vercel.app/"
+          <Link
+            to="https://todoapp-duc-new.vercel.app/"
             target="_blank"
             className="group"
           >
@@ -88,23 +83,19 @@ const Projects = () => {
               />
             </div>
             <div className="mt-3 flex flex-col lg:flex-row justify-between items-center">
-              <h3 className="lg:text-[40px] text-[32px] lg:mb-0 mb-3 font-bold text-black">
-                Todo App
-              </h3>
-              <Link
-                to="/case-study/todo-list"
-                className="flex flex-row items-center gap-x-2 bg-black text-white p-2 rounded-lg"
-              >
-                <span className="text-sm font-medium">Read Case-Study</span>
-                <Album className="w-4 h-4" />
-              </Link>
+              <TitleProject
+                categories="List todo"
+                url="/case-study/todo-list"
+                title="Todo app"
+              />
+              <Hash />
             </div>
-          </a>
+          </Link>
         </div>
 
         <div className="flex flex-col items-center lg:word-3">
-          <a
-            href="https://strive-platform.vercel.app/"
+          <Link
+            to="https://strive-platform.vercel.app/"
             target="_blank"
             className="group"
           >
@@ -119,18 +110,14 @@ const Projects = () => {
               </div>
             </RevealLeft>
             <div className="mt-3 flex flex-col lg:flex-row justify-between items-center">
-              <h3 className="lg:text-[40px] text-[32px] lg:mb-0 mb-3 font-bold text-black">
-                Strive
-              </h3>
-              <Link
-                to="/case-study/todo-list"
-                className="flex flex-row items-center gap-x-2 bg-black text-white p-2 rounded-lg"
-              >
-                <span className="text-sm font-medium">Read Case-Study</span>
-                <Album className="w-4 h-4" />
-              </Link>
+              <TitleProject
+                categories="List todo"
+                url="/case-study/strive-platform"
+                title="Strive / Template Platform"
+              />
+              <Hash />
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

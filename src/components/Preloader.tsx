@@ -30,7 +30,7 @@ const Preloader = () => {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="h-screen w-[100vw] bg-white fixed top-0 left-0 z-[9999] text-black flex items-center justify-center rounded-b-xl gap-3"
+      className="h-screen w-[100vw] bg-black fixed top-0 left-0 z-[9999] text-[#d1d1c7] flex items-center justify-center rounded-b-xl gap-3"
     >
       {dimension.width > 0 && (
         <>
@@ -43,11 +43,6 @@ const Preloader = () => {
             <span></span>
             {words[index]}
           </motion.p>
-          <img
-            src="/assets/icon/logos/logo-dark.svg"
-            alt="logosicon"
-            className="w-7 h-7 bg-transparent text-black"
-          />
         </>
       )}
     </motion.div>

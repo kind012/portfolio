@@ -16,7 +16,7 @@ export const links = [
   },
 ];
 
-export const words = ["TRAN", "THIENDUC", "FRONTEND", "DEVELOPER"];
+export const words = ["Thien Duc", "© Porfolio 2024"];
 
 export const cards = [
   {

@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        "hero-pattern": "url(/assets/images/thumnail-portfolio.png)",
+      },
       fontSize: {
         "display-0": "clamp(3rem, -.057rem + 10.0714vw, 10.25rem)",
         heading: "clamp(3.5rem, 2.3571rem + 4.5143vi, 10.5rem)",

@@ -5,11 +5,11 @@ const About = () => {
   return (
     <section id="about" className="px-[4%] pt-[2%] lg:pb-44 pb-20">
       <RevealUp>
-        <SectionHeading>A little about me</SectionHeading>
+        <SectionHeading>about me</SectionHeading>
       </RevealUp>
       <div className="flex flex-col lg:flex-row gap-x-7">
         <div className="max-w-[950px] w-full lg:sticky lg:top-5">
-          <p className="text-2xl font-normal leading-[1.3] mb-10 lg:mb-[180px]">
+          <p className="text-2xl font-normal leading-[1.3] mb-10 lg:mb-[180px] text-[#a29e9a]">
             {" "}
             Hi, I'm Duc, a designer by day, and by night and frontend developer,
             I'm still often . My work is my play, deeply passionate about
@@ -21,7 +21,7 @@ const About = () => {
             sustainable design and coding, I strive to marry aesthetics with
             eco-consciousness in everything I create.
           </p>
-          <span className="text-base font-normal block max-w-[480px] w-full lg:ml-[375px] mb-[22px]">
+          <span className="text-base font-normal block max-w-[480px] w-full lg:ml-[375px] mb-[22px] text-[#7e766c]">
             Outside of work, I often listen to music or watch movies. It helps
             me relax so I can create beautiful and wonderful designs, and
             perfect products. Let's make something beautiful together.

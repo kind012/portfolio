@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 const Form = () => {
@@ -10,13 +11,13 @@ const Form = () => {
         <div className="flex flex-col w-full">
           <label
             htmlFor="Name"
-            className="text-link mb-1 2xl:mb-2 text-[#ece6d5]"
+            className="text-link mb-1 2xl:mb-2 text-[#9b7d7d]"
           >
-            Your Name <span className="text-error-100 pl-[.25rem]">*</span>
+            Your Name <span className="text-red-500 pl-[.25rem]">*</span>
           </label>
           <input
             type="text"
-            className="rounded-xl max-w-[779px] w-full text-[#bfbcb5] text-xl font-semibold px-4 py-3 bg-transparent focus:bg-beige-600  border border-[#2f2f2d]"
+            className="rounded-xl max-w-[779px] w-full text-[#bfbcb5] text-xl font-semibold px-4 py-3 bg-transparent focus:bg-white/20  border border-[#2f2f2d]"
             placeholder="Closum"
             id="Name"
             required
@@ -27,13 +28,13 @@ const Form = () => {
         <div className="flex flex-col w-full">
           <label
             htmlFor="Email"
-            className="text-link mb-1 2xl:mb-2 text-[#ece6d5]"
+            className="text-link mb-1 2xl:mb-2 text-[#9b7d7d]"
           >
-            Email <span className="text-error-100 pl-[.25rem]">*</span>
+            Email <span className="text-red-500 pl-[.25rem]">*</span>
           </label>
           <input
             type="email"
-            className="rounded-xl max-w-[779px] w-full text-[#bfbcb5] text-xl font-semibold px-4 py-3 bg-transparent focus:bg-beige-600  border border-[#2f2f2d]"
+            className="rounded-xl max-w-[779px] w-full text-[#bfbcb5] text-xl font-semibold px-4 py-3 bg-transparent focus:bg-white/20  border border-[#2f2f2d]"
             placeholder="closum@dev.com"
             id="Email"
             required
@@ -43,14 +44,14 @@ const Form = () => {
         <div className="flex flex-col w-full mb-12">
           <label
             htmlFor="Message"
-            className="text-link mb-1 2xl:mb-2 text-[#ece6d5]"
+            className="text-link mb-1 2xl:mb-2 text-[#9b7d7d]"
           >
-            Message <span className="text-error-100 pl-[.25rem]">*</span>
+            Message <span className="text-red-500 pl-[.25rem]">*</span>
           </label>
           <textarea
             name="Message"
             id="Message"
-            className="pb-20 2xl:pb-32 rounded-xl text-[#bfbcb5] text-xl font-semibold px-4 py-3 bg-transparent focus:bg-beige-600  border border-[#2f2f2d]"
+            className="pb-20 2xl:pb-32 rounded-xl text-[#bfbcb5] text-xl font-semibold px-4 py-3 bg-transparent focus:bg-white/20 border border-[#2f2f2d]"
             required
             placeholder="Brief summary, your timeline, goals, etc."
           ></textarea>
@@ -63,20 +64,20 @@ const Form = () => {
             Send me information via the address below
           </h2>
           <div className="flex flex-col gap-y-2">
-            <a
-              href="mailto:closum@dev.com"
+            <Link
+              to="mailto:closum@dev.com"
               target="_blank"
-              className="text-link font-medium leading-none text-[#bfbcb5]"
+              className="text-link font-medium leading-none text-black"
             >
               thienduc@dev.com
-            </a>
-            <a
-              href="tel:+0123456789"
+            </Link>
+            <Link
+              to="tel:+0123456789"
               target="_blank"
-              className="text-link font-medium leading-none text-[#bfbcb5]"
+              className="text-link font-medium leading-none text-black"
             >
               +012 345 6789
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -85,20 +86,20 @@ const Form = () => {
             socials
           </h2>
           <div className="flex flex-col gap-y-2">
-            <a
-              href="https://facebook.com"
+            <Link
+              to="https://facebook.com"
               target="_blank"
-              className="text-link font-medium leading-none text-[#bfbcb5]"
+              className="text-link font-medium leading-none text-black"
             >
               Facebook
-            </a>
-            <a
-              href="https://instagram.com"
+            </Link>
+            <Link
+              to="https://instagram.com"
               target="_blank"
-              className="text-link font-medium leading-none text-[#bfbcb5]"
+              className="text-link font-medium leading-none text-black"
             >
               Instagram
-            </a>
+            </Link>
           </div>
         </div>
         <img
