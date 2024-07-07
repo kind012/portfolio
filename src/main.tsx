@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CaseStudyPage from "./pages/projects/CaseStudyPage.tsx";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import Cursor from "./components/customCursor/Cursor.tsx";
+import Preloader from "./components/Preloader.tsx";
 // import { caseStudy } from "./constants/data.ts";
 
 // const pathname = caseStudy.map((cased) => cased.name);
@@ -15,10 +16,13 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <div>404 Not Found</div>,
   },
-
   {
     path: "/case-study/:caseStudyId",
     element: <CaseStudyPage />,
+  },
+  {
+    path: "/preloader",
+    element: <Preloader />,
   },
 ]);
 

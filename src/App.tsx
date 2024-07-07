@@ -1,12 +1,12 @@
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import {
-  Header,
   Hero,
   About,
   Service,
   Projects,
   Contact,
+  Header,
 } from "./components/sections";
 import Preloader from "./components/Preloader";
 
@@ -32,11 +32,9 @@ function App() {
         <>
           <Header />
           <Hero />
-          <div className="bg-[#080807] relative z-[99999] rounded-2xl -mt-5">
-            <About />
-            <Service />
-            <Projects />
-          </div>
+          <About />
+          <Service />
+          <Projects />
           <Contact />
         </>
       )}

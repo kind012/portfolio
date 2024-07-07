@@ -1,10 +1,5 @@
 export const links = [
   {
-    href: "#service",
-    title: "Services",
-    datasection: "service",
-  },
-  {
     href: "#projects",
     title: "Projects",
     datasection: "projects",
@@ -16,7 +11,7 @@ export const links = [
   },
 ];
 
-export const words = ["Thien Duc", "© Porfolio 2024"];
+export const words = "thien duc";
 
 export const cards = [
   {
@@ -116,5 +111,54 @@ export const caseStudy = [
     desc2:
       "The case study showcases the successful translation of Alpha.com's e-commerce web experience into a fully mobile experience, emphasizing the importance of a mobile-first approach and user-centered design. The results validate the effectiveness of the redesign and lay the foundation for future growth and innovation for Alpha.com in the mobile commerce space.",
     link: "https://portfolio-tran-thienduc.vercel.app/",
+  },
+];
+
+export const projectData = [
+  {
+    image: "/assets/images/projects/imgproject1.webp",
+    category: "Personal",
+    url: "https://thienducdev.vercel.app/",
+    slug: "/case-study/todo-list",
+    title: "Personal Portfolio",
+  },
+  {
+    image: "/assets/images/projects/imgproject2.webp",
+    category: "Share knowledge",
+    url: "https://blog-duc.netlify.app/",
+    slug: "/case-study/blog",
+    title: "Blog",
+  },
+  {
+    image: "/assets/images/projects/imgproject3.webp",
+    category: "List todo",
+    url: "https://todoapp-duc-new.vercel.app/",
+    slug: "/case-study/todo-list",
+    title: "Todo App",
+  },
+  {
+    image: "/assets/images/projects/imgproject4.webp",
+    category: "SasS Platform",
+    url: "https://strive-platform.vercel.app/",
+    slug: "/case-study/strive-platform",
+    title: "Strive / Template Platform",
+  },
+];
+export const work = [
+  {
+    name: "front end",
+    url: "/assets/icon/upset-star.png",
+  },
+  {
+    name: "ui architect",
+    url: "/assets/icon/upset-star.png",
+  },
+  {
+    name: "interaction",
+    url: "/assets/icon/upset-star.png",
+  },
+  {
+    name: "ui design",
+    url: "/assets/icon/upset-star.png",
   },
 ];

@@ -3,38 +3,32 @@ import RevealUp from "../reveal/RevealUp";
 
 const About = () => {
   return (
-    <section id="about" className="px-[4%] pt-[2%] lg:pb-44 pb-20">
+    <section
+      id="about"
+      className="px-[4%] pt-[2%] lg:pb-44 pb-20 flex flex-row items-start justify-between max-w-full w-full"
+    >
       <RevealUp>
         <SectionHeading>about me</SectionHeading>
       </RevealUp>
-      <div className="flex flex-col lg:flex-row gap-x-7">
-        <div className="max-w-[950px] w-full lg:sticky lg:top-5">
-          <p className="text-2xl font-normal leading-[1.3] mb-10 lg:mb-[180px] text-[#a29e9a]">
-            {" "}
-            Hi, I'm Duc, a designer by day, and by night and frontend developer,
-            I'm still often . My work is my play, deeply passionate about
-            sustainable design and coding, I strive to marry aesthetics with
-            eco-consciousness in everything I create.
-            <br />
-            Hi, I'm Duc, a designer by day, and by night and frontend developer,
-            I'm still often . My work is my play, deeply passionate about
-            sustainable design and coding, I strive to marry aesthetics with
-            eco-consciousness in everything I create.
-          </p>
-          <span className="text-base font-normal block max-w-[480px] w-full lg:ml-[375px] mb-[22px] text-[#7e766c]">
-            Outside of work, I often listen to music or watch movies. It helps
-            me relax so I can create beautiful and wonderful designs, and
-            perfect products. Let's make something beautiful together.
-          </span>
-        </div>
+      <div className="flex flex-col gap-y-6 max-w-[961px] w-full">
+        <img
+          src="/assets/images/profile/about.webp"
+          alt="about-img"
+          className="w-[310px] h-[318px] object-cover rounded-lg"
+        />
 
-        <div className="max-w-[500px] w-full h-[570px]">
-          <img
-            src="/assets/images/profile/about-img.jpg"
-            alt="me"
-            className="w-full h-full object-cover rounded-xl"
-          />
-        </div>
+        <p className="text-[28px] font-medium text-[#a29e9a]">
+          I am a front end in Can Tho. I want to deliver a beautiful look to
+          every project. With a keen eye for design and a passion for
+          innovation, I am creative in creating captivating visual experiences
+          that push boundaries and engage audiences.
+          <br />
+          <br />
+          With the knowledge accumulated during the learning and working
+          process, it reflects the dedication to excellence and commitment to
+          raising the brand to new heights. Currently on a journey to make
+          humanity better through my ideas, creativity and imagination.
+        </p>
       </div>
     </section>
   );

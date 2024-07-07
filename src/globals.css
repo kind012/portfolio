@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Font Arges */
-@font-face {
-  font-family: "Arges";
-  src: url("/public/assets/fonts/font/Arges/Arges-ExtraBold.ttf")
-    format("truetype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
 /* Font Overused Grotesk */
 @font-face {
   font-family: "Overused Grotesk";
@@ -56,7 +47,7 @@ a {
 
 body {
   font-family: "Overused Grotesk";
-  background: black;
+  background: #080807;
 }
 
 @layer utilities {
@@ -78,8 +69,8 @@ body {
     gap: 12px;
     align-items: center;
     border-radius: 100px;
-    background-color: black;
-    color: #d1d1c7;
+    background-color: #c2bba5;
+    color: black;
     padding: 12px 24px;
   }
   .button > svg {
@@ -133,20 +124,23 @@ body {
     align-items: center;
     gap: 20px;
   }
+  .ease-in-out-cubic {
+    transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .text-gradient {
+    color: transparent;
+    background-image: linear-gradient(
+      2005deg,
+      rgb(255, 255, 247) 8.55094%,
+      rgb(114, 114, 103) 107.012%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
 
-  .word-0 {
-    grid-column: span 7 / span 7;
-  }
-  .word-1 {
-    grid-column: span 5 / span 5;
-    padding-top: 5rem;
-  }
-  .word-2 {
-    grid-column: span 5 / span 5;
-    padding-top: 5rem;
-  }
-  .word-3 {
-    grid-column: span 7 / span 7;
+  .text-stroke-3 {
+    -webkit-text-stroke: 1px #c2bba5;
   }
 }
 

@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { slideUp, opacity } from "../helpers/utils/animations/animations";
-import { useEffect, useState } from "react";
+import { slideUp } from "../helpers/utils/animations/animations";
+import { useEffect, useRef, useState } from "react";
 import { words } from "../constants/data";
 import { Dimension } from "../constants/type";
+import { gsap } from "gsap";
+import { useInView } from "react-intersection-observer";
 
 const Preloader = () => {
-  const [index, setIndex] = useState<number>(0);
   const [dimension, setDimension] = useState<Dimension>({
     width: 0,
     height: 0,
@@ -15,35 +16,49 @@ const Preloader = () => {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
   }, []);
 
+  const textRef = useRef(null);
+  const { ref: inViewRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const combinedRef = (node: any) => {
+    textRef.current = node;
+    inViewRef(node);
+  };
+
   useEffect(() => {
-    if (index == words.length - 1) return;
-    setTimeout(
-      () => {
-        setIndex(index + 1);
-      },
-      index == 0 ? 950 : 150
-    );
-  }, [index]);
+    if (inView) {
+      gsap.fromTo(
+        textRef.current,
+        { y: 100 },
+        {
+          y: 20,
+          duration: 1,
+          ease: "power3.out",
+          stagger: 0.1,
+        }
+      );
+    }
+  }, [inView]);
 
   return (
     <motion.div
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="h-screen w-[100vw] bg-black fixed top-0 left-0 z-[9999] text-[#d1d1c7] flex items-center justify-center rounded-b-xl gap-3"
+      className="h-screen bg-white fixed top-0 left-0 z-[9999] rounded-b-xl w-screen"
     >
       {dimension.width > 0 && (
-        <>
-          <motion.p
-            variants={opacity}
-            initial="initial"
-            animate="enter"
-            className="text-[42px] z-[999] font-semibold"
+        <div className="max-h-screen w-full mt-72  flex items-center justify-center gap-3 overflow-hidden h-[130px]">
+          <h1
+            ref={combinedRef}
+            className="text-[42px] text-black font-semibold"
           >
-            <span></span>
-            {words[index]}
-          </motion.p>
-        </>
+            {words}
+          </h1>
+        </div>
       )}
     </motion.div>
   );

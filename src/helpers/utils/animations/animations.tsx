@@ -46,9 +46,10 @@ export const slideUp = {
   },
   exit: {
     top: "-100vh",
-    transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1], delay: 0.1 },
+    transition: { duration: 0.5, ease: [0.55, 0, 0.24, 1], delay: 0.01 },
   },
 };
+
 export const opacity = {
   initial: {
     top: 0,

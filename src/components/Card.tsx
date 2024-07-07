@@ -21,7 +21,7 @@ const Card = ({ card, i }: CardProps) => {
           style={{
             top: `calc(-5vh + ${i * 80}px)`,
           }}
-          className="flex flex-wrap absolute bg-black max-w-[1392px] w-full border-t border-[#2f2f2d]"
+          className="flex flex-wrap absolute bg-[#080807] max-w-[1392px] w-full border-t border-[#2f2f2d]"
         >
           <div className="flex flex-col mb-[27px] max-w-[695px] w-full">
             <RevealUp>

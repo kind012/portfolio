@@ -20,7 +20,7 @@ const SectionHeading = ({ children }: SectionHeadingProps) => {
         className=" w-6 h-6 lg:w-8 lg:h-8"
         loading="lazy"
       />
-      <p className="font-bold text-[#d1d1c7] text-heading leading-tight">
+      <p className="font-bold text-gradient text-[50px] uppercase">
         {children}
       </p>
     </motion.div>

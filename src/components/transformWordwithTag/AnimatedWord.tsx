@@ -27,7 +27,7 @@ const AnimatedWord = ({
           <span key={i}>&nbsp;</span>
         ) : (
           <motion.span
-            className="relative inline-block whitespace-nowrap font-normal"
+            className="relative inline-block whitespace-nowrap text-sm uppercase font-medium text-[#c2bba5]"
             key={i}
             variants={animation}
           >
