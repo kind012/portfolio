@@ -103,7 +103,7 @@ const Form = () => {
           </div>
         </div>
         <img
-          src="/assets/icon/upset-star.png"
+          src="/assets/icon/upset-star.webp"
           alt="starct"
           loading="lazy"
           className="lg:w-[345px] lg:h-[345px] w-[200px] h-[200px]"

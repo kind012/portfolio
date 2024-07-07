@@ -50,14 +50,14 @@ const Projects = () => {
           <span className="text-xl font-medium text-[#7e766c] uppercase">
             (projects)
           </span>
-          <p className="text-[32px] leading-[41.6px] font-medium text-[#a29e9a] max-w-[518px] w-full">
+          <p className="text-[32px] leading-[41.6px] font-medium text-[#a29e9a] max-w-[518px] w-full lg:flex hidden">
             Feature personal projects that have been meticulously crafted with
             passion and purpose over the years.
           </p>
         </div>
       </RevealUp>
-      <div className="flex flex-col items-start">
-        <div className="max-w-[552px] w-full h-fit sticky top-0 overflow-hidden text-[22vw] text-[#a29e9a] font-normal flex-row flex">
+      <div className="flex flex-col items-center lg:items-start">
+        <div className="max-w-[552px] w-full h-fit sticky top-0 overflow-hidden text-[22vw] text-[#a29e9a] font-normal flex-row lg:flex hidden">
           <span className="relative">0</span>
           <div className="relative">
             <div
@@ -77,7 +77,7 @@ const Projects = () => {
 
         {projectData.map((item, index) => (
           <div
-            className="flex flex-col items-center max-w-[792px] w-full h-[876px] mb-32 ml-[600px]"
+            className="flex flex-col items-center max-w-[300px] lg:max-w-[792px] w-full h-[500px] lg:h-[876px] mb-5 lg:mb-32 ml-0 lg:ml-[600px]"
             key={index}
             ref={ref}
           >
@@ -93,7 +93,7 @@ const Projects = () => {
                 loading="lazy"
               />
             </Link>
-            <div className="flex flex-row justify-between items-end max-w-full w-full">
+            <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-start lg:items-end max-w-full w-full">
               <div className="flex flex-col leading-tight">
                 <span className="text-lg font-normal text-[#a29e9a]">
                   {item.category}

@@ -147,18 +147,18 @@ export const projectData = [
 export const work = [
   {
     name: "front end",
-    url: "/assets/icon/upset-star.png",
+    url: "/assets/icon/upset-star.webp",
   },
   {
     name: "ui architect",
-    url: "/assets/icon/upset-star.png",
+    url: "/assets/icon/upset-star.webp",
   },
   {
     name: "interaction",
-    url: "/assets/icon/upset-star.png",
+    url: "/assets/icon/upset-star.webp",
   },
   {
     name: "ui design",
-    url: "/assets/icon/upset-star.png",
+    url: "/assets/icon/upset-star.webp",
   },
 ];

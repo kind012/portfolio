@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="px-[4%] pt-[2%] lg:pb-44 pb-20 flex flex-row items-start justify-between max-w-full w-full"
+      className="px-[4%] pt-[2%] lg:pb-44 pb-20 flex flex-col lg:flex-row lg:items-start justify-center lg:justify-between max-w-full w-full"
     >
       <RevealUp>
         <SectionHeading>about me</SectionHeading>
@@ -14,7 +14,7 @@ const About = () => {
         <img
           src="/assets/images/profile/about.webp"
           alt="about-img"
-          className="w-[310px] h-[318px] object-cover rounded-lg"
+          className="lg:w-[310px] w-[250px] h-[258px] lg:h-[318px] object-cover rounded-lg"
         />
 
         <p className="text-[28px] font-medium text-[#a29e9a]">
